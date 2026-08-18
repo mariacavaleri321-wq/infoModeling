@@ -1,0 +1,150 @@
+/* --------------------------------
+aggiungere position x stesso effetto dato su sito 
+https://viff.org
+
+++ aggiungere queries x renderlo responsive su tel
+-----------------------------------*/
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(235, 207, 207);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.4;
+}
+
+header {
+    background-color: #c9545493;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.link-head {
+    display: flex; /* attiva Flexbox così il gap può funzionare */
+        gap: 15px; /* gap casuale, sarebbe carino renderlo responsive */
+        }
+
+.link-head a {
+        color: rgb(8, 80, 34);
+        font-weight: bold;
+}
+
+/* ---  BARRA STILI --- */
+.bar-style {
+    background-color: transparent;
+    display: flex;
+    width: 100%;
+    padding: 15px 0; /* padding verticale x creare gap sopra e sotto le linee! */
+
+    margin-top: 30px; /* spazio tra header e barra */
+    border-top: 1.5px solid rgb(216, 182, 182);
+    border-bottom: 1.5px solid rgb(216, 182, 182);
+}
+
+
+/* Elementi singoli barra*/
+.bar-item {
+    flex: 1; /* ogni contenitore prende 1 spazio */
+    text-align: center;
+    border-right: 1.5px solid rgba(0, 0, 0, 0.15); /* Linea verticale separatrice */
+    justify-content: center;
+    height: 70px;
+    display: flex;
+    }
+
+
+/* Stile dei link interni */
+.bar-item a {
+    color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Rimuove linea ultimo riquadro (2030)*/
+.bar-item:last-child {
+    border-right: none;
+}
+
+
+/* ---  BLOCCHI CENTRALI --- */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Scatola base dei blocchi */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* spazio tra i due blocchi */
+    width: 100%;
+}
+
+/* Contenitore per le immagini affiancate */
+.area-immagini {
+    display: flex;
+    gap: 10px; /* Spazio tra le due immagini */
+}
+
+.moviepic-square {
+        width: 90%;
+        max-width: 600px;
+        position: relative;
+        display: flex; /* x affiancare immagini */
+        justify-items: center;
+        align-items: center;
+        background-color: transparent;
+        aspect-ratio: 646 / 386; /* dimensioni foto pellicola */
+    }
+
+.moviepic-square .movie-pic {
+    width: 90%;
+    height: 60%;
+    object-fit: cover;
+    padding: 15px 10px;  
+}
+
+
+
+.description-square {
+    width: 90%;
+    max-width: 646px;
+    min-height: 100px;
+    background-color: #894939;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    padding: 25px;
+}
+
+/* css importato da https://css-shape.com/film-strip/*/
+
+.film-strip {
+    --s: 12px;
+    /* control the size */
+    --c: #222;
+
+    width: calc(20*var(--s));
+    aspect-ratio: 1.25;
+    background:
+        conic-gradient(at 50% var(--s), var(--c) 75%, #0000 0) 0 0/calc(2*var(--s)) calc(100% - var(--s)) padding-box;
+    border: var(--s) solid var(--c);
+    padding: calc(var(--s)*2.5) calc(var(--s)*1.5);
+    box-sizing: content-box;
+    /* you can add a filter for an oldish effect 
+  filter: sepia(1) brightness(0.9) grayscale(.2);
+  */
+}
