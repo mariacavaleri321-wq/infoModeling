@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Rome in two takes</title>
+
+    <!--Collegamento al mio css-->
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="mappa.css">
+
+    <!--Leaflet css, da pagina Leaflet-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="link-head" style="text-align:left;">
+            <a href="index.html">HomePage</a>
+            <a href="percorso.html">Percorsi</a>
+            <a href="mappa.html">Mappa</a>
+        </div>
+        <div class="link-head" style="text-align:right;">
+            <a href="pagina1.html">Scelte stile</a>
+            <a href="pagina2.html">Bibliografia</a>
+            <a href="pagina3.html">Team</a>
+        </div>
+    </header>
+
+     <!-- barra scelta stile -->
+    <div class="bar-style">
+        <div class="bar-item">
+            <a href="style1.css">
+                <span class="nav-label">1500</span>
+            </a>
+        </div>
+        <div class="bar-item">
+            <a href="style2.css">
+                <span class="nav-label">1900</span>
+            </a>
+        </div>
+        <div class="bar-item">
+            <a href="style3.css">
+                <span class="nav-label">1950</span>
+            </a>
+        </div>
+        <div class="bar-item">
+            <a href="style4.css">
+                <span class="nav-label">2000</span>
+            </a>
+        </div>
+        <div class="bar-item">
+            <a href="style5.css">
+                <span class="nav-label">2020</span>
+            </a>
+        </div>
+        <div class="bar-item">
+            <a href="style6.css">
+                <span class="nav-label">2035</span>
+            </a>
+        </div>
+    </div>
+
+    <main class="map-page">
+        <h1>Rome in two takes</h1>
+
+        <!-- filtri tematici-->
+        <div id="filters">
+            <button id="show-all">All locations</button>
+            <button id="show-historical">Historical</button>
+            <button id="show-women">Women & Urban Space</button>
+        </div>
+
+        <!-- filtri per selezione film -->
+        <div id="film-filters">
+            <p>Filter by film:</p>
+            <label>
+                <input type="checkbox" value="A Special Day" checked>
+                A Special Day
+            </label>
+
+            <label>
+                <input type="checkbox" value="Rome, Open City" checked>
+                Rome, Open City
+            </label>
+
+            <label>
+                <input type="checkbox" value="Bellissima" checked>
+                Bellissima
+            </label>
+
+            <label>
+                <input type="checkbox" value="There's Still Tomorrow" checked>
+                There's Still Tomorrow
+            </label>
+
+            <label>
+                <input type="checkbox" value="Mamma Roma" checked>
+                Mamma Roma
+            </label>
+
+            <label>
+                <input type="checkbox" value="The Great Beauty" checked>
+                The Great Beauty
+            </label>
+        </div>
+
+        <div id="map"></div>
+    </main>
+
+    <!--Lealeft javascript, da pagina Leaflet-->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!--Collegamento al mio javascript-->
+    <script src="mappa.js"></script>
+
+</body>
+
+</html>

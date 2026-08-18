@@ -1,0 +1,13 @@
+#map {
+    height: 500px;
+    width: 70%;
+}
+
+
+.leaflet-popup-content {
+    font-family: inherit;
+}
+
+.map-legend {
+    padding: 10px;
+}
