@@ -1,89 +1,84 @@
-/* PROTOTYPE SLIDER */
+.documentation-page {
+    width: 85%;
+    margin: 40px auto;
+}
 
-.prototype-slider {
+.documentation-section {
+    margin-top: 60px;
+}
+
+.documentation-intro {
+    margin-bottom: 60px;
+}
+
+
+/* WORKFLOW */
+
+.workflow {
+    margin: 60px 0;
+    text-align: center;
+}
+
+.workflow-steps {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.workflow-step {
+    flex: 1;
+    text-align: center;
+}
+
+.workflow-step strong {
+    font-size: 1.2rem;
+}
+
+
+/* PROTOTIPI */
+
+.prototype-row {
+    display: flex;
     justify-content: center;
-
-    width: 80%;
-    margin: 40px auto 10px;
+    gap: 25px;
+    margin-top: 30px;
 }
 
-
-.slides {
-    width: 80%;
-}
-
-
-.prototype-slide {
-    display: none;
+.prototype-row figure {
+    width: 30%;
     margin: 0;
     text-align: center;
 }
 
-
-.prototype-slide.active {
-    display: block;
-}
-
-
-.prototype-slide img {
+.prototype-row img {
     width: 100%;
-    max-height: 550px;
-
-    object-fit: contain;
+    height: auto;
 }
 
-
-.prototype-slide figcaption {
-    margin-top: 15px;
-
+.prototype-row figcaption {
+    margin-top: 10px;
     font-size: 0.9rem;
-    font-style: italic;
 }
 
 
-/* FRECCE */
+/* IDEE GRAFICHE */
 
-.slider-button {
-    border: none;
-    background: none;
+.graphic-ideas {
+    margin-top: 50px;
+    text-align: center;
+}
 
-    font-size: 2.5rem;
-
-    cursor: pointer;
-
-    padding: 20px;
+.graphic-ideas img {
+    width: 80%;
+    height: auto;
+    margin-top: 20px;
 }
 
 
-/* PALLINI SOTTO */
+/* PREVIOUS / NEXT */
 
-.slider-dots {
+.page-navigation {
     display: flex;
-    justify-content: center;
-
-    gap: 10px;
-
-    margin-bottom: 40px;
-}
-
-
-.dot {
-    width: 12px;
-    height: 12px;
-
-    border-radius: 50%;
-    border: 1px solid black;
-
-    background: white;
-
-    cursor: pointer;
-
-    padding: 0;
-}
-
-
-.dot.active {
-    background: black;
+    justify-content: space-between;
+    margin: 70px 0 30px;
 }
