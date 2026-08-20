@@ -1,0 +1,566 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #8B0000 ; /* Sfondo generale rosso che ricorda le sedie del cinema? */
+    font-family: 'Special Elite', monospace; /* Font stile vecchia macchina da scrivere */
+    color: #e6dfd3;
+}
+
+/* BARRA PER LE ALTRE PAGINE */
+header {
+    background-color: #c24141; 
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: justify;
+    box-sizing: border-box;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: none;
+}
+
+.link-head a {
+    color: white; 
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 1.05rem;
+    font-family: 'Courier New', monospace;
+}
+
+.link-head a:hover {
+    text-decoration: underline;
+}
+
+/* --- BARRA DELLE DATE */
+.bar-style {
+    display: flex;
+    width: 100%;
+    background-color: #38312d;
+    border-top: 1px solid #1a1715;
+    border-bottom: 1px solid #1a1715;
+    box-sizing: border-box;
+    position: sticky;
+    top: 50px; /* h header */
+    z-index: 999;
+    border-top: none;
+}
+
+.bar-item {
+    flex: 1;
+    text-align: center;
+    padding: 30px;
+    border-right: 1px solid #1a1715;
+}
+
+.bar-item:last-child {
+    border-right: none;
+}
+
+.bar-item a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
+    display: block;
+    width: 100%;
+    font-family: 'Courier', monospace;
+}
+
+.bar-item a:hover {
+    color: #ec3232;
+}
+
+/* CONTENUTO PRINCIPALE */
+main {
+    padding: 30px 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Titolo principale */
+main h2 {
+    max-width: 950px;
+    width: 100%;
+    gap: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 3px;
+    color: white;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/*paragrafo dell'introduzione */
+main p {
+    max-width: 950px;
+    width: 100%;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    color: #d6ccb1;
+    text-align: justify;
+    margin: 0 auto; /* x essere centrato rispetto a schermo */
+}
+
+/* STRUTTURA PRINCIPALE SIMIL RULLINO (l'ho divisa in 3 zone) */
+.area-immagini {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 950px;
+    height: 560px;
+    gap: 15px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+    background-color: #1c1b1b;
+    padding: 14px 20px;
+    border-top: 14px dashed white;
+    border-bottom: 14px dashed white;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* ZONA 1: BLOCCO FOTO A SINISTRA */
+.film-panel-left {
+    width: 40%;
+    background-color: transparent;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.film-panel-left img {
+    width: 80%;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+    border: 5px solid white;
+}
+
+.photo-when {
+    color: #aaa;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    text-align: justify;
+    width: 100%;
+    font-family: 'Special Elite' monospace;
+}
+
+
+/* ZONA 2: FRECCE CENTRALI */
+.frecce_scena {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 8%;
+}
+
+.frecce_scena button {
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    cursor: pointer;
+    color: #ffffff;
+    transition: transform 0.2s;
+}
+
+.frecce_scena button:hover {
+    transform: scale(1.2);
+}
+
+.frecce_scena span {
+    color: #ffffff !important;
+}
+
+/* ZONA 3: BLOCCO A DESTRA */
+.description-container-right {
+    width: 45%;
+    height: 100%;
+    background-color: transparent;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+/*TASTI PER CAMBIARE TRA STORY E METADATA */
+.showview-buttons {
+    margin-bottom: 8px; 
+    display: flex; 
+    gap: 8px; 
+    justify-content: flex-end; 
+    width: 100%;
+}
+
+.showview-buttons button{
+    background: #836363; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-family: 'Special Elite', monospace;
+    font-size: 0.85rem; 
+    font-weight: bold;
+}
+
+.showview-buttons button:hover { /*quando il cursore passa sopra il tasto */
+    background: #50341e;     
+    transform: translateX(5px); 
+}
+
+/* RIQUADRO STORY */
+.story-content {
+    background-color: #f4e8c1; /* Colore pergamena vintage */
+    color: #2b2623;
+    padding: 30px;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    height: 450px; /* h box - px bottoni */
+    border-radius: 8px;
+    border: 2px solid #38312d;
+    overflow-y: auto; /* prob testo troppo lungo cosi scorre*/
+    display: flex; 
+    flex-direction: column;
+}
+
+/* RIQUADRO METADATA */
+.metadata-content {
+    background-color: #f4e8c1; /* Colore pergamena vintage */
+    color: #2b2623;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    border-radius: 8px;
+    border: 2px solid #38312d;
+    font-family: 'Special Elite', monospace;
+    font-size: 1.1rem;
+    overflow: auto;
+    height: 450px;           
+}
+
+.metadata-content h3{
+    font-family: 'Special Elite', monospace;
+    font-size: 1.2rem;
+}
+
+/* METADATA FINESTRE INTERATTIVE */
+
+.introduzione-meta {
+    font-family: 'Special Elite', monospace;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.metadata-tasti {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+.metadata-tasti button{
+    background: #836363; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    font-family: 'Special Elite', monospace;
+    font-size: 1rem; 
+    font-weight: bold;
+    width: 250px;
+    align-self: center;
+}
+
+.metadata-tasti button:hover {
+    background: #50341e;     
+    transform: translateX(5px); 
+}
+.metadata-tasti li{
+    margin-bottom: 12px;
+}
+
+.meta-punti {
+    font-size: 1.2rem;
+    color: rgb(161, 50, 50);
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.meta-punti:hover {
+    color: #d81e1e;
+    border-bottom: 2px solid #d81e1e;
+    text-decoration: underline;
+}
+
+/* --- SFONDO SCURO SEMITRASPARENTE PER LA FINESTRA MODALE --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    cursor: pointer; /* cursore per far capire che cliccando fuori si chiude la finestra */
+}
+
+/* --- STRUTTURA DELLA MINIFINESTRA (MODAL BOX) --- */
+.modal-box {
+    background-color: #f4e8c1; /* Colore pergamena vintage */
+    color: #2b2623;
+    padding: 30px;
+    width: 450px;
+    max-width: 90%;
+    border-radius: 8px;
+    border: 3px solid #000000;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    position: relative;
+    text-align: justify;
+    cursor: default; 
+}
+
+.modal-box h3 {
+    margin-top: 0;
+    color: #8556b1;
+    border-bottom: 1px solid #38312d;
+    padding-bottom: 8px;
+    font-size: 1.2rem;
+
+}
+
+.modal-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+    line-height: 1.8;
+    font-size: 0.9rem;
+}
+
+
+/*BUTTONS PER I TELL ME LESS, MORE ETC */
+.tellme-buttons{
+    margin: 15px 0;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tellme-buttons button {
+    padding: 6px 12px;
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 1rem; 
+    font-weight: bold
+}
+
+.tellme-buttons button:nth-child(1){
+    background-color: #50341e;
+}
+.tellme-buttons button:nth-child(2){
+    background-color: #2b180a;
+}
+.tellme-buttons button:nth-child(3){
+    background-color:#7f5b34;
+}
+
+.tellme-buttons button:hover {
+    background:hwb(0 1% 47%);     
+}
+
+/* TESTI PER PARAGRAFI PER LE VARIE CLASSI*/
+.story-content h3, .story-content p, .story-content strong,
+.metadata-content h3, .metadata-content li, .metadata-content strong, .metadata-content p {
+    color: #2b2623 !important;
+}
+.story-content p,
+.metadata-content p {
+    font-size: 0.9rem !important;
+    line-height: 1.4 !important;
+}
+
+/* buttons difficoltà */
+.difficulty-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    margin-bottom: 8px;
+    width: 100%;
+    flex-shrink: 0;
+} 
+
+/* stile bottoni */
+.difficulty-buttons button {
+    color: white;
+    border: none;
+    padding: 8px 8px;
+    border-radius: 4px;
+    font-family: 'Special Elite', monospace;
+    font-size: 0.85rem;
+    font-weight: bold;
+    flex: 1; /* distribuiti equamente sua riga */
+    text-align: center;
+}
+
+.difficulty-buttons button:hover {
+    background:lab(27.36% 49.47 39.09);     
+}
+
+.poster-container {
+    width: 100%;
+    max-width: 950px; /* come box nero*/
+    margin: 40px auto;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+/* griglia flessibile */
+.poster-grid {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permette di andare a capo su schermi piccoli */
+    justify-content: space-between;
+    gap: 20px;
+    /* Spazio uniforme tra le locandine */
+    width: 100%;
+}
+
+
+.poster {
+    flex: 1 1 calc(33.333% - 30px);
+    min-width: 250px;
+    box-sizing: border-box;
+
+}
+
+
+.poster-flip {
+    position: relative;
+    width: 100%;
+}
+
+.poster-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.6s ease-in-out;
+    backface-visibility: hidden;
+}
+
+/* Retro con il testo */
+.poster-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f4e8c1;
+    color: #2b2623;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    /* Spazio interno di sicurezza (padding) dai bordi */
+    padding: 7%;
+    box-sizing: border-box;
+
+    /* Impostazioni rotazione 3D */
+    transition: transform 0.6s ease-in-out;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.poster-back p {
+    margin: 0;
+    font-size: clamp(0.75rem, 1.1vw, 0.95rem);
+    /* Testo descrittivo fluido */
+    line-height: 1.4;
+    text-align: justify;
+    /* Testo giustificato come richiesto */
+    color: #2b2623 !important;
+    font-family: 'Special Elite', monospace;
+}
+
+
+.poster-flip:hover .poster-img {
+    transform: rotateY(-180deg);
+}
+
+/* Il retro ruota diventando visibile */
+.poster-flip:hover .poster-back {
+    transform: rotateY(0deg);
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.85rem;
+
+}
+
+footer a {
+    color: blue;
+    font-size: 0.85rem;
+}
+
+/*QR CODE */
+.modal-qr {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    text-align: center;
+    gap: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.modal-qr img {
+    width: 60px;
+    height: 65px;
+    background-color: white;
+    padding: 3px;
+}
+
+.qr-text {
+    font-size: 0.65rem;
+    color: #b10000;
+    text-align: right;
+    line-height: 1.1;
+    font-family: 'Special Elite', monospace;
+}

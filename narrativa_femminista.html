@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rome and Female Emancipation Through Cinema</title>
+    <link rel="stylesheet" href="cssprova2xnarrativa.css">
+    <script src="script_narrativa_femminista.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courier+Prime&display=swap" rel="stylesheet">
+</head>
+
+<body> 
+    <header>
+        <div class="link-head" style="text-align:left;">
+            <a href="index.html">HomePage</a>
+            <a href="percorso.html">Percorsi</a>
+            <a href="mappa.html">Mappa</a>
+        </div>
+        <div class="link-head" style="text-align:right;">
+            <a href="pagina1.html">Scelte stile</a>
+            <a href="pagina2.html">Bibliografia</a>
+            <a href="pagina3.html">Team</a>
+        </div>
+    </header>
+
+    <div class="bar-style">
+        <div class="bar-item"><a href="style1.css"><span class="nav-label">1500</span></a></div>
+        <div class="bar-item"><a href="style2.css"><span class="nav-label">1900</span></a></div>
+        <div class="bar-item"><a href="style3.css"><span class="nav-label">1950</span></a></div>
+        <div class="bar-item"><a href="style4.css"><span class="nav-label">2000</span></a></div>
+        <div class="bar-item"><a href="style5.css"><span class="nav-label">2020</span></a></div>
+        <div class="bar-item"><a href="style6.css"><span class="nav-label">2035</span></a></div>
+    </div>
+
+    <main> 
+        <div class="introduction">
+            <h2> Rome and Female Emancipation Through Cinema  </h2>
+            <p>
+                Rome is an open-air museum: however, in this narrative, you can explore the city through the eyes of the women who inhabited, defended, and transformed beyond the official image everybody knows. The itinerary reconstructs the evolution of women's conditions from the Fascist era through the economic boom. The chosen locations are not mere scenic backgrounds, but living spaces of daily resistance, struggles for independence, and social emancipation. 
+            </p>
+        </div>
+
+
+        <!-- SCENA 1 -->
+        <div class="area-immagini">
+
+            <div class="film-panel-left">
+                <div style="width: 100%;"> 
+                    <p class="photo-when">TODAY</p>
+                    <img src="img/palazzo federici_oggi.jpg" alt="The same place today" class="movie-pic">
+                </div>
+                <div style="width: 100%;">
+                    <p class="photo-when">IN THE MOVIE</p>
+                    <img src="img/palazzo federici_cinema.jpg" alt="picture from the movie" class="movie-pic">
+                </div>
+            </div>
+        
+            <div class="frecce_scena">
+                <button onclick="previous_scene()">▲</button>
+                <span style="font-weight:bold; font-size:0.9rem; writing-mode: vertical-lr;">1 / 8</span>
+                <button onclick="next_scene()">▼</button>
+            </div>
+
+            <div class="description-container-right">
+                <div style="width: 100%;">
+
+                    <div class="showview-buttons">
+                        <button type="button" onclick="showStoryView(this)"> STORY </button>
+                        <button type="button" onclick="showMetadataView(this)"> METADATA </button>
+                    </div>
+
+                    <div class="story-content" style="display: flex;">
+                        
+                        <div class="difficulty-buttons">
+                        <button type="button" onclick="showNormal(this)" style="background-color: #50341e;">Normal</button>
+                        <button type="button" onclick="showChild(this)" style="background-color: #2b180a;">Child</button>
+                        <button type="button" onclick="showScholar(this)" style="background-color:#7f5b34;">Scholar</button>
+                        </div>
+
+
+                        <h3> Cinecittà - <i> Una giornata particolare (1977) </i> </h3>
+                        <p class="movie-description"> <strong> Environment: THE HOME </strong></p>
+
+                    <!-- livello normal -->
+                        <div class="level-normal" style="display:block">
+                            <p class="movie-description text-less" style="display: none;">
+                                An enormous 1930s residential complex designed as a city within a city. Here, the domestic space becomes the boundary within which Antonietta is forced to live.
+                            </p>
+                            <p class="movie-description text-more" style="display:block;">
+                                Palazzo Federici occupies an entire block in the Nomentano district and consists of courtyards, stairs, passageways, and hundreds of apartments. In <i>A Special Day</i>, Antonietta remains inside the building while Rome celebrates Hitler's visit.
+                            </p>
+                            <p class="movie-description text-didyouknow" style="display:none;">
+                                Almost the entire film is set inside Palazzo Federici, which becomes a sort of microcosm of Fascist society.
+                            </p>
+                        </div>
+            
+                        <!-- livello child -->
+                        <div class="level-child" style="display: none;">
+                            <p class="movie-description text-less" style="display: none;">testo breve child</p>
+                            <p class="movie-description text-more" style="display: block;">testo normale child</p>
+                            <p class="movie-description text-didyouknow" style="display: none;">did u know child</p>
+                        </div>
+            
+                        <!-- livello scholar -->
+                        <div class="level-scholar" style="display: none;">
+                            <p class="movie-description text-less" style="display: none;">testo breve scholar</p>
+                            <p class="movie-description text-more" style="display: block;">testo normale scholar</p>
+                            <p class="movie-description text-didyouknow" style="display: none;">did u know scholar</p>
+                        </div>
+
+                        <div class="tellme-buttons">
+                            <button type="button" onclick="showLess(this)"> Tell me less </button>
+                            <button type="button" onclick="showMore(this)"> Tell me more </button>
+                            <button type="button" onclick="showDidYouKnow(this)"> Did you know that? </button>
+                        </div> 
+                    </div>
+
+                    <div class="metadata-content" style="display: none;">
+                        <h3 style="margin-bottom: 10px;"> Technical Details & Metadata </h3>
+                        <p class= "introduzione-meta"> For each scene, structured metadata has been integrated to detail the <strong> cinematic context of the film</strong>, the <strong> location where it was shot</strong>, and the <strong> academic framework of the project </strong>. To enable semantic web interoperability and digital cataloging, this data is modeled using established formal ontologies: <strong>Schema.org </strong> for entities and web structures, <strong> Dublin Core (dcterms) </strong> for bibliographic and project metadata, and <strong> CIDOC CRM </strong>for cultural heritage and architectural classifications.
+                        </p>
+                        
+                        <div class="metadata-tasti">
+                            <button type="button" onclick="toggleModal('film-finestra')"> CINEMATIC CONTEXT </button> 
+                            <button type="button" onclick="toggleModal('location-finestra')"> LOCATION </button> 
+                            <button type="button" onclick="toggleModal('project-finestra')"> PROJECT </span> 
+                        </div>
+                        
+                        <div id="film-finestra" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'film-finestra')">
+                            <div class="modal-box">
+                                <h3> Cinematic Context </h3>
+                                <ul> 
+                                    <li><strong> schema: name: </strong> Una giornata particolare (1977) </li>
+                                    <li><strong> schema: director: </strong> Ettore Scola </li>
+                                    <li><strong> schema: episode: </strong> DESCRIZIONE CHIEDI </li>
+                                    <li> <strong> schema: direction: </strong> South-East (135°) </li>
+                                    <li> <strong> dcterms: type: </strong>strong> residential complex </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div id="location-finestra" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'location-finestra')">
+                            <div class="modal-box">
+
+                                <div class="modal-qr">
+                                    <span class="qr-text">Scan for more info</span>
+                                    <a href="https://it.wikipedia.org/wiki/Palazzi_Federici" target="_blank">
+                                        <img src="img/palazzo federici_qrcordewiki.png" alt="QR Wikipedia">
+                                    </a>
+                                </div>
+                                </h3> Location </h3>
+                                <ul> 
+                                    <li><strong> schema: name: </strong> Palazzo Federici </li>
+                                    <li><strong> schema: address : </strong> Viale XXI Aprile, 21-29 Roma </li>
+                                    <li><strong> schema: GeoCoordinates: </strong> 41°55′09.4″N 12°31′13.7″E  </li>
+                                    <li> <strong> crm: P2_has_type</strong> Italian Rationalist Architecture </li>
+                                    <li> <strong> crm:P4_has_time_span: </strong> 1930s </li>
+                                    <li> <strong> schema: OpeningDate: </strong> 1937 </li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                        
+                        <div id="project-finestra" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'project-finestra')">
+                            <div class="modal-box">
+                                <h3> Project </h3>
+                                <ul> 
+                                    <li><strong> dcterms: subject </strong> Female Encipation Trough Cinema </li>
+                                    <li><strong> dcterms: language: </strong> en </li>
+                                    <li><strong> dcterms:rights </strong> Academic use - Alma Mater Studiorum, University of Bologna </li> 
+                                </ul>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- SCENA 2 -->
+        <div class="area-immagini" style="display: none;">
+            <div class="film-panel-left">
+                <div style="width: 100%;"> 
+                    <p class="photo-when">TODAY</p>
+                    <img src="img/cinecittà_oggi.jpg" alt="The same place today" class="movie-pic">
+                </div>
+                <div style="width: 100%;">
+                    <p class="photo-when">IN THE MOVIE</p>
+                    <img src="img/cinecittà_cinema.jpg" alt="picture from the movie" class="movie-pic">
+                </div>
+            </div>
+        
+            <div class="frecce_scena">
+                <button onclick="previous_scene()">▲</button>
+                <span style="font-weight:bold; font-size:0.9rem; writing-mode: vertical-lr;">2 / 8</span>
+                <button onclick="next_scene()">▼</button>
+            </div>
+
+            <div class="description-container-right">
+                <div style="width: 100%;">
+                    
+                    <div class="showview-buttons">
+                        <button type="button" onclick="showStoryView(this)"> STORY </button>
+                        <button type="button" onclick="showMetadataView(this)"> METADATA </button>
+                    </div>
+
+                    <div class="story-content" style="display: flex;">
+                        
+                        <div class="difficulty-buttons">
+                        <button type="button" onclick="showNormal(this)" style="background-color: #50341e;">Normal</button>
+                        <button type="button" onclick="showChild(this)" style="background-color: #2b180a;">Child</button>
+                        <button type="button" onclick="showScholar(this)" style="background-color:#7f5b34;">Scholar</button>
+                        </div>
+
+
+                        <h3> Cinecittà - <i> Bellissima (1951) </i> </h3>
+                        <p class="movie-description"> <strong> Environment: THE CITY OF THE IMAGE </strong></p>
+
+                    <!-- livello normal -->
+                        <div class="level-normal" style="display:block">
+                            <p class="movie-description text-less" style="display: none;">
+                                Behind the gates of Cinecittà, Rome ceases to be just a city and becomes an image, a spectacle, and a promise of success.
+                        </p>
+                            <p class="movie-description text-more" style="display:block;">
+                                In Bellissima, Maddalena takes her daughter Maria to an audition, convinced that cinema can offer her a better future.
+                            </p>
+                            <p class="movie-description text-didyouknow" style="display:none;">
+                                Bellissima also depicts film studios in their less glamorous aspects, revealing hard work and illusions.
+                            </p>
+                        </div>
+            
+                        <!-- livello child -->
+                        <div class="level-child" style="display: none;">
+                            <p class="movie-description text-less" style="display: none;">testo breve child</p>
+                            <p class="movie-description text-more" style="display: block;">testo normale child</p>
+                            <p class="movie-description text-didyouknow" style="display: none;">did u know child</p>
+                        </div>
+            
+                        <!-- livello scholar -->
+                        <div class="level-scholar" style="display: none;">
+                            <p class="movie-description text-less" style="display: none;">testo breve scholar</p>
+                            <p class="movie-description text-more" style="display: block;">testo normale scholar</p>
+                            <p class="movie-description text-didyouknow" style="display: none;">did u know scholar</p>
+                        </div>
+                        
+                        <div class="tellme-buttons">
+                            <button type="button" onclick="showLess(this)"> Tell me less </button>
+                            <button type="button" onclick="showMore(this)"> Tell me more </button>
+                            <button type="button" onclick="showDidYouKnow(this)"> Did you know that? </button>
+                        </div> 
+                    </div>
+
+                    <div class="metadata-content" style="display: none;">
+                        <h3 style="margin-bottom: 10px;"> Technical Details & Metadata </h3>
+                        <p class= "introduzione-meta"> For each scene, structured metadata has been integrated to detail the <strong> cinematic context of the film</strong>, the <strong> location where it was shot</strong>, and the <strong> academic framework of the project </strong>. To enable semantic web interoperability and digital cataloging, this data is modeled using established formal ontologies: <strong>Schema.org </strong> for entities and web structures, <strong> Dublin Core (dcterms) </strong> for bibliographic and project metadata, and <strong> CIDOC CRM </strong>for cultural heritage and architectural classifications.
+                        </p>
+                        
+                        <div class="metadata-tasti">
+                            <button type="button" onclick="toggleModal('film-finestra-2')"> CINEMATIC CONTEXT </button> 
+                            <button type="button" onclick="toggleModal('location-finestra-2')"> LOCATION </button> 
+                            <button type="button" onclick="toggleModal('project-finestra-2')"> PROJECT </span> 
+                        </div>
+                    
+                        
+                        <div id="film-finestra-2" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'film-finestra-2')">
+                            <div class="modal-box">
+                                <h3> Cinematic Context </h3>
+                                <ul> 
+                                    <li><strong> schema: name: </strong> Bellissima(1951) </li>
+                                    <li><strong> schema: director: </strong> Luchino Visconti </li>
+                                    <li><strong> schema: episode: </strong> DESCRIZIONE CHIEDI </li>
+                                    <li> <strong> schema: direction: </strong> North-west (Azimuth 315°) </li>
+                                    <li> <strong> dcterms: type: </strong> Film Studio/Cinematic Set </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div id="location-finestra-2" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'location-finestra-2')">
+                            <div class="modal-box">
+                                <h3> Location </h3>
+                                <ul> 
+                                    <li><strong> schema: name: </strong> Cinecittà Studios </li>
+                                    <li><strong> schema: address : </strong> Via Tuscolana 1055, Roma </li>
+                                    <li><strong> schema: GeoCoordinates: </strong> 41°51′N 12°34′E  </li>
+                                    <li> <strong> crm: P2_has_type</strong> Industrial Architecture </li>
+                                    <li> <strong> crm:P4_has_time_span: </strong> 1930s </li>
+                                    <li> <strong> schema: OpeningDate: </strong> 1937 </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div id="project-finestra-2" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'project-finestra-2')">
+                            <div class="modal-box">
+                                <h3> Project </h3>
+                                <ul> 
+                                    <li><strong> dcterms: subject </strong> Female Encipation Trough Cinema </li>
+                                    <li><strong> dcterms: language: </strong> en </li>
+                                    <li><strong> dcterms:rights </strong> Academic use - Alma Mater Studiorum, University of Bologna </li> 
+                                </ul>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- SCENA 3 -->
+        <div class="area-immagini" style="display: none;">
+            <div class="film-panel-left">
+                <div style="width: 100%;"> 
+                    <p class="photo-when">TODAY</p>
+                    <img src="img/via bodoni_oggi.jpg" alt="The same place today" class="movie-pic">
+                </div>
+                <div style="width: 100%;">
+                    <p class="photo-when">IN THE MOVIE</p>
+                    <img src="img/via bodoni_cinema.jpg" alt="picture from the movie" class="movie-pic">
+                </div>
+            </div>
+        
+            <div class="frecce_scena">
+                <button onclick="previous_scene()">▲</button>
+                <span style="font-weight:bold; font-size:0.9rem; writing-mode: vertical-lr;">3 / 8</span>
+                <button onclick="next_scene()">▼</button>
+            </div>
+
+            <div class="description-container-right">
+                <div style="width: 100%;">
+
+                    <div class="showview-buttons">
+                        <button type="button" onclick="showStoryView(this)"> STORY </button>
+                        <button type="button" onclick="showMetadataView(this)"> METADATA </button>
+                    </div>
+
+                    
+                    <div class="story-content" style="display: flex;">
+                        
+                        <div class="difficulty-buttons">
+                        <button type="button" onclick="showNormal(this)" style="background-color: #50341e;">Normal</button>
+                        <button type="button" onclick="showChild(this)" style="background-color: #2b180a;">Child</button>
+                        <button type="button" onclick="showScholar(this)" style="background-color:#7f5b34;">Scholar</button>
+                        </div>
+
+
+                        <h3> Via Bodoni - <i> C'è ancora domani (2023) </i> </h3>
+                        <p class="movie-description"> <strong> Environment: The neighborhood </strong></p>
+
+                    <!-- livello normal -->
+                        <div class="level-normal" style="display:block">
+                            <p class="movie-description text-less" style="display: none;">
+                                In Testaccio, the front door opens onto a neighborhood made of courtyards, small shops, relationships, and social control.
+                        </p>
+                            <p class="movie-description text-more" style="display:block;">
+                                The exteriors of Delia's house are located on Via Bodoni. Here, the domestic space extends into the courtyard.
+                            </p>
+                            <p class="movie-description text-didyouknow" style="display:none;">
+                                The exterior shots of the house were actually filmed in Testaccio, while the interiors were reconstructed at the Cinecittà studios
+                            </p>
+                        </div>
+            
+                        <!-- livello child -->
+                        <div class="level-child" style="display: none;">
+                            <p class="movie-description text-less" style="display: none;">testo breve child</p>
+                            <p class="movie-description text-more" style="display: block;">testo normale child</p>
+                            <p class="movie-description text-didyouknow" style="display: none;">did u know child</p>
+                        </div>
+            
+                        <!-- livello scholar -->
+                        <div class="level-scholar" style="display: none;">
+                            <p class="movie-description text-less" style="display: none;">testo breve scholar</p>
+                            <p class="movie-description text-more" style="display: block;">testo normale scholar</p>
+                            <p class="movie-description text-didyouknow" style="display: none;">did u know scholar</p>
+                        </div>
+                        
+                        <div class="tellme-buttons">
+                            <button type="button" onclick="showLess(this)"> Tell me less </button>
+                            <button type="button" onclick="showMore(this)"> Tell me more </button>
+                            <button type="button" onclick="showDidYouKnow(this)"> Did you know that? </button>
+                        </div> 
+                    </div>
+        
+                    <div class="metadata-content" style="display: none;">
+                        <h3 style="margin-bottom: 10px;"> Technical Details & Metadata </h3>
+                        <p class= "introduzione-meta"> For each scene, structured metadata has been integrated to detail the <strong> cinematic context of the film</strong>, the <strong> location where it was shot</strong>, and the <strong> academic framework of the project </strong>. To enable semantic web interoperability and digital cataloging, this data is modeled using established formal ontologies: <strong>Schema.org </strong> for entities and web structures, <strong> Dublin Core (dcterms) </strong> for bibliographic and project metadata, and <strong> CIDOC CRM </strong>for cultural heritage and architectural classifications.
+                        </p>
+                        
+                        <div class="metadata-tasti">
+                            <button type="button" onclick="toggleModal('film-finestra-3')"> CINEMATIC CONTEXT </button> 
+                            <button type="button" onclick="toggleModal('location-finestra-3')"> LOCATION </button> 
+                            <button type="button" onclick="toggleModal('project-finestra-3')"> PROJECT </span> 
+                        </div>
+                        
+                        <div id="film-finestra-3" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'film-finestra-3')">
+                            <div class="modal-box">
+                                <h3> Cinematic Context </h3>
+                                <ul> 
+                                    <li><strong> schema: name: </strong> C'è acnora domani (2023) </li>
+                                    <li><strong> schema: director: </strong> Paola Cortellesi </li>
+                                    <li><strong> schema: episode: </strong> Delia's house exteriors and neighborhood life in Testaccio </li>
+                                    <li> <strong> schema: direction: </strong> North-West (135°) </li>
+                                    <li> <strong> dcterms: type: </strong>strong> urban neighborhood </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div id="location-finestra-3" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'location-finestra-3')">
+                            <div class="modal-box">
+                                <h3> Location </h3>
+                                <ul> 
+                                    <li><strong> schema: name: </strong> Via Bodoni (Testaccio district) </li>
+                                    <li><strong> schema: address : </strong> Via Bodoni 98, Roma </li>
+                                    <li><strong> schema: GeoCoordinates: </strong> 41.8780° N, 12.4750° E </li>
+                                    <li> <strong> crm: P2_has_type</strong> Popular Historic Quarter </li>
+                                    <li> <strong> crm:P4_has_time_span: </strong> Early 20th Century (Testaccio expansion period) </li>
+                                    <li> <strong> schema: OpeningDate: </strong> 1903 </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div id="project-finestra-3" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'project-finestra-3')">
+                            <div class="modal-box">
+                                <h3> Project </h3>
+                                <ul> 
+                                    <li><strong> dcterms: subject </strong> Female Encipation Trough Cinema </li>
+                                    <li><strong> dcterms: language: </strong> en </li>
+                                    <li><strong> dcterms:rights </strong> Academic use - Alma Mater Studiorum, University of Bologna </li> 
+                                </ul>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- SCENA 4 -->
+        <div class="area-immagini" style="display: none;">
+            <div class="film-panel-left">
+                <div style="width: 100%;"> 
+                    <p class="photo-when">TODAY</p>
+                    <img src="img/piazza testaccio_oggi.jpg" alt="The same place today" class="movie-pic">
+                </div>
+                <div style="width: 100%;">
+                    <p class="photo-when">IN THE MOVIE</p>
+                    <img src="img/.jpg" alt="picture from the movie" class="movie-pic">
+                </div>
+            </div>
+        
+            <div class="frecce_scena">
+                <button onclick="previous_scene()">▲</button>
+                <span style="font-weight:bold; font-size:0.9rem; writing-mode: vertical-lr;">4 / 8</span>
+                <button onclick="next_scene()">▼</button>
+            </div>
+
+            <div class="description-container-right">
+                <div style="width: 100%;">
+
+                    <div class="showview-buttons">
+                        <button type="button" onclick="showStoryView(this)"> STORY </button>
+                        <button type="button" onclick="showMetadataView(this)"> METADATA </button>
+                    </div> 
+
+                    <div class="story-content" style="display: flex;">
+                        
+                        <div class="difficulty-buttons">
+                        <button type="button" onclick="showNormal(this)" style="background-color: #50341e;">Normal</button>
+                        <button type="button" onclick="showChild(this)" style="background-color: #2b180a;">Child</button>
+                        <button type="button" onclick="showScholar(this)" style="background-color:#7f5b34;">Scholar</button>
+                        </div>
+
+
+                        <h3> Piazza and Market of Testaccio - <i> C'è ancora domani </i> </h3>
+                        <p class="movie-description"> <strong> Environment: The neighborhood </strong></p>
+
+                    <!-- livello normal -->
+                        <div class="level-normal" style="display:block">
+                            <p class="movie-description text-less" style="display: none;">
+                                The square and the market transform the neighborhood into a shared space where women work, talk, and build bonds.
+                        </p>
+                            <p class="movie-description text-more" style="display:block;">
+                                Piazza Testaccio represents the neighborhood's civic space, while the market is a hub of exchange and daily work. Here, women’s presence is no longer confined to the home; they participate in the neighborhood's economic and social life. For Delia, her relationship with Marisa demonstrates that public space can foster solidarity and offer the chance to envision a different path
+                            </p>
+                            <p class="movie-description text-didyouknow" style="display:none;">
+                                Part of the actual Testaccio Market was used to recreate Marisa’s workplace.
+                            </p>
+                        </div>
+            
+                        <!-- livello child -->
+                        <div class="level-child" style="display: none;">
+                            <p class="movie-description text-less" style="display: none;">testo breve child</p>
+                            <p class="movie-description text-more" style="display: block;">testo normale child</p>
+                            <p class="movie-description text-didyouknow" style="display: none;">did u know child</p>
+                        </div>
+            
+                        <!-- livello scholar -->
+                        <div class="level-scholar" style="display: none;">
+                            <p class="movie-description text-less" style="display: none;">testo breve scholar</p>
+                            <p class="movie-description text-more" style="display: block;">testo normale scholar</p>
+                            <p class="movie-description text-didyouknow" style="display: none;">did u know scholar</p>
+                        </div>
+                        
+                        <div class="tellme-buttons">
+                            <button type="button" onclick="showLess(this)"> Tell me less </button>
+                            <button type="button" onclick="showMore(this)"> Tell me more </button>
+                            <button type="button" onclick="showDidYouKnow(this)"> Did you know that? </button>
+                        </div> 
+                    </div>
+
+                    <div class="metadata-content" style="display: none;">
+                        <h3 style="margin-bottom: 10px;"> Technical Details & Metadata </h3>
+                        <p class= "introduzione-meta"> For each scene, structured metadata has been integrated to detail the <strong> cinematic context of the film</strong>, the <strong> location where it was shot</strong>, and the <strong> academic framework of the project </strong>. To enable semantic web interoperability and digital cataloging, this data is modeled using established formal ontologies: <strong>Schema.org </strong> for entities and web structures, <strong> Dublin Core (dcterms) </strong> for bibliographic and project metadata, and <strong> CIDOC CRM </strong>for cultural heritage and architectural classifications.
+                        </p>
+                        
+                        <div class="metadata-tasti">
+                            <button type="button" onclick="toggleModal('film-finestra-4')"> CINEMATIC CONTEXT </button> 
+                            <button type="button" onclick="toggleModal('location-finestra-4')"> LOCATION </button> 
+                            <button type="button" onclick="toggleModal('project-finestra-4')"> PROJECT </span> 
+                        </div>
+                        
+                        <div id="film-finestra-4" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'film-finestra-4')">
+                            <div class="modal-box">
+                                <h3> Cinematic Context </h3>
+                                <ul> 
+                                    <li><strong> schema: name: </strong> C'è ancora domani (2023) </li>
+                                    <li><strong> schema: director: </strong> Paola Cortellesi  </li>
+                                    <li><strong> schema: episode: </strong> DESCRIZIONE CHIEDI </li>
+                                    <li> <strong> schema: direction: </strong> South-West (225°) </li>
+                                    <li> <strong> dcterms: type: </strong>strong> Public square </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div id="location-finestra-4" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'location-finestra-4')">
+                            <div class="modal-box">
+                                <h3> Location </h3>
+                                <ul> 
+                                    <li><strong> schema: name: </strong> Piazza Testaccio & Mercato di Testaccio </li>
+                                    <li><strong> schema: address : </strong> Piazza Testaccio, Roma </li>
+                                    <li><strong> schema: GeoCoordinates: </strong> 41.8750° N, 12.4720° E  </li>
+                                    <li> <strong> crm: P2_has_type</strong> Public Market & Community Hub Architecture </li>
+                                    <li> <strong> crm:P4_has_time_span: </strong> 20th/21st Century (Historic market relocated/revitalized) </li>
+                                    <li> <strong> schema: OpeningDate: </strong> 2012 (inauguration date of the new modern structure of the area) </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div id="project-finestra-4" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'project-finestra-4')">
+                            <div class="modal-box">
+                                <h3> Project </h3>
+                                <ul> 
+                                    <li><strong> dcterms: subject </strong> Female Encipation Trough Cinema </li>
+                                    <li><strong> dcterms: language: </strong> en </li>
+                                    <li><strong> dcterms:rights </strong> Academic use - Alma Mater Studiorum, University of Bologna </li> 
+                                </ul>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+                    
+         
+        <!-- SCENA 5 -->
+        <div class="area-immagini" style="display: none;">
+            <div class="film-panel-left">
+                <div style="width: 100%;"> 
+                    <p class="photo-when">TODAY</p>
+                    <img src="img/lungotevere_oggi.jpg" alt="The same place today" class="movie-pic">
+                </div>
+                <div style="width: 100%;">
+                    <p class="photo-when">IN THE MOVIE</p>
+                    <img src="img/lungotevere_cinema.jpg" alt="picture from the movie" class="movie-pic">
+                </div>
+            </div>
+        
+            <div class="frecce_scena">
+                <button onclick="previous_scene()">▲</button>
+                <span style="font-weight:bold; font-size:0.9rem; writing-mode: vertical-lr;">5 / 8</span>
+                <button onclick="next_scene()">▼</button>
+            </div>
+
+            <div class="description-container-right">
+                <div style="width: 100%;">
+
+                    <div class="showview-buttons">
+                        <button type="button" onclick="showStoryView(this)"> STORY </button>
+                        <button type="button" onclick="showMetadataView(this)"> METADATA </button>
+                    </div>
+
+                    <div class="story-content" style="display: flex;">
+                        
+                        <div class="difficulty-buttons">
+                        <button type="button" onclick="showNormal(this)" style="background-color: #50341e;">Normal</button>
+                        <button type="button" onclick="showChild(this)" style="background-color: #2b180a;">Child</button>
+                        <button type="button" onclick="showScholar(this)" style="background-color:#7f5b34;">Scholar</button>
+                        </div>
+
+
+                        <h3> Lungotevere Testaccio - <i> C'è ancora domani </i> </h3>
+                        <p class="movie-description"> <strong> Environment: The transition </strong></p>
+
+                    <!-- livello normal -->
+                        <div class="level-normal" style="display:block">
+                            <p class="movie-description text-less" style="display: none;">
+                                The Tiber marks a physical and symbolic border: crossing it means leaving one's neighborhood and opening up to new possibilities.
+                        </p>
+                            <p class="movie-description text-more" style="display:block;">
+                                The Lungotevere connects Testaccio to Porta Portese and Trastevere. In Delia’s journey, walking through Rome is not yet an act of absolute freedom; her movements are dictated by work and family. Yet, it is precisely by traversing the city that she encounters people, information, and opportunities for change that could not reach her at home.
+                            </p>
+                            <p class="movie-description text-didyouknow" style="display:none;">
+                               The area near the Lungotevere is the setting for the meeting between Delia and the American soldier William—a pivotal figure in the story's development.
+                            </p>
+                        </div>
+            
+                        <!-- livello child -->
+                        <div class="level-child" style="display: none;">
+                            <p class="movie-description text-less" style="display: none;">testo breve child</p>
+                            <p class="movie-description text-more" style="display: block;">testo normale child</p>
+                            <p class="movie-description text-didyouknow" style="display: none;">did u know child</p>
+                        </div>
+            
+                        <!-- livello scholar -->
+                        <div class="level-scholar" style="display: none;">
+                            <p class="movie-description text-less" style="display: none;">testo breve scholar</p>
+                            <p class="movie-description text-more" style="display: block;">testo normale scholar</p>
+                            <p class="movie-description text-didyouknow" style="display: none;">did u know scholar</p>
+                        </div>
+                        
+                        <div class="tellme-buttons">
+                            <button type="button" onclick="showLess(this)"> Tell me less </button>
+                            <button type="button" onclick="showMore(this)"> Tell me more </button>
+                            <button type="button" onclick="showDidYouKnow(this)"> Did you know that? </button>
+                        </div> 
+                    </div>
+                    
+                    <div class="metadata-content" style="display: none;">
+                        <h3 style="margin-bottom: 10px;"> Technical Details & Metadata </h3>
+                        <p class= "introduzione-meta"> For each scene, structured metadata has been integrated to detail the <strong> cinematic context of the film</strong>, the <strong> location where it was shot</strong>, and the <strong> academic framework of the project </strong>. To enable semantic web interoperability and digital cataloging, this data is modeled using established formal ontologies: <strong>Schema.org </strong> for entities and web structures, <strong> Dublin Core (dcterms) </strong> for bibliographic and project metadata, and <strong> CIDOC CRM </strong>for cultural heritage and architectural classifications.
+                        </p>
+                        
+                        <div class="metadata-tasti">
+                            <button type="button" onclick="toggleModal('film-finestra-5')"> CINEMATIC CONTEXT </button> 
+                            <button type="button" onclick="toggleModal('location-finestra-5')"> LOCATION </button> 
+                            <button type="button" onclick="toggleModal('project-finestra-5')"> PROJECT </span> 
+                        </div>
+                        
+                        <div id="film-finestra-5" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'film-finestra-5')">
+                            <div class="modal-box">
+                                <h3> Cinematic Context </h3>
+                                <ul> 
+                                    <li><strong> schema: name: </strong> C'è ancora domani (2023) </li>
+                                    <li><strong> schema: director: </strong> Paola Cortellesi </li>
+                                    <li><strong> schema: episode: </strong> Delia's walk along the river and meeting with the American soldier William </li>
+                                    <li> <strong> schema: direction: </strong> North-West (Azimuth 315°) </li>
+                                    <li> <strong> dcterms: type: </strong>strong> Urban Riverfront </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div id="location-finestra-5" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'location-finestra-5')">
+                            <div class="modal-box">
+                                <h3> Location </h3>
+                                <ul> 
+                                    <li><strong> schema: name: </strong> Lungotevere Testaccio </li>
+                                    <li><strong> schema: address : </strong> Lungotevere Testaccio, Roma </li>
+                                    <li><strong> schema: GeoCoordinates: </strong> 41.8790° N, 12.4680° E  </li>
+                                    <li> <strong> crm: P2_has_type</strong> 19th-Century Embankment Architecture </li>
+                                    <li> <strong> crm:P4_has_time_span: </strong> Late 19th Century </li>
+                                    <li> <strong> schema: OpeningDate: </strong> 1888 (start of construction on the historic Tiber embankments) </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div id="project-finestra-5" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'project-finestra-5')">
+                            <div class="modal-box">
+                                <h3> Project </h3>
+                                <ul> 
+                                    <li><strong> dcterms: subject </strong> Female Encipation Trough Cinema </li>
+                                    <li><strong> dcterms: language: </strong> en </li>
+                                    <li><strong> dcterms:rights </strong> Academic use - Alma Mater Studiorum, University of Bologna </li> 
+                                </ul>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+                    
+
+        <!-- SCENA 6 -->
+        <div class="area-immagini" style="display: none;">
+            <div class="film-panel-left">
+                <div style="width: 100%;"> 
+                    <p class="photo-when">TODAY</p>
+                    <img src="img/porta portese_oggi.jpg" alt="The same place today" class="movie-pic">
+                </div>
+                <div style="width: 100%;">
+                    <p class="photo-when">IN THE MOVIE</p>
+                    <img src="img/porta portese_cinema.jpg" alt="picture from the movie" class="movie-pic">
+                </div>
+            </div>
+        
+            <div class="frecce_scena">
+                <button onclick="previous_scene()">▲</button>
+                <span style="font-weight:bold; font-size:0.9rem; writing-mode: vertical-lr;">6 / 8</span>
+                <button onclick="next_scene()">▼</button>
+            </div>
+
+            <div class="description-container-right">
+                <div style="width: 100%;">
+                    <div class="showview-buttons">
+                        <button type="button" onclick="showStoryView(this)"> STORY </button>
+                        <button type="button" onclick="showMetadataView(this)"> METADATA </button>
+                    </div>
+                    
+
+                    <div class="story-content" style="display: flex;">
+                        
+                        <div class="difficulty-buttons">
+                        <button type="button" onclick="showNormal(this)" style="background-color: #50341e;">Normal</button>
+                        <button type="button" onclick="showChild(this)" style="background-color: #2b180a;">Child</button>
+                        <button type="button" onclick="showScholar(this)" style="background-color:#7f5b34;">Scholar</button>
+                        </div>
+
+
+                        <h3> Porta Portese and Piazza dei Mercanti - <i> Mamma Roma </i> </h3>
+                        <p class="movie-description"> <strong> Environment: The public city </strong></p>
+
+                    <!-- livello normal -->
+                        <div class="level-normal" style="display:block">
+                            <p class="movie-description text-less" style="display: none;">
+                               Between markets, commerce, and relationships, Rome becomes a space in which Mamma Roma tries to rebuild her life.
+                        </p>
+                            <p class="movie-description text-more" style="display:block;">
+                                Porta Portese represents the city’s noisy, working-class side, whereas Piazza dei Mercanti introduces a more intimate space centered on social connections and job opportunities. Mamma Roma attempts to leave prostitution behind, sell goods at the market, and find employment for her son. The city seems to offer her a chance at redemption, yet it remains rife with social inequalities that hinder her emancipation. 
+                            </p>
+                            <p class="movie-description text-didyouknow" style="display:none;">
+                               The Meo Patacca restaurant in Piazza dei Mercanti appears in the film during Mamma Roma’s attempt to secure a job for Ettore.
+                            </p>
+                        </div>
+            
+                        <!-- livello child -->
+                        <div class="level-child" style="display: none;">
+                            <p class="movie-description text-less" style="display: none;">testo breve child</p>
+                            <p class="movie-description text-more" style="display: block;">testo normale child</p>
+                            <p class="movie-description text-didyouknow" style="display: none;">did u know child</p>
+                        </div>
+            
+                        <!-- livello scholar -->
+                        <div class="level-scholar" style="display: none;">
+                            <p class="movie-description text-less" style="display: none;">testo breve scholar</p>
+                            <p class="movie-description text-more" style="display: block;">testo normale scholar</p>
+                            <p class="movie-description text-didyouknow" style="display: none;">did u know scholar</p>
+                        </div>
+                        
+                        <div class="tellme-buttons">
+                            <button type="button" onclick="showLess(this)"> Tell me less </button>
+                            <button type="button" onclick="showMore(this)"> Tell me more </button>
+                            <button type="button" onclick="showDidYouKnow(this)"> Did you know that? </button>
+                        </div> 
+                    </div>
+                
+
+                    <div class="metadata-content" style="display: none;">
+                        <h3 style="margin-bottom: 10px;"> Technical Details & Metadata </h3>
+                        <p class= "introduzione-meta"> For each scene, structured metadata has been integrated to detail the <strong> cinematic context of the film</strong>, the <strong> location where it was shot</strong>, and the <strong> academic framework of the project </strong>. To enable semantic web interoperability and digital cataloging, this data is modeled using established formal ontologies: <strong>Schema.org </strong> for entities and web structures, <strong> Dublin Core (dcterms) </strong> for bibliographic and project metadata, and <strong> CIDOC CRM </strong>for cultural heritage and architectural classifications.
+                        </p>
+                        
+                        <div class="metadata-tasti">
+                            <button type="button" onclick="toggleModal('film-finestra-6')"> CINEMATIC CONTEXT </button> 
+                            <button type="button" onclick="toggleModal('location-finestra-6')"> LOCATION </button> 
+                            <button type="button" onclick="toggleModal('project-finestra-6')"> PROJECT </span> 
+                        </div>
+                
+                        <div id="film-finestra-6" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'film-finestra-6')">
+                            <div class="modal-box">
+                                <h3> Cinematic Context </h3>
+                                <ul> 
+                                    <li><strong> schema: name: </strong> Mamma Roma (1962()) </li>
+                                    <li><strong> schema: director: </strong> Pier Paolo Pasolini </li>
+                                    <li><strong> schema: episode: </strong> Market and public square sequences with Ettore and Mamma Roma </li>
+                                    <li> <strong> schema: direction: </strong> South-East (135°) </li>
+                                    <li> <strong> dcterms: type: </strong>strong> Historic Market </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div id="location-finestra-6" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'location-finestra-6')">
+                            <div class="modal-box">
+                                <h3> Location </h3>
+                                <ul> 
+                                    <li><strong> schema: name: </strong> Porta Portese & Piazza dei Mercanti </li>
+                                    <li><strong> schema: address : </strong> Viale XXI Aprile, 21-29 Roma </li>
+                                    <li><strong> schema: GeoCoordinates: </strong> 	41°53′02.03″N 12°28′26.48″E  </li>
+                                    <li> <strong> crm: P2_has_type</strong> Medieval Architecture </li>
+                                    <li> <strong> crm:P4_has_time_span: </strong> Medieval and Modern Era </li>
+                                    <li> <strong> schema: OpeningDate: </strong> 1644 (Year the Porta Portese market was historically established under Pope Innocent X) </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div id="project-finestra-6" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'project-finestra-6')">
+                            <div class="modal-box">
+                                <h3> Project </h3>
+                                <ul> 
+                                    <li><strong> dcterms: subject </strong> Female Encipation Trough Cinema </li>
+                                    <li><strong> dcterms: language: </strong> en </li>
+                                    <li><strong> dcterms:rights </strong> Academic use - Alma Mater Studiorum, University of Bologna </li> 
+                                </ul>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- SCENA 7 -->
+        <div class="area-immagini" style="display: none;">
+            <div class="film-panel-left">
+                <div style="width: 100%;"> 
+                    <p class="photo-when">TODAY</p>
+                    <img src="img/tempietto_oggi.png" alt="The same place today" class="movie-pic">
+                </div>
+                <div style="width: 100%;">
+                    <p class="photo-when">IN THE MOVIE</p>
+                    <img src="img/tempietto_cinema.png" alt="picture from the movie" class="movie-pic">
+                </div>
+            </div>
+        
+            <div class="frecce_scena">
+                <button onclick="previous_scene()">▲</button>
+                <span style="font-weight:bold; font-size:0.9rem; writing-mode: vertical-lr;">7 / 8</span>
+                <button onclick="next_scene()">▼</button>
+            </div>
+
+            <div class="description-container-right">
+                <div style="width: 100%;">
+                    
+                    <div class="showview-buttons">
+                        <button type="button" onclick="showStoryView(this)"> STORY </button>
+                        <button type="button" onclick="showMetadataView(this)"> METADATA </button>
+                    </div>
+
+                    <div class="story-content" style="display: flex;">
+                        
+                        <div class="difficulty-buttons">
+                        <button type="button" onclick="showNormal(this)" style="background-color: #50341e;">Normal</button>
+                        <button type="button" onclick="showChild(this)" style="background-color: #2b180a;">Child</button>
+                        <button type="button" onclick="showScholar(this)" style="background-color:#7f5b34;">Scholar</button>
+                        </div>
+
+
+                        <h3> Bramante's Tempietto - <i> The Great Beauty </i> </h3>
+                        <p class="movie-description"> <strong> Environment: The temple </strong></p>
+
+                    <!-- livello normal -->
+                        <div class="level-normal" style="display:block">
+                            <p class="movie-description text-less" style="display: none;">
+                                Inside the Renaissance courtyard of San Pietro in Montorio, a quiet architectural gem hides a surreal and silent mystery.
+                        </p>
+                            <p class="movie-description text-more" style="display:block;">
+                                The scene opens with a group of wealthy tourists waiting in silence inside the courtyard of Bramante's Tempietto. Suddenly, a young girl dressed in a white dress appears and mysteriously vanishes into thin air, leaving the characters and the audience suspended between illusion, memory, and the elusive nature of beauty.
+                            </p>
+                            <p class="movie-description text-didyouknow" style="display:none;">
+                               The real Tempietto marks the traditional site of Saint Peter's martyrdom, but in the film it transforms into a metaphysical space where logic dissolves into pure mystery
+                            </p>
+                        </div>
+            
+                        <!-- livello child -->
+                        <div class="level-child" style="display: none;">
+                            <p class="movie-description text-less" style="display: none;">testo breve child</p>
+                            <p class="movie-description text-more" style="display: block;">testo normale child</p>
+                            <p class="movie-description text-didyouknow" style="display: none;">did u know child</p>
+                        </div>
+            
+                        <!-- livello scholar -->
+                        <div class="level-scholar" style="display: none;">
+                            <p class="movie-description text-less" style="display: none;">testo breve scholar</p>
+                            <p class="movie-description text-more" style="display: block;">testo normale scholar</p>
+                            <p class="movie-description text-didyouknow" style="display: none;">did u know scholar</p>
+                        </div>
+                        
+                        <div class="tellme-buttons">
+                            <button type="button" onclick="showLess(this)"> Tell me less </button>
+                            <button type="button" onclick="showMore(this)"> Tell me more </button>
+                            <button type="button" onclick="showDidYouKnow(this)"> Did you know that? </button>
+                        </div> 
+                    </div>
+                    
+                    <div class="metadata-content" style="display: none;">
+                        <h3 style="margin-bottom: 10px;"> Technical Details & Metadata </h3>
+                        <p class= "introduzione-meta"> For each scene, structured metadata has been integrated to detail the <strong> cinematic context of the film</strong>, the <strong> location where it was shot</strong>, and the <strong> academic framework of the project </strong>. To enable semantic web interoperability and digital cataloging, this data is modeled using established formal ontologies: <strong>Schema.org </strong> for entities and web structures, <strong> Dublin Core (dcterms) </strong> for bibliographic and project metadata, and <strong> CIDOC CRM </strong>for cultural heritage and architectural classifications.
+                        </p>
+                        
+                        <div class="metadata-tasti">
+                            <button type="button" onclick="toggleModal('film-finestra-7')"> CINEMATIC CONTEXT </button> 
+                            <button type="button" onclick="toggleModal('location-finestra-7')"> LOCATION </button> 
+                            <button type="button" onclick="toggleModal('project-finestra-7')"> PROJECT </span> 
+                        </div>
+                        
+                        <div id="film-finestra-7" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'film-finestra-7')">
+                            <div class="modal-box">
+                                <h3> Cinematic Context </h3>
+                                <ul> 
+                                    <li><strong> schema: name: </strong> La grande bellezza (2013) </li>
+                                    <li><strong> schema: director: </strong> Paolo Sorrentino </li>
+                                    <li><strong> schema: episode: </strong> DESCRIZIONE CHIEDI </li>
+                                    <li> <strong> schema: direction: </strong> North - West (315°) </li>
+                                    <li> <strong> dcterms: type: </strong>strong> Historic Site Set </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div id="location-finestra-7" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'location-finestra-7')">
+                            <div class="modal-box">
+                                <h3> Location </h3>
+                                <ul> 
+                                    <li><strong> schema: name: </strong> Bramante's Tempietto </li>
+                                    <li><strong> schema: address : </strong> Piazza di San Pietro in Montorio, 2, Roma </li>
+                                    <li><strong> schema: GeoCoordinates: </strong> 41°53′19.5″N 12°27′59.1″E  </li>
+                                    <li> <strong> crm: P2_has_type</strong> Renaissance Religious Architecture </li>
+                                    <li> <strong> crm:P4_has_time_span: </strong> 15th Century (Bramante's Tempietto) </li>
+                                    <li> <strong> schema: OpeningDate: </strong> 1502 (Completion of Bramante's Tempietto) </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div id="project-finestra-7" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'project-finestra-7')">
+                            <div class="modal-box">
+                                <h3> Project </h3>
+                                <ul> 
+                                    <li><strong> dcterms: subject </strong> Female Encipation Trough Cinema </li>
+                                    <li><strong> dcterms: language: </strong> en </li>
+                                    <li><strong> dcterms:rights </strong> Academic use - Alma Mater Studiorum, University of Bologna </li> 
+                                </ul>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- SCENA 8 -->
+        <div class="area-immagini" style="display: none;">
+            <div class="film-panel-left">
+                <div style="width: 100%;"> 
+                    <p class="photo-when">TODAY</p>
+                    <img src="img/fontanone_oggi.jpg" alt="The same place today" class="movie-pic">
+                </div>
+                <div style="width: 100%;">
+                    <p class="photo-when">IN THE MOVIE</p>
+                    <img src="img/fontanone_cinema.png" alt="picture from the movie" class="movie-pic">
+                </div>
+            </div>
+        
+            <div class="frecce_scena">
+                <button onclick="previous_scene()">▲</button>
+                <span style="font-weight:bold; font-size:0.9rem; writing-mode: vertical-lr;">8 / 8</span>
+                <button onclick="next_scene()">▼</button>
+            </div>
+
+            <div class="description-container-right">
+                <div style="width: 100%;">
+                    
+                    <div class="showview-buttons">
+                        <button type="button" onclick="showStoryView(this)"> STORY </button>
+                        <button type="button" onclick="showMetadataView(this)"> METADATA </button>
+                    </div>
+
+                    <div class="story-content" style="display: flex;">
+                        
+                        <div class="difficulty-buttons">
+                        <button type="button" onclick="showNormal(this)" style="background-color: #50341e;">Normal</button>
+                        <button type="button" onclick="showChild(this)" style="background-color: #2b180a;">Child</button>
+                        <button type="button" onclick="showScholar(this)" style="background-color:#7f5b34;">Scholar</button>
+                        </div>
+
+
+                        <h3> Fontanone and Belvedere del Gianicolo - <i> The Great Beauty </i> </h3>
+                        <p class="movie-description"> <strong> Environment: The ascent </strong></p>
+
+                    <!-- livello normal -->
+                        <div class="level-normal" style="display:block">
+                            <p class="movie-description text-less" style="display: none;">
+                               From the heights of the Gianicolo, Rome finally opens up in its entirety and becomes a panorama, a monument, and an image.
+                        </p>
+                            <p class="movie-description text-more" style="display:block;">
+                                The Fontanone dell’Acqua Paola and the Belvedere mark the end of the journey. After passing through houses, courtyards, markets, and streets, the visitor gains a panoramic view of the city. In *The Great Beauty*, however, Rome is often viewed through a male gaze that transforms people and places into a spectacle. Thus, this arrival does not represent a definitive conquest but leaves a question open: does gaining entry to the city also grant the right to tell its story in one’s own voice?
+                            </p>
+                            <p class="movie-description text-didyouknow" style="display:none;">
+                               The Acqua Paola Fountain appears in the opening sequence of "The Great Beauty", accompanied by a female choir singing against the backdrop of the Rome skyline.
+                            </p>
+                        </div>
+            
+                        <!-- livello child -->
+                        <div class="level-child" style="display: none;">
+                            <p class="movie-description text-less" style="display: none;">testo breve child</p>
+                            <p class="movie-description text-more" style="display: block;">testo normale child</p>
+                            <p class="movie-description text-didyouknow" style="display: none;">did u know child</p>
+                        </div>
+            
+                        <!-- livello scholar -->
+                        <div class="level-scholar" style="display: none;">
+                            <p class="movie-description text-less" style="display: none;">testo breve scholar</p>
+                            <p class="movie-description text-more" style="display: block;">testo normale scholar</p>
+                            <p class="movie-description text-didyouknow" style="display: none;">did u know scholar</p>
+                        </div>
+                        
+                        <div class="tellme-buttons">
+                            <button type="button" onclick="showLess(this)"> Tell me less </button>
+                            <button type="button" onclick="showMore(this)"> Tell me more </button>
+                            <button type="button" onclick="showDidYouKnow(this)"> Did you know that? </button>
+                        </div> 
+                    </div>
+                    
+                    <div class="metadata-content" style="display: none;">
+                        <h3 style="margin-bottom: 10px;"> Technical Details & Metadata </h3>
+                        <p class= "introduzione-meta"> For each scene, structured metadata has been integrated to detail the <strong> cinematic context of the film</strong>, the <strong> location where it was shot</strong>, and the <strong> academic framework of the project </strong>. To enable semantic web interoperability and digital cataloging, this data is modeled using established formal ontologies: <strong>Schema.org </strong> for entities and web structures, <strong> Dublin Core (dcterms) </strong> for bibliographic and project metadata, and <strong> CIDOC CRM </strong>for cultural heritage and architectural classifications.
+                        </p>
+                        
+                        <div class="metadata-tasti">
+                            <button type="button" onclick="toggleModal('film-finestra-8')"> CINEMATIC CONTEXT </button> 
+                            <button type="button" onclick="toggleModal('location-finestra-8')"> LOCATION </button> 
+                            <button type="button" onclick="toggleModal('project-finestra-8')"> PROJECT </span> 
+                        </div>
+
+
+                        <div id="film-finestra-8" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'film-finestra-8')">
+                            <div class="modal-box">
+                                <h3> Cinematic Context </h3>
+                                <ul> 
+                                    <li><strong> schema: name: </strong> Mamma Roma (1962) & The Great Beauty (La grande bellezza, 2013) </li>
+                                    <li><strong> schema: director: </strong> Pier Paolo Pasolini & Paolo Sorrentino </li>
+                                    <li><strong> schema: episode: </strong> Final panoramic views of Rome from the monumental fountain terrace </li>
+                                    <li> <strong> schema: direction: </strong> East (9°) </li>
+                                    <li> <strong> dcterms: type: </strong>strong> Panoramic Belvedere Set </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div id="location-finestra-8" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'location-finestra-8')">
+                            <div class="modal-box">
+                                <h3> Location </h3>
+                                <ul> 
+                                    <li><strong> schema: name: </strong> Fontanone del Gianicolo </li>
+                                    <li><strong> schema: address : </strong> Via Garibaldi, Roma </li>
+                                    <li><strong> schema: GeoCoordinates: </strong> 41.8910° N, 12.4630° E </li>
+                                    <li> <strong> crm: P2_has_type</strong> Baroque Monumental Fountain Architecture </li>
+                                    <li> <strong> crm:P4_has_time_span: </strong> 17th Century (Baroque era) </li>
+                                    <li> <strong> schema: OpeningDate: </strong> 1612 (Inauguration of the monumental water display) </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div id="project-finestra-8" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'project-finestra-8')">
+                            <div class="modal-box">
+                                <h3> Project </h3>
+                                <ul> 
+                                    <li><strong> dcterms: subject </strong> Female Encipation Trough Cinema </li>
+                                    <li><strong> dcterms: language: </strong> en </li>
+                                    <li><strong> dcterms:rights </strong> Academic use - Alma Mater Studiorum, University of Bologna </li> 
+                                </ul>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="poster-container">
+            <div class="poster-grid">
+        
+                
+                       <!-- POSTER 2 -->
+                <div class="poster">
+                    <div class="poster-flip">
+                        <img src="img/bellissima-poster.png" alt="Bellissima" class="poster-img">
+                        <div class="poster-back">
+                            <h3>Bellissima</h3>
+                            <p>Luchino Visconti (1951)<br><br><i>Bellissima</i> centers on a working-class mother in Rome, Maddalena, who drags her young daughter to Cinecittà Studios to
+                            attend an audition for a new film by Alessandro Blasetti. Maddalena's efforts to promote her daughter grow increasingly
+                            frenzied.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- POSTER 3 -->
+                <div class="poster">
+                    <div class="poster-flip">
+                        <img src="img/mammaroma-poster.png" alt="Mamma Roma" class="poster-img">
+                        <div class="poster-back">
+                            <h3>Mamma Roma</h3>
+                            <p>Pier Paolo Pasolini (1962)<br><br>After her pimp Carmine marries, prostitute Mamma Roma starts a new life as a marketer in Rome to enable her 16-year-old
+                            son Ettore a better life.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- POSTER 4 -->
+                <div class="poster">
+                    <div class="poster-flip">
+                        <img src="img/1ggparticolare-poster.png" alt="Una giornata particolare" class="poster-img">
+                        <div class="poster-back">
+                            <h3>A Special Day</h3>
+                            <p>Ettore Scola (1977)<br><br><i>A special day</i> is a movie set in Rome in 1938. Its narrative follows a housewife (Loren) and her neighbor (Mastroianni) who stay home the day
+                            Adolf Hitler visits Benito Mussolini.</p>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- POSTER 5 -->
+                <div class="poster">
+                    <div class="poster-flip">
+                        <img src="img/grandebellezza-poster.png" alt="La grande bellezza" class="poster-img">
+                        <div class="poster-back">
+                            <h3>The Great Beauty</h3>
+                            <p>Paolo Sorrentino (2013)<br><br>The movie follows the story of the protagonist Jep Gambardella: a 65-year-old seasoned journalist and theater critic, mostly committed to wandering among the social
+                            events of a Rome immersed in the beauty of its history and in the superficiality of its inhabitants today, in a
+                            merciless contrast.</p>
+                         </div>
+                     </div>
+                </div>
+ 
+                <!-- POSTER 6 -->
+                <div class="poster">
+                    <div class="poster-flip">
+                        <img src="img/ancoradomani-poster.png" alt="C'è ancora domani" class="poster-img">
+                        <div class="poster-back">
+                            <h3>There's Still Tomorrow</h3>
+                            <p>Paola Cortellesi (2023)<br><br><i>There's Still Tomorrow</i>is a 2023 Italian period comedy-drama film,
+                            co-written and directed by <i>Paola Cortellesi</i> in her directorial debut. Set in postwar 1940s Italy, it follows Delia
+                            breaking traditional family patterns and aspiring to a different future, after receiving a mysterious letter.</p>
+                        </div>
+                    </div>
+                </div>
+        
+            </div> 
+        </div> 
+        
+        </main>
+    <footer>
+        <div class="footer-container">
+            <p> This page was finished editining on September 2026. <br>
+            This website was designed for the exam of <a href="https://www.unibo.it/it/studiare/insegnamenti-competenze-trasversali-moocs/insegnamenti/insegnamento/2025/533915">Information Modeling and Web Technologies </a>from the master <a href="https://corsi.unibo.it/2cycle/DigitalHumanitiesKnowledge">Digital Humanities and Digital Knowledge.</a><br>
+                &copy; Copyright reserved to Cavaleri Maria, Gaeta Francesca, Madayag C. Kielyn </p> 
+            
+        </div>
+    </footer>
+</body>
+
+</html>
+        
+
+
