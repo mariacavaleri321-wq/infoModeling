@@ -1,0 +1,428 @@
+/* --------------------------------
+aggiungere position x stesso effetto dato su sito 
+https://viff.org
+
+++ aggiungere queries x renderlo responsive su tel
+
++ aggiungere sticky, aggiungere bene copyright
+
+-----------------------------------*/
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #796355;
+    /* Sfondo generale seppia scuro / vintage */
+    font-family: 'Special Elite', monospace;
+    /* Font stile vecchia macchina da scrivere */
+    color: #e6dfd3;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.4;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* --- HEADER SUPERIORE (Rosso Cinema / Terracotta scuro) --- */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* primo piano (no sovrapposizione con altri elementi) */
+
+    background-color: #b15656;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    border-top: 1px solid #6d2121;
+    border-bottom: 1px solid #6d2121;
+}
+
+.link-head a {
+    color: #f4e8c1;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 1.05rem;
+}
+
+/* --- BARRA STILI DATE */
+.bar-style {
+    position: sticky;
+    top: 50px; /* h header */
+    z-index: 1000;
+
+    background-color: #796355;
+    display: flex;
+    width: 100%;
+    padding: 15px 0;
+    /* padding verticale x creare gap sopra e sotto le linee! */
+
+    margin-top: 30px;
+    /* spazio tra header e barra */
+    border-top: 1.5px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.15);
+}
+
+/* Elementi singoli barra*/
+.bar-item {
+    flex: 1;
+    /* ogni contenitore prende 1 spazio */
+    text-align: center;
+    border-right: 1.5px solid rgba(0, 0, 0, 0.15);
+    /* Linea verticale separatrice */
+    justify-content: center;
+    height: 70px;
+    display: flex;
+}
+
+
+/* Stile dei link interni */
+.bar-item a {
+    color: rgba(228, 228, 228, 0.8);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Rimuove linea ultimo riquadro (2030)*/
+.bar-item:last-child {
+    border-right: none;
+}
+
+
+/* CONTENUTO PRINCIPALE */
+main {
+    padding: 30px 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+
+/* Titolo principale */
+main h2 {
+    max-width: 950px;
+    width: 100%;
+    gap: 0 auto;
+    box-sizing: border-box;
+
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 3px;
+    color: #f4e8c1;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/*paragrafo dell'introduzione */
+main p {
+    max-width: 950px;
+    width: 100%;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    color: #d6ccb1;
+    text-align: justify;
+    margin: 0 auto; /* x essere centrato rispetto a schermo */
+}
+
+/* STRUTTURA PRINCIPALE SIMIL RULLINO (l'ho divisa in 3 zone) */
+.area-immagini {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 950px; /* x essere allineato al titolo/testo sopra */
+    height: 560px; /* altezza massima x rientrare in viasulizzazione schermo ()viewport height */
+    overflow: hidden; /* immagine non straborsa se h troppo piccola */
+    gap: 15px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    background-color: #1c1b1b;
+    padding: 14px 20px;
+    border-top: 14px dashed #ffffff;
+    border-bottom: 14px dashed #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* ZONA 1: BLOCCO FOTO A SINISTRA */
+.film-panel-left {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.film-panel-left img {
+    width: 100%;
+    height: 205px; /* < 1/2 h box */
+    object-fit: cover;
+    border: 2px solid #000;
+}
+
+/* ZONA 2: FRECCE CENTRALI */
+.frecce_scena {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 8%;
+}
+
+.frecce_scena button {
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    color: #ffffff;
+    transition: transform 0.2s;
+}
+
+.frecce_scena button:hover {
+    transform: scale(1.2);
+}
+
+.frecce_scena span {
+    color: #ffffff;
+}
+
+/* ZONA 3: BLOCCO A DESTRA */
+.description-container-right {
+    width: 45%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    min-height: 0;    
+}
+
+/*TASTI PER CAMBIARE TRA STORY E METADATA */
+.showview-buttons {
+    margin-bottom: 8px;
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.showview-buttons button {
+    background: #836363;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-family: 'Special Elite', monospace;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* buttons difficoltà */
+.difficulty-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    margin-bottom: 8px;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* stile bottoni */
+.difficulty-buttons button {
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: 'Special Elite', monospace;
+    font-size: 0.85rem;
+    font-weight: bold;
+    flex: 1; /* distribuiti equamente sua riga */
+    text-align: center;
+}
+
+/* RIQUADRO STORY */
+.story-content,
+.metadata-content {
+    background-color: #f4e8c1;
+    color: #2b2623;
+    padding: 14px 16px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 450px; /* h box - px bottoni */
+    overflow-y: auto; /* prob testo troppo lungo cosi scorre*/
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    border: 2px solid #38312d;
+}
+
+.story-content p,
+.metadata-content p {
+    font-size: 1rem;
+    line-height: 1.3;
+    margin: 6px 0;
+    display: block;
+}
+
+/*BUTTONS PER I TELL ME LESS, MORE ETC */
+.tellme-buttons {
+    margin: 15px 0;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tellme-buttons button {
+    padding: 6px 12px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    font-weight: bold
+}
+
+.tellme-buttons button:nth-child(1) {
+    background-color: #50341e;
+}
+
+.tellme-buttons button:nth-child(2) {
+    background-color: #2b180a;
+}
+
+.tellme-buttons button:nth-child(3) {
+    background-color: #7f5b34;
+}
+
+/* TESTI SCURI PER LE VARIE CLASSI*/
+.story-content h3,
+.story-content p,
+.story-content strong,
+.metadata-content h3,
+.metadata-content li,
+.metadata-content strong,
+.metadata-content p {
+    color: #2b2623;
+}
+
+.poster-container {
+    width: 100%;
+    max-width: 950px; /* come box nero*/
+    margin: 40px auto;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+/* griglia flessibile */
+.poster-grid {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permette di andare a capo su schermi piccoli */
+    justify-content: space-between;
+    gap: 20px;
+    /* Spazio uniforme tra le locandine */
+    width: 100%;
+}
+
+
+.poster {
+    flex: 1 1 calc(33.333% - 30px);
+    min-width: 250px;
+    box-sizing: border-box;
+
+}
+
+
+.poster-flip {
+    position: relative;
+    width: 100%;
+}
+
+.poster-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.6s ease-in-out;
+    backface-visibility: hidden;
+}
+
+/* Retro con il testo */
+.poster-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f4e8c1;
+    color: #2b2623;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    /* Spazio interno di sicurezza (padding) dai bordi */
+    padding: 7%;
+    box-sizing: border-box;
+
+    /* Impostazioni rotazione 3D */
+    transition: transform 0.6s ease-in-out;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.poster-back p {
+    margin: 0;
+    font-size: clamp(0.75rem, 1.1vw, 0.95rem);
+    /* Testo descrittivo fluido */
+    line-height: 1.4;
+    text-align: justify;
+    /* Testo giustificato come richiesto */
+    color: #2b2623 !important;
+    font-family: 'Special Elite', monospace;
+}
+
+
+.poster-flip:hover .poster-img {
+    transform: rotateY(-180deg);
+}
+
+/* Il retro ruota diventando visibile */
+.poster-flip:hover .poster-back {
+    transform: rotateY(0deg);
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.85rem;
+
+}
+
+footer a {
+    color: blue;
+    font-size: 0.85rem;
+}
