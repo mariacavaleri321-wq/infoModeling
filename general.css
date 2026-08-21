@@ -198,3 +198,77 @@ footer a {
 .dropdown:hover .dropdown-menu {
     display: block;
 }
+
+
+
+/* INSEGNA CINEMATOGRAFICA */
+
+.home-introduction {
+    width: 100%;
+    max-width: 1000px;
+    margin: 50px auto 70px auto;
+    text-align: center;
+}
+
+.cinema-sign {
+    position: relative;
+
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+    padding: 60px 70px;
+
+    background-color: #1c1b1b;
+
+    border: 10px solid #b15656;
+    border-radius: 18px;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 0 0 5px #6d2121,
+        0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.cinema-sign h1 {
+    margin: 0;
+
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5.5rem;
+    letter-spacing: 6px;
+
+    color: #f4e8c1;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    text-shadow:
+        2px 2px 0 #6d2121;
+}
+
+.cinema-sign::before,
+.cinema-sign::after {
+    position: absolute;
+    left: 0;
+
+    width: 100%;
+
+    color: #f4e8c1;
+
+    font-size: 1.4rem;
+    letter-spacing: 10px;
+
+    text-align: center;
+}
+
+.cinema-sign::before {
+    content: "● ● ● ● ● ● ● ● ● ● ● ● ●";
+    top: 8px;
+}
+
+.cinema-sign::after {
+    content: "● ● ● ● ● ● ● ● ● ● ● ● ●";
+    bottom: 8px;
+}
+
