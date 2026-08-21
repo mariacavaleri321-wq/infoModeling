@@ -75,6 +75,7 @@ function previous_scene() {
 function showMetadataView(buttonElement) {
     const parentBox = buttonElement.closest('.description-container-right');
     parentBox.querySelector('.story-content').style.display = 'none';
+    parentBox.querySelector('.qr-content').style.display = 'none';
     parentBox.querySelector('.metadata-content').style.display = 'block';
 }
 
@@ -83,6 +84,15 @@ function showStoryView(buttonElement) {
     const parentBox = buttonElement.closest('.description-container-right');
     parentBox.querySelector('.story-content').style.display = 'block';
     parentBox.querySelector('.metadata-content').style.display = 'none';
+    parentBox.querySelector('.qr-content').style.display = 'none';
+}
+
+/* FUNZIONE PER MOSTRARE SOLO IL CONTENUTO QR */
+function showQRView(buttonElement) {
+    const parentBox = buttonElement.closest('.description-container-right');
+    parentBox.querySelector('.story-content').style.display = 'none';
+    parentBox.querySelector('.metadata-content').style.display = 'none';
+    parentBox.querySelector('.qr-content').style.display = 'block';
 }
 
 /* DIFFICOLTÀ: NORMAL, CHILD, SCHOLAR */

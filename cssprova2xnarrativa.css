@@ -539,28 +539,37 @@ footer a {
 }
 
 /*QR CODE */
-.modal-qr {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    text-align: center;
-    gap: 4px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+.qr-content{
+    background-color: #f4e8c1;
+    padding: 30px;
+    border: 2px solid #38312d;
+    border-radius: 8px;
+    height: 450px;
+    box-sizing: border-box;
+    text-align: center;   
 }
 
-.modal-qr img {
-    width: 60px;
-    height: 65px;
-    background-color: white;
-    padding: 3px;
+.qr-content h3 {
+    color: #2b2623;
+    margin-top: 0;
+    font-size: 1.17em;
+    font-weight: bold;
+    text-align: justify;
 }
 
-.qr-text {
-    font-size: 0.65rem;
-    color: #b10000;
-    text-align: right;
-    line-height: 1.1;
+.qr-description{
+    font-size: 0.9rem;
+    line-height: 1.4;
     font-family: 'Special Elite', monospace;
+    color: #2b2623;
+    margin-bottom: 30px;
+}
+
+.qr-image{
+    width: 170px;
+    height: 170px;
+    margin-top: 10px;
+    border: 1px solid #38312d;
+    background-color: white;
+    padding: 4px;
 }
