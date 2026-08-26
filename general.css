@@ -284,18 +284,18 @@ footer a {
 }
 
 
-/* CONTENITORE DEI DUE CIAK */
+/* CONTENITORE DELLE DUE CARD */
 
-.clapperboard-container {
+.narrativa-container {
     display: flex;
     gap: 40px;
     margin-top: 30px;
 }
 
 
-/* CIAK */
+/* CARD DEI PERCORSI */
 
-.clapperboard {
+.narrative-card {
     flex: 1;
 
     background-color: #1c1b1b;
@@ -307,9 +307,9 @@ footer a {
 }
 
 
-/* PARTE SUPERIORE A STRISCE */
+/* DECORAZIONE SUPERIORE */
 
-.clapper-stripes {
+.card-decoration {
     height: 45px;
 
     background: repeating-linear-gradient(
@@ -324,12 +324,9 @@ footer a {
 }
 
 
-/* SCENE E TAKE */
+/* ETICHETTA ITINERARIO */
 
-.clapper-info {
-    display: flex;
-    justify-content: space-between;
-
+.card-label {
     padding: 12px 20px;
 
     border-bottom: 2px solid #f4e8c1;
@@ -337,32 +334,39 @@ footer a {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.3rem;
     letter-spacing: 2px;
+
+    text-align: center;
 }
 
 
-/* CORPO DEL CIAK */
+/* CORPO DELLA CARD */
 
-.clapper-body {
+.card-body {
     padding: 25px;
 }
 
 
 /* TITOLO DEL PERCORSO */
 
-.clapper-body h3 {
+.card-body h3 {
+    min-height: 80px;
+
     margin: 0 0 20px 0;
 
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2.2rem;
+    line-height: 1.1;
     letter-spacing: 2px;
 
     color: #b15656;
+
+    text-align: center;
 }
 
 
-/* INFORMAZIONI DEL CIAK */
+/* INFORMAZIONI DEL PERCORSO */
 
-.clapper-details {
+.card-details {
     padding: 10px 0;
     margin-bottom: 20px;
 
@@ -370,7 +374,7 @@ footer a {
     border-bottom: 1px solid #f4e8c1;
 }
 
-.clapper-details p {
+.card-details p {
     margin: 5px 0;
 
     font-size: 0.9rem;
@@ -384,13 +388,14 @@ footer a {
 
 /* DESCRIZIONE DEL PERCORSO */
 
-.clapper-description {
+.card-description {
     margin-bottom: 25px;
 
     font-size: 1rem;
     line-height: 1.5rem;
 
     text-align: left;
+
     color: #d6ccb1;
 }
 
@@ -406,8 +411,112 @@ footer a {
 }
 
 
-/* EFFETTO QUANDO PASSO SOPRA IL CIAK */
+/* EFFETTO HOVER */
 
-.clapperboard:hover {
+.narrative-card:hover {
     opacity: 0.8;
+}
+
+
+
+/* SEZIONE FILM HOMEPAGE */
+
+.films-section {
+    width: 100%;
+    max-width: 950px;
+    margin: 80px auto;
+}
+
+.films-introduction {
+    margin-bottom: 40px;
+}
+
+.films-introduction h2 {
+    margin-bottom: 20px;
+}
+
+.films-introduction p {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+
+
+.poster-container {
+    width: 100%;
+    max-width: 950px;
+    margin: 40px auto;
+    box-sizing: border-box;
+}
+
+.poster-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.poster {
+    flex: 1 1 calc(33.333% - 30px);
+    min-width: 250px;
+    box-sizing: border-box;
+}
+
+.poster-flip {
+    position: relative;
+    width: 100%;
+}
+
+.poster-img {
+    width: 100%;
+    height: auto;
+    display: block;
+
+    transition: transform 0.6s ease-in-out;
+    backface-visibility: hidden;
+}
+
+.poster-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #f4e8c1;
+    color: #2b2623;
+
+    padding: 7%;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+
+    transition: transform 0.6s ease-in-out;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.poster-back p {
+    margin: 0;
+
+    font-size: 0.9rem;
+    line-height: 1.4;
+
+    text-align: justify;
+
+    color: #2b2623;
+}
+
+.poster-flip:hover .poster-img {
+    transform: rotateY(-180deg);
+}
+
+.poster-flip:hover .poster-back {
+    transform: rotateY(0deg);
 }
