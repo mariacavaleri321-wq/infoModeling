@@ -272,3 +272,142 @@ footer a {
     bottom: 8px;
 }
 
+
+
+
+/* NARRATIVE HOMEPAGE */
+
+.narratives {
+    width: 100%;
+    max-width: 950px;
+    margin: 70px auto;
+}
+
+
+/* CONTENITORE DEI DUE CIAK */
+
+.clapperboard-container {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+
+/* CIAK */
+
+.clapperboard {
+    flex: 1;
+
+    background-color: #1c1b1b;
+    border: 4px solid #f4e8c1;
+
+    color: #f4e8c1;
+
+    box-sizing: border-box;
+}
+
+
+/* PARTE SUPERIORE A STRISCE */
+
+.clapper-stripes {
+    height: 45px;
+
+    background: repeating-linear-gradient(
+        135deg,
+        #f4e8c1 0px,
+        #f4e8c1 35px,
+        #1c1b1b 35px,
+        #1c1b1b 70px
+    );
+
+    border-bottom: 4px solid #f4e8c1;
+}
+
+
+/* SCENE E TAKE */
+
+.clapper-info {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 12px 20px;
+
+    border-bottom: 2px solid #f4e8c1;
+
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+}
+
+
+/* CORPO DEL CIAK */
+
+.clapper-body {
+    padding: 25px;
+}
+
+
+/* TITOLO DEL PERCORSO */
+
+.clapper-body h3 {
+    margin: 0 0 20px 0;
+
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+
+    color: #b15656;
+}
+
+
+/* INFORMAZIONI DEL CIAK */
+
+.clapper-details {
+    padding: 10px 0;
+    margin-bottom: 20px;
+
+    border-top: 1px solid #f4e8c1;
+    border-bottom: 1px solid #f4e8c1;
+}
+
+.clapper-details p {
+    margin: 5px 0;
+
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+
+    text-align: left;
+
+    color: #f4e8c1;
+}
+
+
+/* DESCRIZIONE DEL PERCORSO */
+
+.clapper-description {
+    margin-bottom: 25px;
+
+    font-size: 1rem;
+    line-height: 1.5rem;
+
+    text-align: left;
+    color: #d6ccb1;
+}
+
+
+/* LINK FINALE */
+
+.discover {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+
+    color: #b15656;
+}
+
+
+/* EFFETTO QUANDO PASSO SOPRA IL CIAK */
+
+.clapperboard:hover {
+    opacity: 0.8;
+}
