@@ -210,7 +210,7 @@ footer a {
     text-align: center;
 }
 
-.cinema-sign {
+.title-container {
     position: relative;
 
     width: 100%;
@@ -231,7 +231,7 @@ footer a {
         0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-.cinema-sign h1 {
+.title-container h1 {
     margin: 0;
 
     font-family: 'Bebas Neue', sans-serif;
@@ -247,8 +247,8 @@ footer a {
         2px 2px 0 #6d2121;
 }
 
-.cinema-sign::before,
-.cinema-sign::after {
+.title-container::before,
+.title-container::after {
     position: absolute;
     left: 0;
 
@@ -262,12 +262,12 @@ footer a {
     text-align: center;
 }
 
-.cinema-sign::before {
+.title-container::before {
     content: "● ● ● ● ● ● ● ● ● ● ● ● ●";
     top: 8px;
 }
 
-.cinema-sign::after {
+.title-container::after {
     content: "● ● ● ● ● ● ● ● ● ● ● ● ●";
     bottom: 8px;
 }
