@@ -29,7 +29,7 @@ header {
     top: 0;
     z-index: 2000; 
 
-    background-color: #b15656;
+    background-color: #ae4d4d;
     padding: 15px 40px;
     display: flex;
     justify-content: space-between;
@@ -519,4 +519,32 @@ footer a {
 
 .poster-flip:hover .poster-back {
     transform: rotateY(0deg);
+}
+
+
+
+footer {
+    width: 100%;
+    margin-top: 80px;
+    padding: 30px 20px;
+
+    background-color: #a72c2c;
+
+    box-sizing: border-box;
+}
+
+.footer-container {
+    max-width: 950px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer p {
+    margin: 6px 0;
+    font-size: 0.85rem;
+    color: #d6ccb1;
+}
+
+footer a {
+    color: #f4e8c1;
 }
