@@ -55,6 +55,8 @@ header {
     text-decoration: none;
     margin-right: 20px;
     font-size: 1.05rem;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
 }
 
 /* --- BARRA STILI DATE */
@@ -95,6 +97,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Courier', monospace;
+    font-weight: bold;
 }
 
 /* Rimuove linea ultimo riquadro (2030)*/

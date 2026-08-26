@@ -11,11 +11,11 @@ html, body {
 
 /* BARRA PER LE ALTRE PAGINE */
 header {
-    background-color: #c24141; 
-    padding: 20px 40px;
+    background-color: #b15656; 
+    padding: 15px 40px;
     display: flex;
     justify-content: space-between;
-    align-items: justify;
+    align-items: center;
     box-sizing: border-box;
     width: 100%;
     position: sticky;
@@ -25,7 +25,7 @@ header {
 }
 
 .link-head a {
-    color: white; 
+    color: #f4e8c1; 
     font-weight: bold;
     text-decoration: none;
     margin-right: 20px;
@@ -41,21 +41,21 @@ header {
 .bar-style {
     display: flex;
     width: 100%;
-    background-color: #38312d;
-    border-top: 1px solid #1a1715;
-    border-bottom: 1px solid #1a1715;
+    background-color: #796355;
+    border-top: 1.5px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.15);
     box-sizing: border-box;
     position: sticky;
     top: 50px; /* h header */
     z-index: 999;
-    border-top: none;
+    margin-top: 30px 
 }
 
 .bar-item {
     flex: 1;
     text-align: center;
     padding: 30px;
-    border-right: 1px solid #1a1715;
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .bar-item:last-child {
@@ -64,7 +64,7 @@ header {
 
 .bar-item a {
     text-decoration: none;
-    color: white;
+    color: rgba(228, 228, 228, 0.8);
     font-weight: bold;
     font-size: 1.3rem;
     display: block;
@@ -74,6 +74,11 @@ header {
 
 .bar-item a:hover {
     color: #ec3232;
+}
+
+/* Rimuove linea ultimo riquadro (2030)*/
+.bar-item:last-child {
+    border-right: none;
 }
 
 /* CONTENUTO PRINCIPALE */
