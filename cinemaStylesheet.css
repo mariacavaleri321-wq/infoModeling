@@ -210,6 +210,9 @@ main p {
 }
 
 .frecce_scena span {
+    font-weight: bold;
+    font-size: 0.9rem;
+    writing-mode: vertical-lr;
     color: #ffffff;
 }
 
@@ -429,4 +432,106 @@ footer p {
 footer a {
     color: blue;
     font-size: 0.85rem;
+}
+
+
+/* METADATA FINESTRE INTERATTIVE */
+
+.introduzione-meta {
+    font-family: 'Special Elite', monospace;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.metadata-tasti {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+.metadata-tasti button{
+    background: #836363; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    font-family: 'Special Elite', monospace;
+    font-size: 1rem; 
+    font-weight: bold;
+    width: 250px;
+    align-self: center;
+}
+
+.metadata-tasti button:hover {
+    background: #50341e;     
+    transform: translateX(5px); 
+}
+.metadata-tasti li{
+    margin-bottom: 12px;
+}
+
+.meta-punti {
+    font-size: 1.2rem;
+    color: rgb(161, 50, 50);
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.meta-punti:hover {
+    color: #d81e1e;
+    border-bottom: 2px solid #d81e1e;
+    text-decoration: underline;
+}
+
+/* --- SFONDO SCURO SEMITRASPARENTE PER LA FINESTRA MODALE --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    cursor: pointer; /* cursore per far capire che cliccando fuori si chiude la finestra */
+}
+
+/* --- STRUTTURA DELLA MINIFINESTRA (MODAL BOX) --- */
+.modal-box {
+    background-color: #f4e8c1; /* Colore pergamena vintage */
+    color: #2b2623;
+    padding: 30px;
+    width: 450px;
+    max-width: 90%;
+    border-radius: 8px;
+    border: 3px solid #000000;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    position: relative;
+    text-align: justify;
+    cursor: default; 
+}
+
+.modal-box h3 {
+    margin-top: 0;
+    color: #e44f0b;
+    border-bottom: 1px solid #38312d;
+    padding-bottom: 8px;
+    font-size: 1.2rem;
+
+}
+
+.modal-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+    line-height: 1.8;
+    font-size: 0.9rem;
 }

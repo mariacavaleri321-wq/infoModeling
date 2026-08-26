@@ -108,3 +108,21 @@ function showScholar(buttonElement) {
     parentBox.querySelector('.level-scholar').style.display = 'block';
 }
 
+/* FUNZIONI PER APRIRE/CHIUDERE LE FINESTRE METADATI*/
+function toggleModal(modalId) {     // dichiara la funzione per aprire o chiudere una finestra specifica per l'id scelto
+    const modal = document.getElementById(modalId);    // recupera da HTML l'elemento della finestra corrispondente all'ID e lo memorizza in una costante
+    if (modal.style.display === 'flex') {
+        modal.style.display = 'none';    // se la finestra è aperta (display: flex) allora la chiude impostando none 
+    } else {
+        // altrimenti chiude eventuali altre modali aperte prima di aprire questa evitando sovrapposizioni 
+        document.querySelectorAll('.modal-overlay').forEach(m => m.style.display = 'none');
+        modal.style.display = 'flex';     // Apre la finestra specifica richiesta impostando il suo display su 'flex'
+    }
+}
+
+/* FUNZIONE PER CHIUDERE LA FINESTRA CLICCANDO SULLO SFONDO */
+function closeOnBackground(event, modalId) {
+    if (event.target.id === modalId) {   // se il punto esatto in cui si è fatto clic (event.target) corrisponde esattamente all'ID dello sfondo 
+        document.getElementById(modalId).style.display = 'none';   // se il click è appunto fuori, allora chiude la finestra impostando il display su none
+    }
+}
