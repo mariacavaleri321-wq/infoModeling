@@ -10,7 +10,6 @@
 
     <!--Collegamento al mio css-->
     <link rel="stylesheet" href="general.css">
-    <link rel="stylesheet" href="mappa.css">
 
     <!--Leaflet css, da pagina Leaflet-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
@@ -19,18 +18,29 @@
 </head>
 
 <body>
-    <!-- header -->
-    <header>
+     <header>
+
         <div class="link-head" style="text-align:left;">
-            <a href="index.html">HomePage</a>
-            <a href="percorso.html">Percorsi</a>
-            <a href="mappa.html">Mappa</a>
+            <a href="index.html">Home</a>
+            <a href="mappa.html">Map</a>
+            <div class="dropdown">
+                 <a href="#">Itinerary ▾</a>
+                <div class="dropdown-menu">
+                    <a href="tourStorico.html">Historical Journey</a>
+                    <a href="narrativa_femminista.html">Women & Urban Space</a>
+                </div>
+
+            </div>
+
         </div>
+
         <div class="link-head" style="text-align:right;">
-            <a href="pagina1.html">Scelte stile</a>
+            <a href="pagina1.html">Team</a>
             <a href="documentazione.html">Documentation</a>
-            <a href="pagina3.html">Team</a>
+            <a href="pagina3.html">Disclaimer</a>
+
         </div>
+
     </header>
 
      <!-- barra scelta stile -->
@@ -77,41 +87,12 @@
             <button id="show-women">Women & Urban Space</button>
         </div>
 
-        <!-- filtri per selezione film -->
-        <div id="film-filters">
-            <p>Filter by film:</p>
-            <label>
-                <input type="checkbox" value="A Special Day" checked>
-                A Special Day
-            </label>
-
-            <label>
-                <input type="checkbox" value="Rome, Open City" checked>
-                Rome, Open City
-            </label>
-
-            <label>
-                <input type="checkbox" value="Bellissima" checked>
-                Bellissima
-            </label>
-
-            <label>
-                <input type="checkbox" value="There's Still Tomorrow" checked>
-                There's Still Tomorrow
-            </label>
-
-            <label>
-                <input type="checkbox" value="Mamma Roma" checked>
-                Mamma Roma
-            </label>
-
-            <label>
-                <input type="checkbox" value="The Great Beauty" checked>
-                The Great Beauty
-            </label>
-        </div>
-
         <div id="map"></div>
+        
+        <section class="locations-section">
+            <h2>Explore the locations</h2>
+            <div id="locations-list"></div>
+        </section>
     </main>
 
     <!--Lealeft javascript, da pagina Leaflet-->

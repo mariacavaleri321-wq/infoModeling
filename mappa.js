@@ -17,7 +17,12 @@ var locations = [
         lng: 12.520102236861284, 
         narratives: ['historical', 'women'],
         historicalOrder: 1,
-        womenOrder: 1
+        womenOrder: 1,
+        description: 'The apartment complex at the centre of A Special Day.',
+        historicalLink: 'tourStorico.html#palazzo-federici',
+        womenLink: 'narrativa_femminista.html#palazzo-federici',
+        historicalDirections: '',
+        womenDirections: ''
     },
 
     {   id: 'piazza-di-spagna',
@@ -27,7 +32,8 @@ var locations = [
         lng: 12.482326,
         narratives: ['historical'],
         historicalOrder: 2,
-        womenOrder: null
+        womenOrder: null,
+        description: 'An iconic Roman square appearing in the opening sequences of Rome, Open City.'
     },
 
     {   id: 'cinecitta',
@@ -37,17 +43,19 @@ var locations = [
         lng: 12.575623206438049,
         narratives: ['women'],
         historicalOrder: null,
-        womenOrder: 2
+        womenOrder: 2,
+        description: 'The legendary film studios where Maddalena brings her daughter to audition in Bellissima.'
     },
 
-    {   id: 'trevi-fountain',
-        name: 'Trevi Fountain',
+    {   id: 'piazza-navona',
+        name: 'Piazza Navona',
         films: ['The Great Beauty'],
-        lat: 41.90108118402971,
-        lng: 12.483326590557075,
+        lat: 41.8992246355397,
+        lng: 12.473737346685144,
         narratives: ['historical'],
         historicalOrder: 3,
-        womenOrder: null
+        womenOrder: null,
+        description: 'One of Rome’s monumental spaces featured in the visual journey of The Great Beauty.'
     },
 
     {   id: 'santa-maria-in-cappella',
@@ -57,7 +65,8 @@ var locations = [
         lng: 12.478169040556464,
         narratives: ['historical'],
         historicalOrder: 4,
-        womenOrder: null
+        womenOrder: null,
+        description: 'A historic corner of Trastevere connected to the Rome explored through There’s Still Tomorrow.'
     },
 
     {   id: 'piazza-testaccio',
@@ -67,7 +76,8 @@ var locations = [
         lng: 12.47679868288506,
         narratives: ['historical', 'women'],
         historicalOrder: 5,
-        womenOrder: 4
+        womenOrder: 4,
+        description: 'The heart of Testaccio, representing the neighbourhood and communal life surrounding Delia.'
     },
 
     {   id: 'basilica-san-paolo',
@@ -77,7 +87,8 @@ var locations = [
         lng: 12.4768353963776,
         narratives: ['historical'],
         historicalOrder: 6,
-        womenOrder: null
+        womenOrder: null,
+        description: 'The monumental basilica that appears during Maddalena and Maria’s journey in Bellissima.'
     },
     
     // modifica
@@ -88,9 +99,10 @@ var locations = [
         lng: 12.478553476507402,
         narratives: ['historical'],
         historicalOrder: 7,
-        womenOrder: null
+        womenOrder: null,
+        description: 'A symbolic viewpoint over Rome, evoking the spectacular city portrayed in The Great Beauty.'
 
-},
+    },
 
     {   id: 'fontana-acqua-paola',
         name: "Fontana dell'Acqua Paola",
@@ -99,17 +111,23 @@ var locations = [
         lng: 12.46411612151793,
         narratives: ['historical', 'women'],
         historicalOrder: 8,
-        womenOrder: 8
+        womenOrder: 8,
+        description: 'The monumental fountain that provides the setting for the memorable opening of The Great Beauty.'
     },
 
     {   id: 'via-bodoni',
-        name: 'Via Bodoni',
+        name: 'Via Bodoni 98',
         films: ["There's Still Tomorrow"],
         lat: 41.87910068856054, 
         lng: 12.474543440555983,
         narratives: ['women'],
         historicalOrder: null,
-        womenOrder: 3
+        womenOrder: 3,
+        description: 'The Testaccio street where the exterior of Delia’s home in There’s Still Tomorrow was filmed.',
+        historicalLink: null,
+        womenLink: 'narrativa_femminista.html#via-bodoni',
+        historicalDirections: '',
+        womenDirections: 'From Cinecittà, take Metro A and continue towards Testaccio. Walk approximately 5 minutes to Via Bodoni.'
     },
 
     {   id: 'mercato-testaccio',
@@ -119,7 +137,8 @@ var locations = [
         lng: 12.473857416337614,
         narratives: ['women'],
         historicalOrder: null,
-        womenOrder: 4
+        womenOrder: 4,
+        description: 'The neighbourhood market associated with everyday work and community life in There’s Still Tomorrow.'
     },
 
     {   id: 'lungotevere-testaccio',
@@ -129,7 +148,8 @@ var locations = [
         lng: 12.470692409872179,
         narratives: ['women'],
         historicalOrder: null,
-        womenOrder: 5
+        womenOrder: 5,
+        description: 'A transition from the enclosed neighbourhood towards a wider experience of the city.'
     },
 
     {   id: 'porta-portese',
@@ -139,7 +159,8 @@ var locations = [
         lng: 12.474364586261354,
         narratives: ['women'],
         historicalOrder: null,
-        womenOrder: 6
+        womenOrder: 6,
+        description: 'A popular Roman setting connected to Mamma Roma and her struggle for a different life.'
     },
 
     {   id: 'piazza-dei-mercanti',
@@ -149,17 +170,19 @@ var locations = [
         lng: 12.477011979188777,
         narratives: ['women'],
         historicalOrder: null,
-        womenOrder: 6
+        womenOrder: 6,
+        description: 'A Trastevere square used as a filming location in Mamma Roma.'
     },
 
     {   id: 'san-pietro-in-montorio',
         name: 'San Pietro in Montorio',
-        films: ['Mamma Roma', 'The Great Beauty'],
+        films: ['The Great Beauty'],
         lat: 41.888777824418995, 
         lng: 12.46669379822742,
         narratives: ['women'],
         historicalOrder: null,
-        womenOrder: 7
+        womenOrder: 7,
+        description: 'A Renaissance landmark appearing among the hidden and monumental spaces of The Great Beauty.'
     }
 
 ];
@@ -172,7 +195,11 @@ for (var i = 0; i < locations.length; i++) {
     var currentLocation = locations[i];
     // creazione automatica del marker: per ogni location creato marker e aggiunto pop up
     var marker = L.marker([currentLocation.lat, currentLocation.lng]).addTo(map)
-        .bindPopup(currentLocation.name);
+    .bindPopup(
+        '<strong>' + currentLocation.name + '</strong><br>' +
+        '<em>' + currentLocation.films.join(', ') + '</em><br><br>' +
+        currentLocation.description
+    );
     // salvo il marker nell'array
     markers.push(marker);
 }
@@ -180,141 +207,50 @@ for (var i = 0; i < locations.length; i++) {
 
 
 
-// LINEA PERCORSO HISTORICAL 
+// Variabili per salvare le linee dei due percorsi
+var historicalLine;
+var womenLine;
 
-// Creo un array vuoto per salvare le coordinate dell'itinerario storico
-var historicalRoute = [];
-// Scorro tutte le location
-for (var i = 0; i < locations.length; i++) {
-    // Controllo se la location appartiene all'itinerario storico
-    if (locations[i].historicalOrder !== null) {
-        // Salvo coordinate e ordine della tappa
-        historicalRoute.push({
-            lat: locations[i].lat,
-            lng: locations[i].lng,
-            order: locations[i].historicalOrder
-        });
-    }
-}
-// Ordino le tappe in base al valore di historicalOrder
-historicalRoute.sort(function(a, b) {
-    return a.order - b.order;
-});
-// Creo la linea che collega le tappe dell'itinerario storico + colore blu
-var historicalLine = L.polyline(historicalRoute, {
-    color: 'blue'}).addTo(map);
-
-
-
-
-
-// LINEA PERCORSO WOMEN
-
-// Creo un array vuoto per salvare le coordinate dell'itinerario 
-var womenRoute = [];
-// Scorro tutte le location
-for (var i = 0; i < locations.length; i++) {
-    // Controllo se la location appartiene all'itinerario women
-    if (locations[i].womenOrder !== null) {
-        // Salvo coordinate e ordine della tappa
-        womenRoute.push({
-            lat: locations[i].lat,
-            lng: locations[i].lng,
-            order: locations[i].womenOrder
-        });
-    }
-}
-// Ordino le tappe in base al valore di womenOrder
-womenRoute.sort(function(a, b) {
-    return a.order - b.order;
-});
-// Creo la linea che collega le tappe dell'itinerario women + colore rosso
-var womenLine = L.polyline(womenRoute, {
-    color: 'red'}).addTo(map);
-
-
-
-
-// Variabile che tiene traccia della narrativa attualmente selezionata
+// Narrativa inizialmente selezionata
 var currentNarrative = 'all';
 
 
 
 
-// CHECKBOX
-
-// Funzione che restituisce l'elenco dei film selezionati nelle checkbox
-function getSelectedFilms() {
-    // Seleziono tutte le checkbox presenti dentro il contenitore film-filters
-    var checkboxes = document.querySelectorAll('#film-filters input[type="checkbox"]');
-    // Creo un array vuoto in cui salvare i film selezionati
-    var selectedFilms = [];
-    // Scorro tutte le checkbox
-    for (var i = 0; i < checkboxes.length; i++) {
-        // Controllo se la checkbox corrente è selezionata
-        if (checkboxes[i].checked) {
-            // Se è selezionata, aggiungo il suo valore all'array
-            selectedFilms.push(checkboxes[i].value);
-        }
-    }
-    // Restituisco l'elenco dei film selezionati
-    return selectedFilms;
-}
-
-// Funzione che seleziona nuovamente tutte le checkbox dei film
-function selectAllFilms() {
-    var checkboxes = document.querySelectorAll('#film-filters input[type="checkbox"]');
-    for (var i = 0; i < checkboxes.length; i++) {
-        checkboxes[i].checked = true;
-    }
-}
-
-
-
-
-// MODIFICARE LINEE PERCORSI
 
 // Funzione che aggiorna marker e percorsi
-// in base alla narrativa selezionata e ai film selezionati
+// in base alla narrativa selezionata
+
 function updateMap() {
-    // Recupero i film selezionati
-    var selectedFilms = getSelectedFilms();
-    // Creo due array temporanei per le coordinate
-    // delle location attualmente visibili
+
     var visibleHistoricalRoute = [];
     var visibleWomenRoute = [];
+
     // Scorro tutte le location
     for (var i = 0; i < locations.length; i++) {
+
         var currentLocation = locations[i];
+
         // Controllo se la location appartiene alla narrativa selezionata
         var matchesNarrative =
             currentNarrative === 'all' ||
             currentLocation.narratives.includes(currentNarrative);
-        // Controllo se almeno uno dei film della location
-        // è tra quelli selezionati
-        var matchesFilm = false;
-        for (var j = 0; j < currentLocation.films.length; j++) {
 
-            if (selectedFilms.includes(currentLocation.films[j])) {
-                matchesFilm = true;
-            }
-        }
-        // Se la location rispetta entrambi i filtri
-        if (matchesNarrative && matchesFilm) {
+        if (matchesNarrative) {
+
             // Mostro il marker
             markers[i].addTo(map);
-            // Se appartiene al percorso Historical,
-            // salvo le coordinate
-            if (currentLocation.historicalOrder !== null) {
 
+            // Aggiungo la tappa al percorso Historical
+            if (currentLocation.historicalOrder !== null) {
                 visibleHistoricalRoute.push({
                     lat: currentLocation.lat,
                     lng: currentLocation.lng,
                     order: currentLocation.historicalOrder
                 });
             }
-            // Se appartiene al percorso Women,
-            // salvo le coordinate
+
+            // Aggiungo la tappa al percorso Women
             if (currentLocation.womenOrder !== null) {
                 visibleWomenRoute.push({
                     lat: currentLocation.lat,
@@ -322,93 +258,272 @@ function updateMap() {
                     order: currentLocation.womenOrder
                 });
             }
+
         } else {
-            // Se non rispetta i filtri, nascondo il marker
+
+            // Nascondo il marker
             map.removeLayer(markers[i]);
+
         }
     }
-    // Ordino le coordinate secondo l'ordine narrativo
+
+    
+
+    // Ordino le tappe
     visibleHistoricalRoute.sort(function(a, b) {
         return a.order - b.order;
     });
+
     visibleWomenRoute.sort(function(a, b) {
         return a.order - b.order;
     });
-    // Tolgo le vecchie linee dalla mappa
-    map.removeLayer(historicalLine);
-    map.removeLayer(womenLine);
-    // Ricreo le linee usando solo le location visibili
+
+
+    // Rimuovo le linee precedenti, se esistono
+    if (historicalLine) {
+        map.removeLayer(historicalLine);
+    }
+
+    if (womenLine) {
+     map.removeLayer(womenLine);
+    }
+
+
+    // Creo le nuove linee
     historicalLine = L.polyline(visibleHistoricalRoute, {
         color: 'blue'
     });
+
     womenLine = L.polyline(visibleWomenRoute, {
         color: 'red'
     });
-    // Decido quali linee mostrare
+
+
+    // Mostro la linea corretta
     if (currentNarrative === 'historical') {
+
         historicalLine.addTo(map);
+
     } else if (currentNarrative === 'women') {
+
         womenLine.addTo(map);
+
     } else {
-        // In "All" mostro entrambe
+
         historicalLine.addTo(map);
         womenLine.addTo(map);
+
+    }
+
+    // Aggiorno anche l'elenco sotto la mappa
+
+updateLocationsList();
+}
+
+
+function updateLocationsList() {
+
+    var list = document.getElementById('locations-list');
+
+    // Svuoto la lista precedente
+    list.innerHTML = '';
+
+    // Creo una copia delle location
+    var visibleLocations = [];
+
+    for (var i = 0; i < locations.length; i++) {
+
+        // All = tutte le location
+        if (currentNarrative === 'all') {
+            visibleLocations.push(locations[i]);
+        }
+
+        // Historical = solo location historical
+        else if (
+            currentNarrative === 'historical' &&
+            locations[i].narratives.includes('historical')
+        ) {
+            visibleLocations.push(locations[i]);
+        }
+
+        // Women = solo location women
+        else if (
+            currentNarrative === 'women' &&
+            locations[i].narratives.includes('women')
+        ) {
+            visibleLocations.push(locations[i]);
+        }
+    }
+
+
+    // Se sono dentro un itinerario, ordino le tappe
+    if (currentNarrative === 'historical') {
+
+        visibleLocations.sort(function(a, b) {
+            return a.historicalOrder - b.historicalOrder;
+        });
+
+    }
+
+    else if (currentNarrative === 'women') {
+
+        visibleLocations.sort(function(a, b) {
+            return a.womenOrder - b.womenOrder;
+        });
+
+    }
+
+
+    // Creo una card per ogni location
+    for (var i = 0; i < visibleLocations.length; i++) {
+
+        var location = visibleLocations[i];
+
+        var card = document.createElement('div');
+        card.className = 'location-card';
+
+        var content = '';
+
+        // Numero della tappa
+        if (currentNarrative === 'historical') {
+            content += '<p class="location-order">Stop ' +
+                location.historicalOrder +
+                '</p>';
+        }
+
+        else if (currentNarrative === 'women') {
+            content += '<p class="location-order">Stop ' +
+                location.womenOrder +
+                '</p>';
+        }
+
+
+        // Nome
+        content += '<h3>' + location.name + '</h3>';
+
+        // Film
+        content += '<p><em>' +
+            location.films.join(', ') +
+            '</em></p>';
+
+        // Descrizione
+        content += '<p>' +
+            location.description +
+            '</p>';
+
+
+        // ALL LOCATIONS:
+        // mostro solamente i link agli itinerari
+        if (currentNarrative === 'all') {
+
+            if (location.historicalLink) {
+                content +=
+                    '<a href="' +
+                    location.historicalLink +
+                    '">Explore in the Historical Journey</a>';
+            }
+
+            if (location.womenLink) {
+                content +=
+                    '<a href="' +
+                    location.womenLink +
+                    '">Explore in Women & Urban Space</a>';
+            }
+        }
+
+
+        // HISTORICAL
+        if (currentNarrative === 'historical') {
+
+            if (location.historicalDirections) {
+
+                content +=
+                    '<div class="directions">' +
+                    '<strong>How to get there</strong>' +
+                    '<p>' +
+                    location.historicalDirections +
+                    '</p>' +
+                    '</div>';
+            }
+
+            if (location.historicalLink) {
+
+                content +=
+                    '<a href="' +
+                    location.historicalLink +
+                    '">Discover this stop →</a>';
+            }
+        }
+
+
+        // WOMEN
+        if (currentNarrative === 'women') {
+
+            if (location.womenDirections) {
+
+                content +=
+                    '<div class="directions">' +
+                    '<strong>How to get there</strong>' +
+                    '<p>' +
+                    location.womenDirections +
+                    '</p>' +
+                    '</div>';
+            }
+
+            if (location.womenLink) {
+
+                content +=
+                    '<a href="' +
+                    location.womenLink +
+                    '">Discover this stop →</a>';
+            }
+        }
+
+
+        card.innerHTML = content;
+
+        list.appendChild(card);
     }
 }
 
 
-
-// PER FAR FUNZIONARE checkbox
-// Seleziono tutte le checkbox dei film
-var filmCheckboxes = document.querySelectorAll('#film-filters input[type="checkbox"]');
-// Scorro tutte le checkbox
-for (var i = 0; i < filmCheckboxes.length; i++) {
-    // Quando cambia lo stato di una checkbox
-    filmCheckboxes[i].addEventListener('change', function() {
-        // Aggiorno la mappa in base ai filtri attivi
-        updateMap();
-    });
-}
-
-
-
-
-//FILTRO X HISTORICAL
+// FILTRO HISTORICAL
 
 var historicalButton = document.getElementById('show-historical');
+
 historicalButton.addEventListener('click', function() {
-    // Imposto la narrativa Historical
+
     currentNarrative = 'historical';
-    // Riseleziono tutti i film
-    selectAllFilms();
-    // Aggiorno marker e linea
+
     updateMap();
+
 });
 
 
+// FILTRO WOMEN
 
-
-// FILTRO X WOMEN
 var womenButton = document.getElementById('show-women');
+
 womenButton.addEventListener('click', function() {
-    // Imposto la narrativa Women
+
     currentNarrative = 'women';
-    // Riseleziono tutti i film
-    selectAllFilms();
-    // Aggiorno marker e linea
+
     updateMap();
+
 });
 
 
-
-// FILTRO X TUTTI I PERCORSI
+// FILTRO ALL
 
 var allButton = document.getElementById('show-all');
+
 allButton.addEventListener('click', function() {
-    // Torno alla visualizzazione generale
+
     currentNarrative = 'all';
-    // Riseleziono tutti i film
-    selectAllFilms();
-    // Aggiorno marker e mostra entrambe le linee
+
     updateMap();
+
 });
+
+// Mostro inizialmente tutte le location e i due percorsi
+updateMap();

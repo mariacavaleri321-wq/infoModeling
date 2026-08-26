@@ -548,3 +548,51 @@ footer p {
 footer a {
     color: #f4e8c1;
 }
+
+
+/* MAPPA */
+
+#map {
+    width: 100%;
+    max-width: 950px;
+    height: 600px;
+    margin-top: 30px;
+}
+
+
+.locations-section {
+    width: 100%;
+    max-width: 1100px;
+    margin: 50px auto;
+}
+
+#locations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.location-card {
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.location-card h3 {
+    margin-top: 0;
+}
+
+.location-card a {
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.location-order {
+    font-weight: bold;
+}
+
+.directions {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #ccc;
+}
