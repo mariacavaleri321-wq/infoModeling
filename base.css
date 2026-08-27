@@ -20,7 +20,7 @@ a {
 }
 
 a:hover {
-    opacity: 0.4;
+    opacity: 0.7;
 }
 
 button {
@@ -48,12 +48,14 @@ header {
 
     background-color: #212121;
 
-    border-top: 1px solid #6d2121;
-    border-bottom: 1px solid #6d2121;
+    border-top: 1px solid #f4e8c1;
+    border-bottom: 1px solid #f4e8c1;
 }
 
 
-/* contenitore link navbar */
+/* =========================================================
+   LINK NAVBAR
+   ========================================================= */
 
 .link-head {
     display: flex;
@@ -64,33 +66,32 @@ header {
 .dropdown > a {
     margin-right: 20px;
 
-    color: #f4e8c1;
+    color: white;
 
     font-family: 'Special Elite', monospace;
     font-size: 1.05rem;
     font-weight: bold;
+
+    transition: color 0.2s ease;
 }
 
 .link-head > a:hover,
 .dropdown > a:hover {
+    color: #f4e8c1;
+
+    opacity: 1;
+
     text-decoration: underline;
 }
+
 
 /* =========================================================
    DROPDOWN NAVBAR
    ========================================================= */
 
-.link-head {
-    display: flex;
-    align-items: center;
-}
-
 .dropdown {
     position: relative;
 }
-
-
-/* menu nascosto normalmente */
 
 .dropdown-menu {
     display: none;
@@ -103,22 +104,16 @@ header {
 
     background-color: #212121;
 
-    border: 1px solid #6d2121;
+    border: 1px solid #f4e8c1;
 
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.35);
 
     z-index: 2100;
 }
 
-
-/* MOSTRA IL MENU QUANDO SI PASSA SU ITINERARY */
-
 .dropdown:hover .dropdown-menu {
     display: block;
 }
-
-
-/* link interni */
 
 .dropdown-menu a {
     display: block;
@@ -126,22 +121,19 @@ header {
     margin: 0;
     padding: 12px 15px;
 
-    color: #f4e8c1;
+    color: white;
 
     font-family: 'Special Elite', monospace;
     font-size: 0.9rem;
 
     white-space: nowrap;
 
-    border-bottom: 1px solid rgba(244, 232, 193, 0.15);
+    border-bottom: 1px solid rgba(244, 232, 193, 0.2);
 }
 
 .dropdown-menu a:last-child {
     border-bottom: none;
 }
-
-
-/* hover sulle due opzioni */
 
 .dropdown-menu a:hover {
     background-color: #943b3b;
@@ -150,6 +142,7 @@ header {
 
     opacity: 1;
 }
+
 
 /* =========================================================
    BARRA STILI / DATE
@@ -170,8 +163,8 @@ header {
 
     background-color: #943b3b;
 
-    border-top: 1.5px solid rgba(0, 0, 0, 0.15);
-    border-bottom: 1.5px solid rgba(0, 0, 0, 0.15);
+    border-top: 1.5px solid rgba(255, 255, 255, 0.35);
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.35);
 }
 
 .bar-item {
@@ -185,7 +178,7 @@ header {
 
     text-align: center;
 
-    border-right: 1.5px solid rgba(0, 0, 0, 0.15);
+    border-right: 1.5px solid rgba(255, 255, 255, 0.35);
 }
 
 .bar-item:last-child {
@@ -200,15 +193,19 @@ header {
     align-items: center;
     justify-content: center;
 
-    color: rgba(228, 228, 228, 0.8);
+    color: white;
 
     font-family: 'Courier', monospace;
     font-size: 1.3rem;
     font-weight: bold;
+
+    transition: color 0.2s ease;
 }
 
 .bar-item a:hover {
-    color: #ec3232;
+    color: #f4e8c1;
+
+    opacity: 1;
 }
 
 
@@ -284,7 +281,9 @@ main p {
 }
 
 
-/* contenitore del titolo */
+/* =========================================================
+   CONTENITORE TITOLO
+   ========================================================= */
 
 .title-container {
     position: relative;
@@ -299,16 +298,22 @@ main p {
 
     background-color: #1c1b1b;
 
-    border: 10px solid #b15656;
+    border: 7px solid #f4e8c1;
     border-radius: 18px;
 
     box-shadow:
-        0 0 0 5px #6d2121,
+        0 0 0 3px white,
+        0 0 0 7px #f4e8c1,
+        0 0 20px rgba(244, 232, 193, 0.7),
+        0 0 40px rgba(244, 232, 193, 0.35),
         0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 
-/* titolo della homepage */
+/* =========================================================
+   TITOLO HOMEPAGE
+   RIPRISTINATO BEBAS NEUE
+   ========================================================= */
 
 .title-container h1 {
     width: 100%;
@@ -322,17 +327,22 @@ main p {
     line-height: 1;
     letter-spacing: 6px;
 
-    color: #f4e8c1;
+    color: white;
 
     text-align: center;
     text-transform: uppercase;
 
+    -webkit-text-stroke: 1px #f4e8c1;
+
     text-shadow:
-        2px 2px 0 #6d2121;
+        2px 2px 0 #6d2121,
+        0 0 8px rgba(244, 232, 193, 0.3);
 }
 
 
-/* pallini luminosi */
+/* =========================================================
+   LUCI INSEGNA
+   ========================================================= */
 
 .title-container::before,
 .title-container::after {
@@ -348,6 +358,10 @@ main p {
     letter-spacing: 10px;
 
     text-align: center;
+
+    text-shadow:
+        0 0 4px white,
+        0 0 8px #f4e8c1;
 }
 
 .title-container::before {
@@ -372,9 +386,6 @@ main p {
     margin: 70px auto;
 }
 
-
-/* contenitore delle due card */
-
 .narrativa-container {
     width: 100%;
 
@@ -396,18 +407,20 @@ main p {
     box-sizing: border-box;
 
     background-color: #1c1b1b;
+
     color: #f4e8c1;
 
-    border: 4px solid #f4e8c1;
+    border: 4px solid white;
 
     transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        opacity 0.25s ease;
+        opacity 0.2s ease,
+        border-color 0.2s ease;
 }
 
 
-/* parte superiore tipo ciak */
+/* =========================================================
+   PARTE SUPERIORE TIPO CIAK
+   ========================================================= */
 
 .card-decoration {
     height: 45px;
@@ -415,17 +428,19 @@ main p {
     background:
         repeating-linear-gradient(
             135deg,
-            #f4e8c1 0px,
-            #f4e8c1 35px,
+            white 0px,
+            white 35px,
             #1c1b1b 35px,
             #1c1b1b 70px
         );
 
-    border-bottom: 4px solid #f4e8c1;
+    border-bottom: 4px solid white;
 }
 
 
-/* ITINERARY 01 / ITINERARY 02 */
+/* =========================================================
+   ETICHETTA ITINERARIO
+   ========================================================= */
 
 .card-label {
     padding: 12px 20px;
@@ -442,14 +457,18 @@ main p {
 }
 
 
-/* corpo */
+/* =========================================================
+   CORPO CARD
+   ========================================================= */
 
 .card-body {
     padding: 25px;
 }
 
 
-/* titolo narrativa */
+/* =========================================================
+   TITOLO NARRATIVA
+   ========================================================= */
 
 .card-body h3 {
     min-height: 80px;
@@ -461,13 +480,15 @@ main p {
     line-height: 1.1;
     letter-spacing: 2px;
 
-    color: #b15656;
+    color: white;
 
     text-align: center;
 }
 
 
-/* dettagli */
+/* =========================================================
+   DETTAGLI
+   ========================================================= */
 
 .card-details {
     padding: 10px 0;
@@ -483,6 +504,7 @@ main p {
 
     margin: 5px 0;
 
+    font-family: 'Special Elite', monospace;
     font-size: 0.9rem;
     line-height: 1.3rem;
 
@@ -492,7 +514,9 @@ main p {
 }
 
 
-/* descrizione */
+/* =========================================================
+   DESCRIZIONE CARD
+   ========================================================= */
 
 .card-description {
     width: 100%;
@@ -504,52 +528,53 @@ main p {
     font-size: 1rem;
     line-height: 1.5rem;
 
-    color: #d6ccb1;
-
     text-align: left;
+
+    color: #d6ccb1 !important;
 }
 
 
-/* link finale */
+/* =========================================================
+   DISCOVER
+   ========================================================= */
 
 .discover {
     display: inline-block;
 
     padding: 8px 14px;
 
-    border: 1px solid #b15656;
+    background-color: #1c1b1b;
+
+    border: 1px solid white;
     border-radius: 3px;
 
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.1rem;
     letter-spacing: 1px;
 
-    color: #f4e8c1;
+    color: white;
 
     transition:
-        background-color 0.2s ease,
-        transform 0.2s ease;
+        color 0.2s ease,
+        border-color 0.2s ease;
 }
 
-.discover:hover {
-    background-color: #b15656;
-
+.narrative-card:hover .discover {
     color: #f4e8c1;
-
-    opacity: 1;
-
-    transform: translateX(4px);
+    border-color: #f4e8c1;
 }
 
 
-/* hover dell'intera card */
+/* =========================================================
+   HOVER CARD
+
+   PIÙ LEGGERO E SEMPLICE
+   ========================================================= */
 
 .narrative-card:hover {
-    opacity: 1;
+    opacity: 0.82;
 
-    transform: translateY(-5px);
-
-    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.3);
+    border-color: #f4e8c1;
 }
 
 
@@ -662,10 +687,14 @@ main p {
 
     font-size: 2.2rem;
 
-    transition: transform 0.2s ease;
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .frecce_scena button:hover {
+    color: #f4e8c1;
+
     transform: scale(1.2);
 }
 
@@ -716,10 +745,10 @@ main p {
 .showview-buttons button {
     padding: 10px 20px;
 
-    background-color: #836363;
+    background-color: #1c1b1b;
     color: white;
 
-    border: none;
+    border: 1px solid white;
     border-radius: 4px;
 
     font-family: 'Special Elite', monospace;
@@ -727,14 +756,17 @@ main p {
     font-weight: bold;
 
     transition:
-        background-color 0.2s ease,
-        transform 0.2s ease;
+        color 0.2s ease,
+        border-color 0.2s ease,
+        background-color 0.2s ease;
 }
 
 .showview-buttons button:hover {
-    background-color: #50341e;
+    color: #f4e8c1;
 
-    transform: translateX(5px);
+    border-color: #f4e8c1;
+
+    background-color: #212121;
 }
 
 
@@ -758,7 +790,7 @@ main p {
     background-color: #f4e8c1;
     color: #2b2623;
 
-    border: 2px solid #38312d;
+    border: 2px solid white;
     border-radius: 8px;
 
     overflow-y: auto;
@@ -787,9 +819,11 @@ main p {
 
     padding: 8px;
 
+    background-color: #1c1b1b;
+
     color: white;
 
-    border: none;
+    border: 1px solid #1c1b1b;
     border-radius: 4px;
 
     font-family: 'Special Elite', monospace;
@@ -800,6 +834,8 @@ main p {
 }
 
 .difficulty-buttons button:hover {
+    color: #f4e8c1;
+
     opacity: 0.8;
 }
 
@@ -820,9 +856,11 @@ main p {
 .tellme-buttons button {
     padding: 6px 12px;
 
+    background-color: #1c1b1b;
+
     color: white;
 
-    border: none;
+    border: 1px solid #1c1b1b;
     border-radius: 4px;
 
     font-family: 'Courier New', monospace;
@@ -830,20 +868,10 @@ main p {
     font-weight: bold;
 }
 
-.tellme-buttons button:nth-child(1) {
-    background-color: #50341e;
-}
-
-.tellme-buttons button:nth-child(2) {
-    background-color: #2b180a;
-}
-
-.tellme-buttons button:nth-child(3) {
-    background-color: #7f5b34;
-}
-
 .tellme-buttons button:hover {
-    opacity: 0.75;
+    color: #f4e8c1;
+
+    opacity: 0.8;
 }
 
 
@@ -864,7 +892,7 @@ main p {
     background-color: #f4e8c1;
     color: #2b2623;
 
-    border: 2px solid #38312d;
+    border: 2px solid white;
     border-radius: 8px;
 
     font-family: 'Special Elite', monospace;
@@ -909,25 +937,25 @@ main p {
 
     padding: 10px 20px;
 
-    background-color: #836363;
+    background-color: #1c1b1b;
     color: white;
 
-    border: none;
-    border-radius: 10px;
+    border: 1px solid #1c1b1b;
+    border-radius: 4px;
 
     font-family: 'Special Elite', monospace;
     font-size: 1rem;
     font-weight: bold;
 
     transition:
-        background-color 0.2s ease,
-        transform 0.2s ease;
+        color 0.2s ease,
+        opacity 0.2s ease;
 }
 
 .metadata-tasti button:hover {
-    background-color: #50341e;
+    color: #f4e8c1;
 
-    transform: translateX(5px);
+    opacity: 0.8;
 }
 
 .metadata-tasti li {
@@ -940,7 +968,7 @@ main p {
    ========================================================= */
 
 .meta-punti {
-    color: rgb(161, 50, 50);
+    color: #943b3b;
 
     font-size: 1.2rem;
 
@@ -950,9 +978,9 @@ main p {
 }
 
 .meta-punti:hover {
-    color: #d81e1e;
+    color: #6d2121;
 
-    border-bottom: 2px solid #d81e1e;
+    border-bottom: 2px solid #6d2121;
 
     text-decoration: underline;
 }
@@ -995,7 +1023,7 @@ main p {
     background-color: #f4e8c1;
     color: #2b2623;
 
-    border: 3px solid #000000;
+    border: 3px solid white;
     border-radius: 8px;
 
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
@@ -1010,9 +1038,9 @@ main p {
 
     padding-bottom: 8px;
 
-    color: #e44f0b;
+    color: #943b3b;
 
-    border-bottom: 1px solid #38312d;
+    border-bottom: 1px solid #943b3b;
 
     font-size: 1.2rem;
 }
@@ -1063,7 +1091,7 @@ main p {
 
     background-color: #f4e8c1;
 
-    border: 2px solid #38312d;
+    border: 2px solid white;
     border-radius: 8px;
 
     text-align: center;
@@ -1245,34 +1273,32 @@ main p {
 
     padding: 10px 18px;
 
-    border: 1px solid #f4e8c1;
+    background-color: #1c1b1b;
+
+    border: 1px solid #1c1b1b;
     border-radius: 3px;
 
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1rem;
     letter-spacing: 1.5px;
 
-    color: #f4e8c1;
+    color: white;
 
     text-decoration: none;
 
     transition:
-        background-color 0.2s ease,
-        transform 0.2s ease;
+        color 0.2s ease,
+        border-color 0.2s ease,
+        opacity 0.2s ease;
 }
 
 .bottone:hover {
-    background-color: #b15656;
-
     color: #f4e8c1;
 
-    opacity: 1;
+    border-color: #f4e8c1;
 
-    transform: translateY(-2px);
+    opacity: 0.85;
 }
-
-
-/* se esiste soltanto NEXT, viene portato a destra */
 
 .bottoni-pagine .bottone:only-child {
     margin-left: auto;
@@ -1317,9 +1343,15 @@ footer p {
 }
 
 footer a {
-    color: #f4e8c1;
+    color: white;
 
     font-size: 0.85rem;
+}
+
+footer a:hover {
+    color: #f4e8c1;
+
+    opacity: 1;
 }
 
 
@@ -1406,20 +1438,23 @@ footer a {
     .title-container {
         padding: 50px 25px;
 
-        border-width: 7px;
+        border-width: 5px;
     }
 
     .title-container h1 {
         font-size: 3.2rem;
+
         letter-spacing: 3px;
     }
 
     .title-container::before,
     .title-container::after {
         font-size: 0.9rem;
+
         letter-spacing: 4px;
 
         overflow: hidden;
+
         white-space: nowrap;
     }
 
