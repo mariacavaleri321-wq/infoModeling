@@ -12,7 +12,7 @@ body {
     background-color: #943b3b;
 
     font-family: 'Special Elite', monospace;
-    color: #e6dfd3;
+    color: white;
 }
 
 a {
@@ -136,9 +136,9 @@ header {
 }
 
 .dropdown-menu a:hover {
-    background-color: #943b3b;
+    background-color: #f4e8c1;
 
-    color: #f4e8c1;
+    color: #943b3b;
 
     opacity: 1;
 }
@@ -199,13 +199,15 @@ header {
     font-size: 1.3rem;
     font-weight: bold;
 
-    transition: color 0.2s ease;
+    transition:
+        color 0.2s ease,
+        opacity 0.2s ease;
 }
 
 .bar-item a:hover {
     color: #f4e8c1;
 
-    opacity: 1;
+    opacity: 0.75;
 }
 
 
@@ -227,6 +229,7 @@ main {
 
 /* =========================================================
    TITOLI GENERALI
+   stesso stile usato nella homepage
    ========================================================= */
 
 main h2 {
@@ -261,7 +264,7 @@ main p {
     font-size: 1.1rem;
     line-height: 1.6rem;
 
-    color: #d6ccb1;
+    color: white;
 
     text-align: justify;
 }
@@ -312,7 +315,6 @@ main p {
 
 /* =========================================================
    TITOLO HOMEPAGE
-   RIPRISTINATO BEBAS NEUE
    ========================================================= */
 
 .title-container h1 {
@@ -408,13 +410,14 @@ main p {
 
     background-color: #1c1b1b;
 
-    color: #f4e8c1;
+    color: white;
 
     border: 4px solid white;
 
     transition:
         opacity 0.2s ease,
-        border-color 0.2s ease;
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 
@@ -508,7 +511,7 @@ main p {
     font-size: 0.9rem;
     line-height: 1.3rem;
 
-    color: #f4e8c1;
+    color: white;
 
     text-align: left;
 }
@@ -530,7 +533,7 @@ main p {
 
     text-align: left;
 
-    color: #d6ccb1 !important;
+    color: white !important;
 }
 
 
@@ -556,25 +559,35 @@ main p {
 
     transition:
         color 0.2s ease,
-        border-color 0.2s ease;
+        border-color 0.2s ease,
+        background-color 0.2s ease;
 }
 
 .narrative-card:hover .discover {
-    color: #f4e8c1;
+    background-color: #f4e8c1;
+
+    color: #943b3b;
+
     border-color: #f4e8c1;
 }
 
 
 /* =========================================================
    HOVER CARD
-
-   PIÙ LEGGERO E SEMPLICE
    ========================================================= */
 
 .narrative-card:hover {
-    opacity: 0.82;
+
+    opacity: 1;
 
     border-color: #f4e8c1;
+
+    box-shadow:
+
+        0 0 8px rgba(244, 232, 193, 0.7),
+
+        0 0 18px rgba(244, 232, 193, 0.35);
+
 }
 
 
@@ -652,7 +665,7 @@ main p {
 
     margin-bottom: 5px;
 
-    color: #aaa;
+    color: white;
 
     font-family: 'Special Elite', monospace;
     font-size: 1rem;
@@ -762,11 +775,11 @@ main p {
 }
 
 .showview-buttons button:hover {
-    color: #f4e8c1;
+    background-color: #f4e8c1;
+
+    color: #943b3b;
 
     border-color: #f4e8c1;
-
-    background-color: #212121;
 }
 
 
@@ -831,12 +844,18 @@ main p {
     font-weight: bold;
 
     text-align: center;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
 }
 
 .difficulty-buttons button:hover {
-    color: #f4e8c1;
+    background-color: #f4e8c1;
 
-    opacity: 0.8;
+    color: #943b3b;
+
+    opacity: 1;
 }
 
 
@@ -866,12 +885,18 @@ main p {
     font-family: 'Courier New', monospace;
     font-size: 1rem;
     font-weight: bold;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
 }
 
 .tellme-buttons button:hover {
-    color: #f4e8c1;
+    background-color: #f4e8c1;
 
-    opacity: 0.8;
+    color: #943b3b;
+
+    opacity: 1;
 }
 
 
@@ -948,14 +973,14 @@ main p {
     font-weight: bold;
 
     transition:
-        color 0.2s ease,
-        opacity 0.2s ease;
+        background-color 0.2s ease,
+        color 0.2s ease;
 }
 
 .metadata-tasti button:hover {
-    color: #f4e8c1;
+    background-color: #f4e8c1;
 
-    opacity: 0.8;
+    color: #943b3b;
 }
 
 .metadata-tasti li {
@@ -1287,17 +1312,19 @@ main p {
     text-decoration: none;
 
     transition:
+        background-color 0.2s ease,
         color 0.2s ease,
-        border-color 0.2s ease,
-        opacity 0.2s ease;
+        border-color 0.2s ease;
 }
 
 .bottone:hover {
-    color: #f4e8c1;
+    background-color: #f4e8c1;
+
+    color: #943b3b;
 
     border-color: #f4e8c1;
 
-    opacity: 0.85;
+    opacity: 1;
 }
 
 .bottoni-pagine .bottone:only-child {
@@ -1334,7 +1361,7 @@ footer p {
 
     margin: 6px auto;
 
-    color: #d6ccb1;
+    color: white;
 
     font-size: 0.85rem;
     line-height: 1.5;
