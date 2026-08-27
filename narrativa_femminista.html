@@ -126,6 +126,7 @@
                         <div class="metadata-tasti">
                             <button type="button" onclick="toggleModal('film-finestra')"> CINEMATIC CONTEXT </button> 
                             <button type="button" onclick="toggleModal('location-finestra')"> LOCATION </button> 
+                            <button type="button" onclick="toggleModal('shot-finestra')"> SHOT</button> 
                             <button type="button" onclick="toggleModal('project-finestra')"> PROJECT </span> 
                         </div>
                         
@@ -167,6 +168,31 @@
                                 </ul>
                             </div>
                         </div> 
+
+
+                        <div id="shot-finestra" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'shot-finestra')">
+
+                            <div class="modal-box">
+                                <h3>Shot</h3>
+
+                                <ul>
+                                    <li><strong>Shot scale:</strong>Long shot / architectural establishing shot</li>
+                                    <li><strong>Camera angle:</strong>Low angle</li>
+                                    <li><strong>Camera tilt:</strong>Upward</li>
+                                    <li><strong>Framing:</strong>Frontal and approximately symmetrical</li>
+                                    <li><strong>Camera position:</strong>To be determined</li>
+                                    <li><strong>Viewing direction:</strong>To be determined</li>
+                                    <li><strong>Azimuth:</strong>To be determined</li>
+                                    <li><strong>Camera height:</strong> Approx. eye level / street level</li>
+                                    <li><strong>Focal length:</strong>Unknown</li>
+                                    <li><strong>Replication instructions:</strong>
+                                        Stand opposite the façade, centre the main architectural
+                                        axis in the frame and tilt the camera upward, keeping the
+                                        upper cornice and a small portion of the sky visible.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="qr-content" style="display:none;">
