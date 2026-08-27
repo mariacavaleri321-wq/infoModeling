@@ -1333,6 +1333,12 @@ main p {
     border-color: #f4e8c1;
 
     opacity: 1;
+
+    box-shadow:
+
+        0 0 5px rgba(244, 232, 193, 0.8),
+
+        0 0 10px rgba(244, 232, 193, 0.5);
 }
 
 .bottoni-pagine .bottone:only-child {
