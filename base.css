@@ -30,13 +30,12 @@ button {
 
 /* =========================================================
    HEADER / NAVBAR
-   mantiene lo stile cinemaStylesheet
    ========================================================= */
 
 header {
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 2000;
 
     width: 100%;
     box-sizing: border-box;
@@ -48,24 +47,109 @@ header {
     padding: 15px 40px;
 
     background-color: #212121;
+
     border-top: 1px solid #6d2121;
     border-bottom: 1px solid #6d2121;
 }
 
-.link-head a {
+
+/* contenitore link navbar */
+
+.link-head {
+    display: flex;
+    align-items: center;
+}
+
+.link-head > a,
+.dropdown > a {
     margin-right: 20px;
 
     color: #f4e8c1;
 
-    font-family: 'Courier New', monospace;
+    font-family: 'Special Elite', monospace;
     font-size: 1.05rem;
     font-weight: bold;
 }
 
-.link-head a:hover {
+.link-head > a:hover,
+.dropdown > a:hover {
     text-decoration: underline;
 }
 
+/* =========================================================
+   DROPDOWN NAVBAR
+   ========================================================= */
+
+.link-head {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+}
+
+
+/* menu nascosto normalmente */
+
+.dropdown-menu {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    min-width: 230px;
+
+    background-color: #212121;
+
+    border: 1px solid #6d2121;
+
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.35);
+
+    z-index: 2100;
+}
+
+
+/* MOSTRA IL MENU QUANDO SI PASSA SU ITINERARY */
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+/* link interni */
+
+.dropdown-menu a {
+    display: block;
+
+    margin: 0;
+    padding: 12px 15px;
+
+    color: #f4e8c1;
+
+    font-family: 'Special Elite', monospace;
+    font-size: 0.9rem;
+
+    white-space: nowrap;
+
+    border-bottom: 1px solid rgba(244, 232, 193, 0.15);
+}
+
+.dropdown-menu a:last-child {
+    border-bottom: none;
+}
+
+
+/* hover sulle due opzioni */
+
+.dropdown-menu a:hover {
+    background-color: #943b3b;
+
+    color: #f4e8c1;
+
+    opacity: 1;
+}
 
 /* =========================================================
    BARRA STILI / DATE
@@ -144,7 +228,9 @@ main {
 }
 
 
-/* TITOLO */
+/* =========================================================
+   TITOLI GENERALI
+   ========================================================= */
 
 main h2 {
     width: 100%;
@@ -158,13 +244,15 @@ main h2 {
     font-size: 3rem;
     letter-spacing: 3px;
 
-    color: white;
+    color: #f4e8c1;
 
     text-align: center;
 }
 
 
-/* INTRODUZIONE */
+/* =========================================================
+   TESTO GENERALE
+   ========================================================= */
 
 main p {
     width: 100%;
@@ -172,12 +260,296 @@ main p {
 
     margin: 0 auto;
 
+    font-family: 'Special Elite', monospace;
     font-size: 1.1rem;
     line-height: 1.6rem;
 
     color: #d6ccb1;
 
     text-align: justify;
+}
+
+
+/* =========================================================
+   HOMEPAGE - INSEGNA CINEMATOGRAFICA
+   ========================================================= */
+
+.home-introduction {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 50px auto 70px auto;
+
+    text-align: center;
+}
+
+
+/* contenitore del titolo */
+
+.title-container {
+    position: relative;
+
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+    padding: 60px 70px;
+
+    box-sizing: border-box;
+
+    background-color: #1c1b1b;
+
+    border: 10px solid #b15656;
+    border-radius: 18px;
+
+    box-shadow:
+        0 0 0 5px #6d2121,
+        0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+/* titolo della homepage */
+
+.title-container h1 {
+    width: 100%;
+    max-width: none;
+
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5.5rem;
+    line-height: 1;
+    letter-spacing: 6px;
+
+    color: #f4e8c1;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    text-shadow:
+        2px 2px 0 #6d2121;
+}
+
+
+/* pallini luminosi */
+
+.title-container::before,
+.title-container::after {
+    position: absolute;
+    left: 0;
+
+    width: 100%;
+
+    color: #f4e8c1;
+
+    font-family: Arial, sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 10px;
+
+    text-align: center;
+}
+
+.title-container::before {
+    content: "● ● ● ● ● ● ● ● ● ● ● ● ●";
+    top: 8px;
+}
+
+.title-container::after {
+    content: "● ● ● ● ● ● ● ● ● ● ● ● ●";
+    bottom: 8px;
+}
+
+
+/* =========================================================
+   HOMEPAGE - NARRATIVE
+   ========================================================= */
+
+.narratives {
+    width: 100%;
+    max-width: 950px;
+
+    margin: 70px auto;
+}
+
+
+/* contenitore delle due card */
+
+.narrativa-container {
+    width: 100%;
+
+    display: flex;
+
+    gap: 40px;
+
+    margin-top: 30px;
+}
+
+
+/* =========================================================
+   CARD NARRATIVE
+   ========================================================= */
+
+.narrative-card {
+    flex: 1;
+
+    box-sizing: border-box;
+
+    background-color: #1c1b1b;
+    color: #f4e8c1;
+
+    border: 4px solid #f4e8c1;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        opacity 0.25s ease;
+}
+
+
+/* parte superiore tipo ciak */
+
+.card-decoration {
+    height: 45px;
+
+    background:
+        repeating-linear-gradient(
+            135deg,
+            #f4e8c1 0px,
+            #f4e8c1 35px,
+            #1c1b1b 35px,
+            #1c1b1b 70px
+        );
+
+    border-bottom: 4px solid #f4e8c1;
+}
+
+
+/* ITINERARY 01 / ITINERARY 02 */
+
+.card-label {
+    padding: 12px 20px;
+
+    border-bottom: 2px solid #f4e8c1;
+
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+
+    color: #f4e8c1;
+
+    text-align: center;
+}
+
+
+/* corpo */
+
+.card-body {
+    padding: 25px;
+}
+
+
+/* titolo narrativa */
+
+.card-body h3 {
+    min-height: 80px;
+
+    margin: 0 0 20px 0;
+
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    line-height: 1.1;
+    letter-spacing: 2px;
+
+    color: #b15656;
+
+    text-align: center;
+}
+
+
+/* dettagli */
+
+.card-details {
+    padding: 10px 0;
+    margin-bottom: 20px;
+
+    border-top: 1px solid #f4e8c1;
+    border-bottom: 1px solid #f4e8c1;
+}
+
+.card-details p {
+    width: 100%;
+    max-width: none;
+
+    margin: 5px 0;
+
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+
+    color: #f4e8c1;
+
+    text-align: left;
+}
+
+
+/* descrizione */
+
+.card-description {
+    width: 100%;
+    max-width: none;
+
+    margin-bottom: 25px;
+
+    font-family: 'Special Elite', monospace;
+    font-size: 1rem;
+    line-height: 1.5rem;
+
+    color: #d6ccb1;
+
+    text-align: left;
+}
+
+
+/* link finale */
+
+.discover {
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    border: 1px solid #b15656;
+    border-radius: 3px;
+
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+
+    color: #f4e8c1;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.discover:hover {
+    background-color: #b15656;
+
+    color: #f4e8c1;
+
+    opacity: 1;
+
+    transform: translateX(4px);
+}
+
+
+/* hover dell'intera card */
+
+.narrative-card:hover {
+    opacity: 1;
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -735,6 +1107,26 @@ main p {
 
 
 /* =========================================================
+   SEZIONE FILM HOMEPAGE
+   ========================================================= */
+
+.films-section {
+    width: 100%;
+    max-width: 950px;
+
+    margin: 80px auto;
+}
+
+.films-introduction {
+    margin-bottom: 40px;
+}
+
+.films-introduction h2 {
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
    POSTER
    ========================================================= */
 
@@ -834,6 +1226,60 @@ main p {
 
 
 /* =========================================================
+   BOTTONI PREVIOUS / NEXT
+   ========================================================= */
+
+.bottoni-pagine {
+    width: 100%;
+    max-width: 950px;
+
+    margin: 50px auto 20px auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottone {
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    border: 1px solid #f4e8c1;
+    border-radius: 3px;
+
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+
+    color: #f4e8c1;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.bottone:hover {
+    background-color: #b15656;
+
+    color: #f4e8c1;
+
+    opacity: 1;
+
+    transform: translateY(-2px);
+}
+
+
+/* se esiste soltanto NEXT, viene portato a destra */
+
+.bottoni-pagine .bottone:only-child {
+    margin-left: auto;
+}
+
+
+/* =========================================================
    FOOTER
    ========================================================= */
 
@@ -842,15 +1288,25 @@ footer {
 
     box-sizing: border-box;
 
+    margin-top: 80px;
     padding: 25px 40px;
 
     background-color: #1c1b1b;
 }
 
-footer p {
+.footer-container {
+    width: 100%;
     max-width: 950px;
 
     margin: 0 auto;
+
+    text-align: center;
+}
+
+footer p {
+    max-width: 950px;
+
+    margin: 6px auto;
 
     color: #d6ccb1;
 
@@ -882,16 +1338,36 @@ footer a {
     }
 
     .link-head {
+        justify-content: center;
+
+        flex-wrap: wrap;
+
         text-align: center !important;
     }
 
-    .link-head a {
+    .link-head > a,
+    .dropdown > a {
         display: inline-block;
 
         margin: 5px 8px;
 
         font-size: 0.9rem;
     }
+
+
+    /* dropdown mobile */
+
+    .dropdown-menu {
+        top: 100%;
+        left: 50%;
+
+        min-width: 210px;
+
+        transform: translateX(-50%);
+    }
+
+
+    /* barra date */
 
     .bar-style {
         position: static;
@@ -909,6 +1385,9 @@ footer a {
         font-size: 1rem;
     }
 
+
+    /* main */
+
     main {
         padding: 20px;
     }
@@ -916,6 +1395,55 @@ footer a {
     main h2 {
         font-size: 2.3rem;
     }
+
+
+    /* insegna homepage */
+
+    .home-introduction {
+        margin: 35px auto 50px auto;
+    }
+
+    .title-container {
+        padding: 50px 25px;
+
+        border-width: 7px;
+    }
+
+    .title-container h1 {
+        font-size: 3.2rem;
+        letter-spacing: 3px;
+    }
+
+    .title-container::before,
+    .title-container::after {
+        font-size: 0.9rem;
+        letter-spacing: 4px;
+
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+
+    /* narrative */
+
+    .narratives {
+        margin: 50px auto;
+    }
+
+    .narrativa-container {
+        flex-direction: column;
+
+        gap: 30px;
+    }
+
+    .card-body h3 {
+        min-height: auto;
+
+        font-size: 2rem;
+    }
+
+
+    /* rullino */
 
     .area-immagini {
         height: auto;
@@ -964,9 +1492,28 @@ footer a {
         width: 100%;
     }
 
+
+    /* poster */
+
     .poster {
         flex: 1 1 100%;
     }
+
+
+    /* previous / next */
+
+    .bottoni-pagine {
+        margin-top: 35px;
+
+        gap: 15px;
+    }
+
+    .bottone {
+        font-size: 0.9rem;
+    }
+
+
+    /* footer */
 
     footer {
         padding: 25px 20px;
