@@ -70,7 +70,6 @@ header {
 
     font-family: 'Special Elite', monospace;
     font-size: 1.05rem;
-    font-weight: bold;
 
     transition: color 0.2s ease;
 }
@@ -160,7 +159,6 @@ header {
     box-sizing: border-box;
 
     padding: 15px 0;
-    margin-top: 30px;
 
     background-color: #943b3b;
 
@@ -1444,11 +1442,7 @@ footer a:hover {
     /* barra date */
 
     .bar-style {
-        position: static;
-
-        margin-top: 15px;
-
-        overflow-x: auto;
+        top: 90px;
     }
 
     .bar-item {
