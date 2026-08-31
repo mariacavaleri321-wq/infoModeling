@@ -19,6 +19,7 @@ function showLess(buttonElement) {
     const parentBox = buttonElement.closest('.story-content'); //trova lo story-content più vicino al button cliccato
     const activeLevel = getActiveLevel(parentBox); // Prende il livello visibile
     activeLevel.querySelector('.text-less').style.display = 'block'; //rende visibile il text less impostando il display su block
+    activeLevel.querySelector('.text-standard').style.display = 'none';
     activeLevel.querySelector('.text-more').style.display = 'none';  //nasconde il text more impostando il display su none
     activeLevel.querySelector('.text-didyouknow').style.display = 'none'; //nasconde il text did you know impostando il display su none
 }
@@ -27,6 +28,7 @@ function showMore(buttonElement) {
     const parentBox = buttonElement.closest('.story-content');
     const activeLevel = getActiveLevel(parentBox);
     activeLevel.querySelector('.text-less').style.display = 'none';
+    activeLevel.querySelector('.text-standard').style.display = 'none';
     activeLevel.querySelector('.text-more').style.display = 'block';
     activeLevel.querySelector('.text-didyouknow').style.display = 'none';
 }
@@ -35,6 +37,7 @@ function showDidYouKnow(buttonElement) {
     const parentBox = buttonElement.closest('.story-content');
     const activeLevel = getActiveLevel(parentBox);
     activeLevel.querySelector('.text-less').style.display = 'none';
+    activeLevel.querySelector('.text-standard').style.display = 'none';
     activeLevel.querySelector('.text-more').style.display = 'none';
     activeLevel.querySelector('.text-didyouknow').style.display = 'block';
 }
@@ -101,6 +104,7 @@ function showNormal(buttonElement) {
     parentBox.querySelector('.level-normal').style.display = 'block';
     parentBox.querySelector('.level-child').style.display = 'none';
     parentBox.querySelector('.level-scholar').style.display = 'none';
+    resetToStandard(parentBox); // Riporta al testo standard di default
 }
 
 function showChild(buttonElement) {
@@ -108,6 +112,7 @@ function showChild(buttonElement) {
     parentBox.querySelector('.level-normal').style.display = 'none';
     parentBox.querySelector('.level-child').style.display = 'block';
     parentBox.querySelector('.level-scholar').style.display = 'none';
+    resetToStandard(parentBox); // Riporta al testo standard di default
 }
 
 function showScholar(buttonElement) {
@@ -115,7 +120,18 @@ function showScholar(buttonElement) {
     parentBox.querySelector('.level-normal').style.display = 'none';
     parentBox.querySelector('.level-child').style.display = 'none';
     parentBox.querySelector('.level-scholar').style.display = 'block';
+    resetToStandard(parentBox); // Riporta al testo standard di default
 }
+
+function resetToStandard(parentBox) {
+    const activeLevel = getActiveLevel(parentBox);
+    activeLevel.querySelector('.text-less').style.display = 'none';
+    activeLevel.querySelector('.text-standard').style.display = 'block'; // lo standard di default
+    activeLevel.querySelector('.text-more').style.display = 'none';
+    activeLevel.querySelector('.text-didyouknow').style.display = 'none';
+}
+
+
 /* FUNZIONI PER APRIRE/CHIUDERE LE FINESTRE METADATI*/
 function toggleModal(modalId) {     // dichiara la funzione per aprire o chiudere una finestra specifica per l'id scelto
     const modal = document.getElementById(modalId);    // recupera da HTML l'elemento della finestra corrispondente all'ID e lo memorizza in una costante
@@ -134,3 +150,17 @@ function closeOnBackground(event, modalId) {
         document.getElementById(modalId).style.display = 'none';   // se il click è appunto fuori, allora chiude la finestra impostando il display su none
     }
 }
+
+/* FUNZIONE PER RIMANDARE DALLA MAPPA DIRETTAMENTE ALLA SCENA GIUSTA */
+window.addEventListener('DOMContentLoaded', () => { 
+    const hash = window.location.hash;             // prende tutto ciò che c'è dall'# in poi 
+    if (hash) {                                    // se l'# c'è
+        const targetScene = document.querySelector(hash); // allora cerca nell'HTML il blocco con quell'ID esatto 
+        if (targetScene) {                         // Controlla se la scena è stata trovata con successo nell'HTML
+            const scenes = Array.from(document.querySelectorAll('.area-immagini')); // crea una lista di tutte le scene presenti nella pagina
+            current_scene = scenes.indexOf(targetScene); // posizione numerica (indice) di quella specifica scena nella lista
+            if (current_scene === -1) current_scene = 0; // se non la trova, imposta la scena 0 (la prima) come sicurezza
+        }
+    }
+    update_scene();                                // esegue la funzione grafica che mostra solo la scena giusta e nasconde le altre
+});                                                

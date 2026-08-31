@@ -19,8 +19,8 @@ var locations = [
         historicalOrder: 1,
         womenOrder: 1,
         description: 'The apartment complex at the centre of A Special Day.',
-        historicalLink: 'tourStorico.html',
-        womenLink: 'narrativa_femminista.html',
+        historicalLink: 'tourStorico.html#palazzo-federici',
+        womenLink: 'narrativa_femminista.html#palazzo-federici',
     },
 
     {   id: 'piazza-di-spagna',
@@ -32,7 +32,7 @@ var locations = [
         historicalOrder: 2,
         womenOrder: null,
         description: 'An iconic Roman square appearing in the opening sequences of Rome, Open City.',
-        historicalLink: 'tourStorico.html',
+        historicalLink: 'tourStorico.html#piazza-di-spagna',
         womenLink: null,
     },
 
@@ -46,7 +46,7 @@ var locations = [
         womenOrder: 2,
         description: 'The legendary film studios where Maddalena brings her daughter to audition in Bellissima.',
         historicalLink: null,
-        womenLink: 'narrativa_femminista.html',
+        womenLink: 'narrativa_femminista.html#cinecitta',
     },
 
     {   id: 'piazza-navona',
@@ -58,7 +58,7 @@ var locations = [
         historicalOrder: 3,
         womenOrder: null,
         description: 'One of Rome’s monumental spaces featured in the visual journey of The Great Beauty.',
-        historicalLink: 'tourStorico.html',
+        historicalLink: 'tourStorico.html#piazza-navona',
         womenLink: null,
     },
 
@@ -71,7 +71,7 @@ var locations = [
         historicalOrder: 4,
         womenOrder: null,
         description: 'A historic corner of Trastevere connected to the Rome explored through There’s Still Tomorrow.',
-        historicalLink: 'tourStorico.html',
+        historicalLink: 'tourStorico.html#santa-maria-in-cappella',
         womenLink: null,
     },
 
@@ -84,8 +84,8 @@ var locations = [
         historicalOrder: 5,
         womenOrder: 4,
         description: 'The heart of Testaccio, representing the neighbourhood and communal life surrounding Delia.',
-        historicalLink: 'tourStorico.html',
-        womenLink: 'narrativa_femminista.html',
+        historicalLink: 'tourStorico.html#piazza-testaccio',
+        womenLink: 'narrativa_femminista.html#piazza-testaccio',
     },
 
     {   id: 'basilica-san-paolo',
@@ -97,7 +97,7 @@ var locations = [
         historicalOrder: 6,
         womenOrder: null,
         description: 'The monumental basilica that appears during Maddalena and Maria’s journey in Bellissima.',
-        historicalLink: 'tourStorico.html',
+        historicalLink: 'tourStorico.html#basilica-san-paolo',
         womenLink: null,
     },
     
@@ -111,7 +111,7 @@ var locations = [
         historicalOrder: 7,
         womenOrder: null,
         description: 'A symbolic viewpoint over Rome, evoking the spectacular city portrayed in The Great Beauty.',
-        historicalLink: 'tourStorico.html',
+        historicalLink: 'tourStorico.html#knights-of-malta-keyhole',
         womenLink: null,
 
     },
@@ -125,8 +125,8 @@ var locations = [
         historicalOrder: 8,
         womenOrder: 8,
         description: 'The monumental fountain that provides the setting for the memorable opening of The Great Beauty.',
-        historicalLink: 'tourStorico.html',
-        womenLink: 'narrativa_femminista.html',
+        historicalLink: 'tourStorico.html#fontana-acqua-paola',
+        womenLink: 'narrativa_femminista.html#fontana-acqua-paola',
     },
 
     {   id: 'via-bodoni',
@@ -139,7 +139,7 @@ var locations = [
         womenOrder: 3,
         description: 'The Testaccio street where the exterior of Delia’s home in There’s Still Tomorrow was filmed.',
         historicalLink: null,
-        womenLink: 'narrativa_femminista.html'
+        womenLink: 'narrativa_femminista.html#via-bodoni'
     },
 
     {   id: 'mercato-testaccio',
@@ -152,7 +152,7 @@ var locations = [
         womenOrder: 4,
         description: 'The neighbourhood market associated with everyday work and community life in There’s Still Tomorrow.',
         historicalLink: null,
-        womenLink: 'narrativa_femminista.html',
+        womenLink: 'narrativa_femminista.html#mercato-testaccio',
     },
 
     {   id: 'lungotevere-testaccio',
@@ -165,7 +165,7 @@ var locations = [
         womenOrder: 5,
         description: 'A transition from the enclosed neighbourhood towards a wider experience of the city.',
         historicalLink: null,
-        womenLink: 'narrativa_femminista.html',
+        womenLink: 'narrativa_femminista.html#lungotevere-testaccio',
     },
 
     {   id: 'porta-portese',
@@ -178,7 +178,7 @@ var locations = [
         womenOrder: 6,
         description: 'A popular Roman setting connected to Mamma Roma and her struggle for a different life.',
         historicalLink: null,
-        womenLink: 'narrativa_femminista.html',
+        womenLink: 'narrativa_femminista.html#porta-portese',
     },
 
     {   id: 'piazza-dei-mercanti',
@@ -191,7 +191,7 @@ var locations = [
         womenOrder: 6,
         description: 'A Trastevere square used as a filming location in Mamma Roma.',
         historicalLink: null,
-        womenLink: 'narrativa_femminista.html',
+        womenLink: 'narrativa_femminista.html#piazza-dei-mercanti',
     },
 
     {   id: 'san-pietro-in-montorio',
@@ -204,7 +204,7 @@ var locations = [
         womenOrder: 7,
         description: 'A Renaissance landmark appearing among the hidden and monumental spaces of The Great Beauty.',
         historicalLink: null,
-        womenLink: 'narrativa_femminista.html',
+        womenLink: 'narrativa_femminista.html#san-pietro-in-montorio',
     }
 
 ];
