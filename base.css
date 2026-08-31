@@ -374,12 +374,12 @@ main p {
 }
 
 .title-container::before {
-    content: "● ● ● ● ● ● ● ● ● ● ● ● ●";
+    content: "  \25CF     \25CF    \25CF    \25CF    \25CF    \25CF    \25CF    \25CF    \25CF    \25CF    \25CF    \25CF    \25CF   ";
     top: 8px;
 }
 
 .title-container::after {
-    content: "● ● ● ● ● ● ● ● ● ● ● ● ●";
+    content: "     \25CF      \25CF          \25CF      \25CF      \25CF      \25CF     \25CF      \25CF      \25CF      \25CF      \25CF      \25CF      \25CF";
     bottom: 8px;
 }
 
