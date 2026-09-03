@@ -27,7 +27,7 @@ da dire:
 <head>
     <title>Rome through cinema</title>
     <link rel="stylesheet" href="base.css">
-    <script src="script_narrative.js" defer></script>
+    <script src="script_narrativa_femminista.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courier+Prime&display=swap" rel="stylesheet">
 </head>
 
@@ -113,16 +113,12 @@ da dire:
         <!-- SCENA 1 -->
         <div class="area-immagini">
             <div class="film-panel-left">
-                <div style="width: 100%; text-align: center;">
-                    <p
-                        style="color: #aaa; font-size: 1rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">
-                        Today</p>
+                <div style="width: 100%;">
+                    <p class="photo-when">TODAY</p>
                     <img src="img/tour-marcia-federici-oggi.jpg" alt="The same place today" class="movie-pic">
                 </div>
-                <div style="width: 100%; text-align: center;">
-                    <p
-                        style="color: #aaa; font-size: 1rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">
-                        the Movie</p>
+                <div style="width: 100%;">
+                    <p class="photo-when">IN THE MOVIE</p>
                     <img src="img/marcia-federici-1gg.png" alt="picture from the movie" class="movie-pic">
                 </div>
             </div>
@@ -134,7 +130,8 @@ da dire:
             </div>
         
             <div class="description-container-right">
-        
+                <div style="width: 100%;">
+
                 <div class="showview-buttons">
                     <button type="button" onclick="showStoryView(this)"> STORY </button>
                     <button type="button" onclick="showMetadataView(this)"> METADATA </button>
@@ -146,9 +143,10 @@ da dire:
                     <div class="difficulty-buttons">
                         <button type="button" onclick="showNormal(this)">Normal</button>
                         <button type="button" onclick="showChild(this)">Child</button>
-                        <button type="button" onclick="showScholar(this)">Scholar</button>
+                        <button type="button" onclick="showScholar(this)">Cinephile</button>
                     </div>
-                    <h3>Federici Palace<br><i>A special day (1977)</i><br></h3>
+
+                    <h3>Federici Palace-<i> A special day (1977)</i><br></h3>
                     <p class="movie-description"> <strong> Environment: THE HOUSE</strong></p>
         
                     <!-- livello normal -->
@@ -157,6 +155,9 @@ da dire:
                             The tour begins at the height of the Fascist regime, where it all started: the building's residents,
                             dressed in Fascist
                             uniforms, return home marching.
+                        </p>
+                        <p class="movie-description text-standard" style="display: block;">
+                            da aggiungere text standart
                         </p>
                         <p class="movie-description text-more" style="display:block;">
                             It is May 6, 1938, the day of Hitler's arrival in Rome. The apartment building repopulates after a
@@ -173,6 +174,7 @@ da dire:
                     <!-- livello child -->
                     <div class="level-child" style="display: none;">
                         <p class="movie-description text-less" style="display: none;">testo breve child</p>
+                        <p class="movie-description text-standard" style="display: block;">scrivere</p>
                         <p class="movie-description text-more" style="display: block;">testo normale child</p>
                         <p class="movie-description text-didyouknow" style="display: none;">did u know child</p>
                     </div>
@@ -180,6 +182,8 @@ da dire:
                     <!-- livello scholar -->
                     <div class="level-scholar" style="display: none;">
                         <p class="movie-description text-less" style="display: none;">testo breve scholar</p>
+                        <p class="movie-description text-standard" style="display: block;">scrivere
+                        </p>
                         <p class="movie-description text-more" style="display: block;">testo normale scholar</p>
                         <p class="movie-description text-didyouknow" style="display: none;">did u know scholar</p>
                     </div>
@@ -197,13 +201,14 @@ da dire:
                         </p>
                         
                         <div class="metadata-tasti">
-                            <button type="button" onclick="toggleModal('film-finestra-8')"> CINEMATIC CONTEXT </button>
-                            <button type="button" onclick="toggleModal('location-finestra-8')"> LOCATION </button>
-                            <button type="button" onclick="toggleModal('project-finestra-8')"> PROJECT </span>
+                            <button type="button" onclick="toggleModal('film-finestra')"> CINEMATIC CONTEXT </button>
+                            <button type="button" onclick="toggleModal('location-finestra')"> LOCATION </button>
+                            <button type="button" onclick="toggleModal('shot-finestra')"> SHOT</button>
+                            <button type="button" onclick="toggleModal('project-finestra')"> PROJECT </span>
                         </div>
                         
                         
-                        <div id="film-finestra-8" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'film-finestra-8')">
+                        <div id="film-finestra" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'film-finestra')">
                             <div class="modal-box">
                                 <h3> Cinematic Context </h3>
                                 <ul>
@@ -217,7 +222,7 @@ da dire:
                             </div>
                         </div>
                         
-                        <div id="location-finestra-8" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'location-finestra-8')">
+                        <div id="location-finestra" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'location-finestra')">
                             <div class="modal-box">
                                 </h3> Location </h3>
                                 <ul> 
@@ -241,7 +246,31 @@ da dire:
                                     <li><strong> dcterms:rights </strong> Academic use - Alma Mater Studiorum, University of Bologna </li> 
                                 </ul>
                             </div>
-                        </div> 
+                        </div>
+                    
+                    <div id="shot-finestra" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'shot-finestra')">
+                    
+                        <div class="modal-box">
+                            <h3>Shot</h3>
+                    
+                            <ul>
+                                <li><strong>Shot scale:</strong>Long shot / architectural establishing shot</li>
+                                <li><strong>Camera angle:</strong>Low angle</li>
+                                <li><strong>Camera tilt:</strong>Upward</li>
+                                <li><strong>Framing:</strong>Frontal and approximately symmetrical</li>
+                                <li><strong>Camera position:</strong>To be determined</li>
+                                <li><strong>Viewing direction:</strong>To be determined</li>
+                                <li><strong>Azimuth:</strong>To be determined</li>
+                                <li><strong>Camera height:</strong> Approx. eye level / street level</li>
+                                <li><strong>Focal length:</strong>Unknown</li>
+                                <li><strong>Replication instructions:</strong>
+                                    Stand opposite the façade, centre the main architectural
+                                    axis in the frame and tilt the camera upward, keeping the
+                                    upper cornice and a small portion of the sky visible.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                     </div>
 
                     <div class="qr-content" style="display:none;">
@@ -348,7 +377,9 @@ da dire:
                         <div class="metadata-tasti">
                             <button type="button" onclick="toggleModal('film-finestra-2')"> CINEMATIC CONTEXT </button>
                             <button type="button" onclick="toggleModal('location-finestra-2')"> LOCATION </button>
-                            <button type="button" onclick="toggleModal('project-finestra-2')"> PROJECT </span>
+                            <button type="button" onclick="toggleModal('shot-finestra')"> SHOT</button>
+                            <button type="button" onclick="toggleModal
+                            ('project-finestra-2')"> PROJECT </span>
                         </div>
                         
                         <div id="film-finestra-2" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'film-finestra-2')">
@@ -470,6 +501,7 @@ da dire:
                         <div class="metadata-tasti">
                             <button type="button" onclick="toggleModal('film-finestra-3')"> CINEMATIC CONTEXT </button>
                             <button type="button" onclick="toggleModal('location-finestra-3')"> LOCATION </button>
+                            <button type="button" onclick="toggleModal('shot-finestra')"> SHOT</button>
                             <button type="button" onclick="toggleModal('project-finestra-3')"> PROJECT </span>
                         </div>
                         
@@ -596,6 +628,7 @@ da dire:
                         <div class="metadata-tasti">
                             <button type="button" onclick="toggleModal('film-finestra-4')"> CINEMATIC CONTEXT </button>
                             <button type="button" onclick="toggleModal('location-finestra-4')"> LOCATION </button>
+                            <button type="button" onclick="toggleModal('shot-finestra')"> SHOT</button>
                             <button type="button" onclick="toggleModal('project-finestra-4')"> PROJECT </span>
                         </div>
                         
@@ -721,6 +754,7 @@ da dire:
                         <div class="metadata-tasti">
                             <button type="button" onclick="toggleModal('film-finestra-5')"> CINEMATIC CONTEXT </button>
                             <button type="button" onclick="toggleModal('location-finestra-5')"> LOCATION </button>
+                            <button type="button" onclick="toggleModal('shot-finestra')"> SHOT</button>
                             <button type="button" onclick="toggleModal('project-finestra-5')"> PROJECT </span>
                         </div>
                         
@@ -847,6 +881,7 @@ da dire:
                         <div class="metadata-tasti">
                             <button type="button" onclick="toggleModal('film-finestra-6')"> CINEMATIC CONTEXT </button>
                             <button type="button" onclick="toggleModal('location-finestra-6')"> LOCATION </button>
+                            <button type="button" onclick="toggleModal('shot-finestra')"> SHOT</button>
                             <button type="button" onclick="toggleModal('project-finestra-6')"> PROJECT </span>
                         </div>
                         
@@ -975,6 +1010,7 @@ da dire:
                         <div class="metadata-tasti">
                             <button type="button" onclick="toggleModal('film-finestra-7')"> CINEMATIC CONTEXT </button>
                             <button type="button" onclick="toggleModal('location-finestra-7')"> LOCATION </button>
+                            <button type="button" onclick="toggleModal('shot-finestra')"> SHOT</button>
                             <button type="button" onclick="toggleModal('project-finestra-7')"> PROJECT </span>
                         </div>
                         
