@@ -290,15 +290,11 @@ da dire:
         <div class="area-immagini" style="display: none;">
             <div class="film-panel-left">
                 <div style="width: 100%; text-align: center;">
-                    <p
-                        style="color: #aaa; font-size: 0.8rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">
-                        Today</p>
+                    <p class="photo-when">TODAY</p>
                     <img src="img/tour-romacitta-spagna-oggi.png" alt="The same place today" class="movie-pic">
                 </div>
-                <div style="width: 100%; text-align: center;">
-                    <p
-                        style="color: #aaa; font-size: 0.8rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">
-                        In the Movie</p>
+                <div style="width: 100%;">
+                    <p style="width: 100%;">IN THE MOVIE</p>
                     <img src="img/tour-romacitta.png" alt="picture from the movie" class="movie-pic">
                 </div>
             </div>
@@ -326,15 +322,18 @@ da dire:
                         <button type="button" onclick="showScholar(this)">Cinephile</button>
                         </div>
 
-                        <h3> Piazza di Spagna<i> Rome, Open City (1945) </i> </h3>
+                        <h3>Piazza di Spagna - <i> Rome, Open City (1945)</i></h3>
                         <p class="movie-description"> <strong> Environment: THE SQUARE </strong></p>
                         
                         <!-- livello normal -->
                         <div class="level-normal" style="display:block">
 
-                            <p class="movie-description text-less" style="display:block;">
+                            <p class="movie-description text-less" style="display:none;">
                                 The tour continues with the dark years of the Nazi occupation: German soldiers marching in Piazza di Spagna show the
                                 harsh reality of that.
+                            </p>
+                            <p class="movie-description text-standard" style="display: block;">
+                                aggiungere
                             </p>
                             <p class="movie-description text-more" style="display:none;">
                                 We are between 1943 and 1944, during the months of the German occupation of Rome. Rossellini opens the film by showing a
@@ -351,14 +350,16 @@ da dire:
                         <!-- livello child -->
                         <div class="level-child" style="display: none;">
                             <p class="movie-description text-less" style="display: none;">testo breve child</p>
-                            <p class="movie-description text-more" style="display: block;">testo normale child</p>
+                            <p class="movie-description text-standard" style="display: block;">scrivere</p>
+                            <p class="movie-description text-more" style="display: none;">testo piu child</p>
                             <p class="movie-description text-didyouknow" style="display: none;">did u know child</p>
                         </div>
         
                         <!-- livello scholar -->
                         <div class="level-scholar" style="display: none;">
                             <p class="movie-description text-less" style="display: none;">testo breve scholar</p>
-                            <p class="movie-description text-more" style="display: block;">testo normale scholar</p>
+                            <p class="movie-description text-standard" style="display: block;">aggiungere standard</p>
+                            <p class="movie-description text-more" style="display: none;">testo normale scholar</p>
                             <p class="movie-description text-didyouknow" style="display: none;">did u know scholar</p>
                         </div>
 
@@ -397,7 +398,7 @@ da dire:
                         
                         <div id="location-finestra-2" class="modal-overlay-2" style="display:none;" onclick="closeOnBackground(event, 'location-finestra-2')">
                             <div class="modal-box">
-                                </h3> Location </h3>
+                                </h3>Location</h3>
                                 <ul> 
                                     <li><strong> schema: name: </strong> Palazzo Federici </li>
                                     <li><strong> schema: address : </strong> Viale XXI Aprile, 21-29 Roma </li>
@@ -438,16 +439,12 @@ da dire:
         <!-- SCENA 3 -->
         <div class="area-immagini" style="display: none;">
             <div class="film-panel-left">
-                <div style="width: 100%; text-align: center;">
-                    <p
-                        style="color: #aaa; font-size: 0.8rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">
-                        Today</p>
+                <div style="width: 100%;">
+                    <p class="photo-when">TODAY</p>
                     <img src="img/tour-piazzanav-oggi.png" alt="The same place today" class="movie-pic">
                 </div>
-                <div style="width: 100%; text-align: center;">
-                    <p
-                        style="color: #aaa; font-size: 0.8rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">
-                        In the Movie</p>
+                <div style="width: 100%;">
+                    <p class="photo-when">IN THE MOVIE</p>
                     <img src="tour-piazzanav.png" alt="picture from the movie" class="movie-pic">
                 </div>
             </div>
@@ -467,31 +464,64 @@ da dire:
                         <button type="button" onclick="showQRView(this)"> QR CODE </button>
                     </div>
     
-                    <div class="story-content" style="display: block;">
+                    <div class="story-content" style="display: flex;">
                         <!-- button difficoltà lettura -->
                         <div class="difficulty-buttons">
                             <button type="button" onclick="showNormal(this)">Normal</button>
                             <button type="button" onclick="showChild(this)">Child</button>
-                            <button type="button" onclick="showScholar(this)">Scholar</button>
+                            <button type="button" onclick="showScholar(this)">Cinephile</button>
                         </div>
                         
-                        <h3> Piazza Navona<i><br>There's Still Tomorrow (2023)</i> </h3>
+                        <h3> Piazza Navona - <i> There's Still Tomorrow (2023)</i> </h3>
                         <p class="movie-description"> <strong> Environment: The neighborhood </strong></p>
-    
-                        <p class="movie-description text-less" style="display: block;">
-                            cambiare testo
-                        </p>
-                        <p class="movie-description text-more" style="display:none;">
-                            cambiare testo
-                        </p>
-                        <p class="movie-description text-didyouknow" style="display:none;">
-                            cambiare testo
+
+                        <!-- livello normal -->
+                        <div class="level-normal" style="display:block">
+                        
+                            <p class="movie-description text-standard" style="display: block;">
+                                incolla testo
+                            </p>
+                            <p class="movie-description text-less" style="display: none;">
+                                pire qui
+                            </p>
+                            <p class="movie-description text-more" style="display:block;">
+                                qui anche
+                            </p>
+                            </p>
+                            <p class="movie-description text-didyouknow" style="display:none;">
+                                same here
+                            </p>
+                        </div>
+                        
+                        <!-- livello child -->
+                        <div class="level-child" style="display: none;">
+                        
+                            <p class="movie-description text-less" style="display: none;">
+                                copiare
+                            </p>
+                        
+                            <p class="movie-description text-standard" style="display: block;"> incolla</p>
+                        
+                            <p class="movie-description text-more" style="display: none;">testo</p>
+                            <p class="movie-description text-didyouknow" style="display: none;">anche qui</p>
+                        </div>
+                        
+                        <!-- livello scholar -->
+                        <div class="level-scholar" style="display: none;">
+                        
+                            <p class="movie-description text- less" style="display:none;">copia incolla
+                            </p>
+                            <p class="movie-description text-standard" style="display: block;">same</p>
+                            <p class="movie-description text-more" style="display: none;">teto bello</p>
+                            <p class="movie-description text-didyouknow" style="display: none;">anche qui testo</p>
+                        </div>
+                        
                         <div class="tellme-buttons">
                             <button type="button" onclick="showLess(this)"> Tell me less </button>
                             <button type="button" onclick="showMore(this)"> Tell me more </button>
                             <button type="button" onclick="showDidYouKnow(this)"> Did you know that? </button>
                         </div>
-                    </div>
+                        </div>
 
                     <div class="metadata-content" style="display: none;">
                         <h3 style="margin-bottom: 10px;"> Technical Details & Metadata </h3>
@@ -533,7 +563,7 @@ da dire:
                             </div>
                         </div>
                         
-                        <div id="project-finestra" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'project-finestra')">
+                        <div id="project-finestra-3" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'project-finestra-3')">
                             <div class="modal-box">
                                 <h3> Project </h3>
                                 <ul> 
@@ -561,16 +591,12 @@ da dire:
         <!-- SCENA 4 -->
         <div class="area-immagini" style="display: none;">
             <div class="film-panel-left">
-                <div style="width: 100%; text-align: center;">
-                    <p
-                        style="color: #aaa; font-size: 0.8rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">
-                        Today</p>
+                <div style="width: 100%;">
+                    <p class="photo-when">TODAY</p>
                     <img src="img/tour-domani-mat-oggi.png" alt="The same place today" class="movie-pic">
                 </div>
-                <div style="width: 100%; text-align: center;">
-                    <p
-                        style="color: #aaa; font-size: 0.8rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">
-                        In the Movie</p>
+                <div style="width: 100%;">
+                    <p class="photo-when">IN THE MOVIE</p>
                     <img src="img/tour-domani-matrimonio.png" alt="picture from the movie" class="movie-pic">
                 </div>
             </div>
@@ -590,21 +616,26 @@ da dire:
                         <button type="button" onclick="showQRView(this)"> QR CODE </button>
                     </div>
     
-                    <div class="story-content" style="display: block;">
+                    <div class="story-content" style="display: flex;">
                         <!-- button difficoltà lettura -->
                         <div class="difficulty-buttons">
                             <button type="button" onclick="showNormal(this)">Normal</button>
                             <button type="button" onclick="showChild(this)">Child</button>
-                            <button type="button" onclick="showScholar(this)">Scholar</button>
+                            <button type="button" onclick="showScholar(this)">Cinephile</button>
                         </div>
+
                         <h3>Chiesa di Santa Maria in Cappella<i>There's Still Tomorrow (2023)</i> </h3>
                         <p class="movie-description"> <strong> Environment: The community </strong></p>
 
-                        <p class="movie-description text-less" style="display:block;">
-                            The tour continues with the post-war recovery, we move to the working class neighborhoods (then Trastevere), that are
+                   <!-- livello normal -->
+                        <div class="level-normal" style="display:block">
+                            <p class="movie-description text-less" style="display: none;">The tour continues with the post-war recovery, we move to the working class neighborhoods (then Trastevere), that are
                             the true drivers of the rebirth: the struggles of a patriarchal family are reflected on the parvis od this ancient
-                            chruch in a Rome that is about to change.
-                        </p>
+                            chruch in a Rome that is about to change.</p>
+
+                            <p class="movie-description text-standard" style="display: block;">aggiungere text standard
+                            </p>
+
                         <p class="movie-description text-more" style="display:none;">
                             We are in 1946, in the months preceding the institutional referendum and the introduction of the women’s suffrage. This
                             beautiful medieval church serves as a background for the wedding between Marcella, Delia’s young daughter, and Giulio,
@@ -613,6 +644,27 @@ da dire:
                         <p class="movie-description text-didyouknow" style="display:none;">
                             aggiungere testo
                         </p>
+                        <!-- livello child -->
+                        <div class="level-child" style="display: none;">
+                        
+                            <p class="movie-description text-less" style="display: none;">manca testo
+                            </p>
+                            <p class="movie-description text-standard" style="display: block;">pure qui</p>
+                            <p class="movie-description text-more" style="display: none;">ma quanti ne mancano</p>
+                            <p class="movie-description text-didyouknow" style="display: none;">cazzo abbiamo fatto che mancano tutti sti testi</p>
+                        </div>
+                        
+                        <!-- livello scholar -->
+                        <div class="level-scholar" style="display: none;">
+                        
+                            <p class="movie-description text-less" style="display: none;">
+                                Tma come è possibile
+                            </p>
+                            <p class="movie-description text-standard" style="display: block;">perche non li abbiamo scritti?</p>
+                            <p class="movie-description text-more" style="display: none;">Cstranezza totale</p>
+                            <p class="movie-description text-didyouknow" style="display: none;">mancano cento cose aiuto</p>
+                        </div>
+
                         <div class="tellme-buttons">
                             <button type="button" onclick="showLess(this)"> Tell me less </button>
                             <button type="button" onclick="showMore(this)"> Tell me more </button>
@@ -645,7 +697,7 @@ da dire:
                             </div>
                         </div>
                         
-                        <div id="location-finestra" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'location-finestra')">
+                        <div id="location-finestra-4" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'location-finestra-4')">
                             <div class="modal-box">
                                 </h3> Location </h3>
                                 <ul> 
@@ -660,7 +712,7 @@ da dire:
                             </div>
                         </div>
                         
-                        <div id="project-finestra" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'project-finestra')">
+                        <div id="project-finestra-4" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'project-finestra-4')">
                             <div class="modal-box">
                                 <h3> Project </h3>
                                 <ul> 
@@ -689,16 +741,12 @@ da dire:
         <!-- SCENA 5 -->
         <div class="area-immagini" style="display: none;">
             <div class="film-panel-left">
-                <div style="width: 100%; text-align: center;">
-                    <p
-                        style="color: #aaa; font-size: 0.8rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">
-                        Today</p>
+                <div style="width: 100%;">
+                    <p class="photo-when">TODAY</p>
                     <img src="img/tour-domani-testaccio-oggi.png" alt="The same place today" class="movie-pic">
                 </div>
-                <div style="width: 100%; text-align: center;">
-                    <p
-                        style="color: #aaa; font-size: 0.8rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">
-                        In the Movie</p>
+                <div style="width: 100%;">
+                    <p class="photo-when">IN THE MOVIE</p>
                     <img src="img/tour-domani-testaccio.png" alt="picture from the movie" class="movie-pic">
                 </div>
             </div>
@@ -718,27 +766,61 @@ da dire:
                         <button type="button" onclick="showQRView(this)"> QR CODE </button>
                     </div>
     
-                    <div class="story-content" style="display: block;">
+                    <div class="story-content" style="display: flex;">
                         <!-- button difficoltà lettura -->
                         <div class="difficulty-buttons">
                             <button type="button" onclick="showNormal(this)">Normal</button>
                             <button type="button" onclick="showChild(this)">Child</button>
-                            <button type="button" onclick="showScholar(this)">Scholar</button>
+                            <button type="button" onclick="showScholar(this)">Cinephile</button>
                         </div>
-                        <h3> Lungotevere Testaccio<i> There's still tomorrow</i> </h3>
+
+                        <h3> Lungotevere Testaccio- <i> There's still tomorrow (2023)</i> </h3>
                         <p class="movie-description"> <strong> Environment: The transition </strong></p>
-    
-                        <p class="movie-description text-less" style="display:block;">
-                            The journey reaches the heart of working-class Rome in the post-war period: in this historic square, the daily life of a
+
+                        <!-- livello normal -->
+                        <div class="level-normal" style="display:block">
+                        
+                            <p class="movie-description text-less" style="display: none;">The journey reaches the heart of working-class Rome in the post-war period: in this historic square, the daily life of a
                             neighborhood trying to leave behind the rubble left by the conflict is reborn.
-                        </p>
-                        <p class="movie-description text-more" style="display:none;">
-                            It is here where Delia walks while running her daily errands: an authentic image of a working class that, even amidst
-                            the poverty of reconstruction, finds the strength to rebuild a solidary community and hope for a better future.
-                        </p>
-                        <p class="movie-description text-didyouknow" style="display:none;">
-                            aggiungere testo
-                        </p>
+                            </p>
+                            <p class="movie-description text-standard" style="display: block;"> figuratu se non manca testo
+                                
+                            </p>
+                            <p class="movie-description text-more" style="display:none;">It is here where Delia walks while running her daily errands: an authentic image of a working class that, even amidst
+                            the poverty of reconstruction, finds the strength to rebuild a solidary community and hope for a better future. 
+                            </p>
+                            <p class="movie-description text-didyouknow" style="display:none;"> aggiungere testo
+                            </p>
+                        </div>
+                        <!-- livello child -->
+                        <div class="level-child" style="display: none;">
+                        
+                            <p class="movie-description text-less" style="display: none;">
+                                Walking far from home expands Delia’s world and possibilities.
+                            </p>
+                            <p class="movie-description text-standard" style="display: block;">As Delia moves farther from home, she meets new
+                                people and discovers new possibilities. Walking through Rome slowly makes her world bigger.</p>
+                            <p class="movie-description text-more" style="display: none;">Delia does not walk around Rome simply because she is
+                                free: most of her journeys are connected to work and family duties.
+                                Yet going through the city gives her opportunities that she would never have at home. She meets different people
+                                and begins to see that her life could change. Moving through Rome therefore becomes an important part of her
+                                journey toward independence.</p>
+                            <p class="movie-description text-didyouknow" style="display: none;">During her movements through this area of Rome,
+                                Delia meets William, the American soldier who becomes important to the development of her story.</p>
+                        </div>
+                        
+                        <!-- livello scholar -->
+                        <div class="level-scholar" style="display: none;">
+                        
+                            <p class="movie-description text-less" style="display: none;">aggiungere
+                            </p>
+                            <p class="movie-description text-standard" style="display: block;"> qui pure
+                            </p>
+                            <p class="movie-description text-more" style="display: block;"> manca testo</p>
+                            <p class="movie-description text-didyouknow" style="display: none;">scrivere</p>
+                        </div>
+    
+
                         <div class="tellme-buttons">
                             <button type="button" onclick="showLess(this)"> Tell me less </button>
                             <button type="button" onclick="showMore(this)"> Tell me more </button>
@@ -754,7 +836,7 @@ da dire:
                         <div class="metadata-tasti">
                             <button type="button" onclick="toggleModal('film-finestra-5')"> CINEMATIC CONTEXT </button>
                             <button type="button" onclick="toggleModal('location-finestra-5')"> LOCATION </button>
-                            <button type="button" onclick="toggleModal('shot-finestra')"> SHOT</button>
+                            <button type="button" onclick="toggleModal('shot-finestra-5')"> SHOT</button>
                             <button type="button" onclick="toggleModal('project-finestra-5')"> PROJECT </span>
                         </div>
                         
@@ -781,12 +863,11 @@ da dire:
                                     <li> <strong> crm: P2_has_type</strong> Italian Rationalist Architecture </li>
                                     <li> <strong> crm:P4_has_time_span: </strong> 1930s </li>
                                     <li> <strong> schema: OpeningDate: </strong> 1937 </li>
-                                </ul>
-                                
+                                </ul>     
                             </div>
                         </div>
                         
-                        <div id="project-finestra" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'project-finestra')">
+                        <div id="project-finestra-5" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'project-finestra-5')">
                             <div class="modal-box">
                                 <h3> Project </h3>
                                 <ul> 
@@ -815,16 +896,12 @@ da dire:
         <!-- SCENA 6 -->
         <div class="area-immagini" style="display: none;">
             <div class="film-panel-left">
-                <div style="width: 100%; text-align: center;">
-                    <p
-                        style="color: #aaa; font-size: 0.8rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">
-                        Today</p>
+                <div style="width: 100%;">
+                    <p class="photo-when">TODAY</p>
                     <img src="img/tour-mammaroma-portese-oggi.png" alt="The same place today" class="movie-pic">
                 </div>
-                <div style="width: 100%; text-align: center;">
-                    <p
-                        style="color: #aaa; font-size: 0.8rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">
-                        In the Movie</p>
+                <div style="width: 100%;">
+                    <p class="photo-when">IN THE MOVIE</p>
                     <img src="img/tour-mammaroma-portese.png" alt="picture from the movie" class="movie-pic">
                 </div>
             </div>
@@ -843,29 +920,63 @@ da dire:
                         <button type="button" onclick="showQRView(this)"> QR CODE </button>
                     </div>
     
-                    <div class="story-content" style="display: block;">
+                    <div class="story-content" style="display: flex;">
                         <!-- button difficoltà lettura -->
                         <div class="difficulty-buttons">
                             <button type="button" onclick="showNormal(this)">Normal</button>
                             <button type="button" onclick="showChild(this)">Child</button>
-                            <button type="button" onclick="showScholar(this)">Scholar</button>
+                            <button type="button" onclick="showScholar(this)">Cinephile</button>
                         </div>
+
                         <h3>Porta Portese market<i><br>Mamma Roma (1962)</i></h3>
                         <p class="movie-description"> <strong> Environment: The public city </strong></p>
-    
-                        <p class="movie-description text-less" style="display: block;">
-                            The tour moves to the early 1950s, the era of the economic boom and the illusion of success: the majestic basilica
-                            serves as the backdrop for a mother's desperate quest for social redemption for her little girl
-                        </p>
-                        <p class="movie-description text-more" style="display:none;">
+
+                        <!-- livello normal -->
+                        <div class="level-normal" style="display:block">
+                        
+                            <p class="movie-description text-less" style="display: none;">The tour moves to the early 1950s, the era of the economic boom and the illusion of success: the majestic basilica serves as the backdrop for a mother's desperate quest for social redemption for her little girl.
+                            </p>
+                            <p class="movie-description text-standard" style="display: block;">
                             We are in 1951, in an Italy racing towards material wealth yet remaining profoundly naive in the face of the
                             entertainment industry's promises. Luchino Visconti chooses this imposing basilica for a key scene in which Maddalena
                             Cecconi, played by the extraordinary Anna Magnani, tries to protect her daughter Maria.
-                        </p>
-                        <p class="movie-description text-didyouknow" style="display:none;">
-                            The solemnity and vastness of Rome's historical monuments painfully contrast with the fragility and intimacy of an
+                            </p>
+                        
+                            <p class="movie-description text-more" style="display:none;">scrivere
+                            </p>
+                            <p class="movie-description text-didyouknow" style="display:none;">The solemnity and vastness of Rome's historical monuments painfully contrast with the fragility and intimacy of an
                             ordinary family, crushed by dreams of cinematic glory that are as grand as they are illusory.
-                        </p>
+                            
+                            </p>
+                        </div>
+                        <!-- livello child -->
+                        <div class="level-child" style="display: none;">
+                        
+                            <p class="movie-description text-less" style="display: none;">
+                                Mamma Roma works hard in the city to build a better future for her son.
+                            </p>
+                            <p class="movie-description text-standard" style="display: block;">Mamma Roma works in the city and tries to build a
+                                better life for herself and her son. But being independent does not make all her difficulties disappear.</p>
+                            <p class="movie-description text-more" style="display: none;">Mamma Roma wants to leave her old life behind and
+                                create better opportunities for her son Ettore. She works at the market and moves confidently through Rome,
+                                trying to change their future. But her past and her social condition continue to limit her possibilities. The
+                                city gives her greater independence, but it cannot remove all the inequalities she faces.</p>
+                            <p class="movie-description text-didyouknow" style="display: none;">Mamma Roma is played by Anna Magnani, one of the
+                                most famous actresses in Italian cinema and a figure strongly associated with cinematic representations of Rome.
+                            </p>
+                        </div>
+                        
+                        <!-- livello scholar -->
+                        <div class="level-scholar" style="display: none;">
+                        
+                            <p class="movie-description text-less" style="display: none;">manca
+                            </p>
+                            <p class="movie-description text-standard" style="display: block;">testo</p>
+                            <p class="movie-description text-more" style="display: block;">scrivere</p>
+                            <p class="movie-description text-didyouknow" style="display: none;">mamma quanto manca</p>
+                        </div>
+    
+                        
                         <div class="tellme-buttons">
                             <button type="button" onclick="showLess(this)"> Tell me less </button>
                             <button type="button" onclick="showMore(this)"> Tell me more </button>
@@ -881,7 +992,7 @@ da dire:
                         <div class="metadata-tasti">
                             <button type="button" onclick="toggleModal('film-finestra-6')"> CINEMATIC CONTEXT </button>
                             <button type="button" onclick="toggleModal('location-finestra-6')"> LOCATION </button>
-                            <button type="button" onclick="toggleModal('shot-finestra')"> SHOT</button>
+                            <button type="button" onclick="toggleModal('shot-finestra-6')"> SHOT</button>
                             <button type="button" onclick="toggleModal('project-finestra-6')"> PROJECT </span>
                         </div>
                         
@@ -913,7 +1024,7 @@ da dire:
                             </div>
                         </div>
                         
-                        <div id="project-finestra" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'project-finestra')">
+                        <div id="project-finestra-6" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'project-finestra-6')">
                             <div class="modal-box">
                                 <h3> Project </h3>
                                 <ul> 
@@ -941,16 +1052,12 @@ da dire:
         <!-- SCENA 7 -->
         <div class="area-immagini" style="display: none;">
             <div class="film-panel-left">
-                <div style="width: 100%; text-align: center;">
-                    <p
-                        style="color: #aaa; font-size: 0.8rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">
-                        Today</p>
+                <div style="width: 100%;">
+                    <p style="width: 100%;">TODAY</p>
                     <img src="img/tour-malta-greatbeauty-today.png" alt="The same place today" class="movie-pic">
                 </div>
-                <div style="width: 100%; text-align: center;">
-                    <p
-                        style="color: #aaa; font-size: 0.8rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">
-                        In the Movie</p>
+                <div style="width: 100%;">
+                    <p style="width: 100%;">IN THE MOVIE</p>
                     <img src="img/tour-malta-greatbeuty.png" alt="picture from the movie" class="movie-pic">
                 </div>
             </div>
@@ -970,29 +1077,58 @@ da dire:
                         <button type="button" onclick="showQRView(this)"> QR CODE </button>
                     </div>
     
-                    <div class="story-content" style="display: block;">
+                    <div class="story-content" style="display: flex;">
                         <!-- button difficoltà lettura -->
                         <div class="difficulty-buttons">
                             <button type="button" onclick="showNormal(this)">Normal</button>
                             <button type="button" onclick="showChild(this)">Child</button>
-                            <button type="button" onclick="showScholar(this)">Scholar</button>
+                            <button type="button" onclick="showScholar(this)">Cinephile</button>
                         </div>
-                        <h3> San Pietro in Montorio<i>The Great Beauty </i> </h3>
+                        <h3> San Pietro in Montorio - <i>The Great Beauty (2013)</i> </h3>
                         <p class="movie-description"> <strong> Environment: The ascent </strong></p>
-    
-                        <p class="movie-description text-less" style="display: block;">
-                            The journey ascends the Aventine Hill, where we encounter one of Rome's most fascinating secrets: the ancient keyhole
-                            that frames the dome of St. Peter's and transforms the city into a painting.
-                        </p>
-                        <p class="movie-description text-more" style="display:none;">
-                            We are in 2013. In one of the most evocative night scenes in Sorrentino's film, Jep Gambardella takes Ramona on a
-                            magical walk, where ancient history dialogues with modern disillusionment.
-                        </p>
-                        <p class="movie-description text-didyouknow" style="display:none;">
-                            Did you know that by looking through the keyhole of the door, your eyes view three different States? You are standing on
+
+                        <!-- livello normal -->
+                        <div class="level-normal" style="display:block">
+                        
+                            <p class="movie-description text-less" style="display: none;">
+                                The journey ascends the Aventine Hill, where we encounter one of Rome's most fascinating secrets: the ancient keyhole
+                                that frames the dome of St. Peter's and transforms the city into a painting.
+                            </p>
+                            <p class="movie-description text-standard" style="display: block;"> We are in 2013. In one of the most evocative night scenes in Sorrentino's film, Jep Gambardella takes Ramona on a
+                            magical walk, where ancient history dialogues with modern disillusionment. 
+                            </p>
+                            <p class="movie-description text-more" style="display:none;">
+                                manca standard o more
+                            </p>
+                            <p class="movie-description text-didyouknow" style="display:none;"> Did you know that by looking through the keyhole of the door, your eyes view three different States? You are standing on
                             the soil of the Italian Republic, you peek through the garden of the Villa del Priorato (which enjoys the right of
                             extraterritoriality for the Sovereign Military Order of Malta), and in the background, the Dome of St. Peter's is
                             situated in the Vatican City State.
+                                
+                            </p>
+                        </div>
+                        <!-- livello child -->
+                        <div class="level-child" style="display: none;">
+                        
+                            <p class="movie-description text-less" style="display: none;">less child
+                            </p>
+                            <p class="movie-description text-standard" style="display: block;">standard</p>
+                            <p class="movie-description text-more" style="display: none;">more
+                            </p>
+                            <p class="movie-description text-didyouknow" style="display: none;">did u know</p>
+                        </div>
+                        
+                        <!-- livello scholar -->
+                        <div class="level-scholar" style="display: none;">
+                        
+                            <p class="movie-description text-less" style="display: none;">
+                                scrivere testo
+                            </p>
+                            <p class="movie-description text-standard" style="display: block;">manca testo</p>
+                            <p class="movie-description text-more" style="display: none;">pure qui</p>
+                            <p class="movie-description text-didyouknow" style="display: none;">scrivere</p>
+                        </div>
+                            
                         </p>
                         <div class="tellme-buttons">
                             <button type="button" onclick="showLess(this)"> Tell me less </button>
@@ -1010,7 +1146,7 @@ da dire:
                         <div class="metadata-tasti">
                             <button type="button" onclick="toggleModal('film-finestra-7')"> CINEMATIC CONTEXT </button>
                             <button type="button" onclick="toggleModal('location-finestra-7')"> LOCATION </button>
-                            <button type="button" onclick="toggleModal('shot-finestra')"> SHOT</button>
+                            <button type="button" onclick="toggleModal('shot-finestra-7')"> SHOT</button>
                             <button type="button" onclick="toggleModal('project-finestra-7')"> PROJECT </span>
                         </div>
                         
@@ -1042,7 +1178,7 @@ da dire:
                             </div>
                         </div>
                         
-                        <div id="project-finestra" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'project-finestra')">
+                        <div id="project-finestra-7" class="modal-overlay" style="display:none;" onclick="closeOnBackground(event, 'project-finestra-7')">
                             <div class="modal-box">
                                 <h3> Project </h3>
                                 <ul> 
