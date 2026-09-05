@@ -549,3 +549,45 @@ allButton.addEventListener('click', function() {
 
 // Mostro inizialmente tutte le location e i due percorsi
 updateMap();
+
+
+
+
+/* aggiunta codice x cambio stili */
+
+(function () {
+    // 1. Trova il link CSS principale nell'head
+    const cssLink = document.querySelector('link[rel="stylesheet"]');
+
+    // 2. Se c'è uno stile salvato, lo applica subito
+    const savedStyle = localStorage.getItem("userStyle");
+    if (savedStyle && cssLink) {
+        cssLink.setAttribute("href", savedStyle);
+    }
+
+    // Funzione che attiva i click sui link della barra
+    function initBarEvents() {
+        const barLinks = document.querySelectorAll(".bar-style .bar-item a");
+
+        barLinks.forEach(link => {
+            // Rimuoviamo eventuali listener precedenti per evitare duplicazioni
+            link.addEventListener("click", function (e) {
+                e.preventDefault(); // BLOCCA l'apertura diretta del file CSS
+
+                const newStyle = this.getAttribute("href");
+
+                if (cssLink && newStyle) {
+                    cssLink.setAttribute("href", newStyle);
+                    localStorage.setItem("userStyle", newStyle);
+                }
+            });
+        });
+    }
+
+    // 3. Esegue la funzione sia se il DOM è già pronto, sia se si sta ancora caricando
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initBarEvents);
+    } else {
+        initBarEvents();
+    }
+})();
