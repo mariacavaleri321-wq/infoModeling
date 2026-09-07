@@ -2,6 +2,8 @@
    CSS STILE ANNI 80
    ========================================================= */
 
+   @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
 /* STILE GENERALE */
 html,
 body {
@@ -10,10 +12,11 @@ body {
     width: 100%;
     min-height: 100vh;
 
-    background-color: #543b94;
+    background: linear-gradient(180deg, #fb7da8,#b832d6,#058cd7);
+    background-attachment: fixed;
 
-    font-family: 'Special Elite', monospace;
-    color: white;
+    font-family: 'VT323', monospace;
+    color: #00f3ff;
 }
 
 a {
@@ -47,10 +50,11 @@ header {
 
     padding: 15px 40px;
 
-    background-color: #212121;
+    background-color: #12002b;
 
-    border-top: 1px solid #f4e8c1;
-    border-bottom: 1px solid #f4e8c1;
+    border-top: 1px solid #ff007f;
+    border-bottom: 1px solid #00f3ff;
+    box-shadow: 0 0 15px #00f3ff;
 }
 
 
@@ -67,9 +71,9 @@ header {
 .dropdown>a {
     margin-right: 20px;
 
-    color: white;
+    color: #ff007f;
 
-    font-family: 'Special Elite', monospace;
+    font-family: 'Press Start 2P', cursive;
     font-size: 1.05rem;
 
     transition: color 0.2s ease;
@@ -77,7 +81,7 @@ header {
 
 .link-head>a:hover,
 .dropdown>a:hover {
-    color: #f4e8c1;
+    color: #ffe600;
 
     opacity: 1;
 
@@ -103,9 +107,9 @@ header {
 
     min-width: 230px;
 
-    background-color: #212121;
+    background-color: #12002b;
 
-    border: 1px solid #f4e8c1;
+    border: 1px solid #12002b;
 
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.35);
 
@@ -124,12 +128,12 @@ header {
 
     color: white;
 
-    font-family: 'Special Elite', monospace;
+    font-family: 'VT323', monospace;
     font-size: 0.9rem;
 
     white-space: nowrap;
 
-    border-bottom: 1px solid rgba(244, 232, 193, 0.2);
+    border-bottom: 1px solid rgba(255, 0, 127, 0.4);
 }
 
 .dropdown-menu a:last-child {
@@ -137,9 +141,9 @@ header {
 }
 
 .dropdown-menu a:hover {
-    background-color: #f4e8c1;
+    background-color: #ff007f;
 
-    color: #943b3b;
+    color: white;
 
     opacity: 1;
 }
@@ -161,10 +165,10 @@ header {
 
     padding: 15px 0;
 
-    background-color: #943b3b;
+    background-color: #ff007f;
 
-    border-top: 1.5px solid rgba(255, 255, 255, 0.35);
-    border-bottom: 1.5px solid rgba(255, 255, 255, 0.35);
+    border-top: 1.5px solid #ffe600;
+    border-bottom: 1.5px solid #ffe600;
 }
 
 .bar-item {
