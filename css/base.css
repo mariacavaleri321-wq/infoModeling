@@ -234,10 +234,7 @@ main {
 }
 
 
-/* =========================================================
-   TITOLI GENERALI
-   stesso stile usato nella homepage
-   ========================================================= */
+/* TITOLI GENERALI */
 
 main h2 {
     width: 100%;
@@ -257,9 +254,7 @@ main h2 {
 }
 
 
-/* =========================================================
-   TESTO GENERALE
-   ========================================================= */
+/* TESTO GENERALE  */
 
 main p {
     width: 100%;
@@ -622,9 +617,6 @@ main p {
     box-sizing: border-box;
 
     background-color: #1c1b1b;
-
-    border-top: 14px dashed white;
-    border-bottom: 14px dashed white;
     border-radius: 4px;
 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
