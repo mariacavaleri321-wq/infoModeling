@@ -5,6 +5,7 @@
    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
 
 /* STILE GENERALE */
+
 html,
 body {
     margin: 0;
@@ -12,7 +13,7 @@ body {
     width: 100%;
     min-height: 100vh;
 
-    background: linear-gradient(180deg, #fb7da8,#b832d6,#058cd7);
+    background: linear-gradient(180deg, #ff007f,#b832d6,#058cd7);
     background-attachment: fixed;
 
     font-family: 'VT323', monospace;
@@ -58,9 +59,7 @@ header {
 }
 
 
-/* =========================================================
-   LINK NAVBAR
-   ========================================================= */
+/* LINK NAVBAR */
 
 .link-head {
     display: flex;
@@ -74,7 +73,7 @@ header {
     color: #ff007f;
 
     font-family: 'Press Start 2P', cursive;
-    font-size: 1.05rem;
+    font-size: 0.7rem;
 
     transition: color 0.2s ease;
 }
@@ -90,9 +89,7 @@ header {
 }
 
 
-/* =========================================================
-   DROPDOWN NAVBAR
-   ========================================================= */
+/* DROPDOWN NAVBAR (itinerary)*/
 
 .dropdown {
     position: relative;
@@ -129,7 +126,7 @@ header {
     color: white;
 
     font-family: 'VT323', monospace;
-    font-size: 0.9rem;
+    font-size: 1rem;
 
     white-space: nowrap;
 
@@ -155,7 +152,7 @@ header {
 
 .bar-style {
     position: sticky;
-    top: 50px;
+    top: 45px;
     z-index: 999;
 
     display: flex;
@@ -182,7 +179,7 @@ header {
 
     text-align: center;
 
-    border-right: 1.5px solid rgba(255, 255, 255, 0.35);
+    border-right: 1.5px solid rgba(255, 225, 0, 0.35);
 }
 
 .bar-item:last-child {
@@ -199,9 +196,8 @@ header {
 
     color: white;
 
-    font-family: 'Courier', monospace;
-    font-size: 1.3rem;
-    font-weight: bold;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.9rem;
 
     transition:
         color 0.2s ease,
@@ -210,7 +206,7 @@ header {
 
 .bar-item a:hover {
 
-    color: #f4e8c1;
+    color: #ffe600;
 
     opacity: 1;
 
@@ -239,10 +235,7 @@ main {
 }
 
 
-/* =========================================================
-   TITOLI GENERALI
-   stesso stile usato nella homepage
-   ========================================================= */
+/* TITOLI GENERALI stesso stile usato nella homepage */
 
 main h2 {
     width: 100%;
@@ -252,19 +245,17 @@ main h2 {
 
     margin-bottom: 15px;
 
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 3rem;
-    letter-spacing: 3px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    letter-spacing: 2px;
 
-    color: #f4e8c1;
+    color: #ff007f;
 
     text-align: center;
 }
 
 
-/* =========================================================
-   TESTO GENERALE
-   ========================================================= */
+/* TESTO GENERALE */
 
 main p {
     width: 100%;
@@ -272,11 +263,11 @@ main p {
 
     margin: 0 auto;
 
-    font-family: 'Special Elite', monospace;
-    font-size: 1.1rem;
-    line-height: 1.6rem;
+    font-family: 'VT323', monospace;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
 
-    color: white;
+    color: #00f3ff;
 
     text-align: justify;
 }
@@ -311,10 +302,10 @@ main p {
 
     box-sizing: border-box;
 
-    background-color: #1c1b1b;
+    background-color: #050010;
 
-    border: 7px solid #f4e8c1;
-    border-radius: 18px;
+    border: 4px solid #00f3ff;
+    border-radius: 0px;
 
     box-shadow:
         0 0 0 3px white,
@@ -424,7 +415,7 @@ main p {
 
     color: white;
 
-    border: 4px solid white;
+    border: 4px solid #00f3ff;
 
     transition:
         opacity 0.2s ease,
@@ -460,11 +451,11 @@ main p {
 
     border-bottom: 2px solid #f4e8c1;
 
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.3rem;
-    letter-spacing: 2px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
 
-    color: #f4e8c1;
+    color: #ffe600;
 
     text-align: center;
 }
@@ -488,12 +479,12 @@ main p {
 
     margin: 0 0 20px 0;
 
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.2rem;
-    line-height: 1.1;
-    letter-spacing: 2px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    letter-spacing: 1px;
 
-    color: white;
+    color: #ff007f;
 
     text-align: center;
 }
@@ -507,8 +498,8 @@ main p {
     padding: 10px 0;
     margin-bottom: 20px;
 
-    border-top: 1px solid #f4e8c1;
-    border-bottom: 1px solid #f4e8c1;
+    border-top: 1px dashed #ff007f;
+    border-bottom: 1px dashed #ff007f;
 }
 
 .card-details p {
@@ -517,11 +508,11 @@ main p {
 
     margin: 5px 0;
 
-    font-family: 'Special Elite', monospace;
-    font-size: 0.9rem;
+    font-family: 'VT323', monospace;
+    font-size: 1rem;
     line-height: 1.3rem;
 
-    color: white;
+    color: #00f3ff;
 
     text-align: left;
 }
@@ -537,13 +528,13 @@ main p {
 
     margin-bottom: 25px;
 
-    font-family: 'Special Elite', monospace;
+    font-family: 'VT323', monospace;
     font-size: 1rem;
     line-height: 1.5rem;
 
     text-align: left;
 
-    color: white !important;
+    color: white;
 }
 
 
@@ -1426,7 +1417,7 @@ footer a:hover {
 
         margin: 5px 8px;
 
-        font-size: 0.9rem;
+        font-size: 0.7rem;
     }
 
 
@@ -1445,7 +1436,7 @@ footer a:hover {
     /* barra date */
 
     .bar-style {
-        top: 90px;
+        top: 80px;
     }
 
     .bar-item {
@@ -1453,7 +1444,7 @@ footer a:hover {
     }
 
     .bar-item a {
-        font-size: 1rem;
+        font-size: 0.7rem;
     }
 
 
