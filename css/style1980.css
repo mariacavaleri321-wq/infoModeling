@@ -13,7 +13,7 @@ body {
     width: 100%;
     min-height: 100vh;
 
-    background: linear-gradient(180deg, #ff007f,#b832d6,#00f3ff);
+    background: linear-gradient(180deg,#1d0243,#2a0360,#1d0243);
     background-attachment: fixed;
 
     font-family: 'VT323', monospace;
@@ -194,7 +194,7 @@ header {
     align-items: center;
     justify-content: center;
 
-    color: white;
+    color: #ffe600;
 
     font-family: 'Press Start 2P', cursive;
     font-size: 0.9rem;
@@ -626,10 +626,10 @@ main p {
     
     background-image: repeating-linear-gradient(
         0deg,
-        rgba(216, 180, 254, 0.35) 0px,
-        rgba(216, 180, 254, 0.35) 3px,
-        transparent 3px, /* spessore linea */
-        transparent 12px /* Distanza tra le linee */
+        rgba(255, 0, 127, 0.04) 0px,
+        rgba(255, 0, 127, 0.04) 2px,
+        transparent 2px, /* spessore linea */
+        transparent 8px /* Distanza tra le linee */
         );
     
     box-shadow:
@@ -652,7 +652,7 @@ main p {
     align-items: center;
     justify-content: space-between;
 
-    gap: 20px;
+    gap: 15px;
 
     box-sizing: border-box;
 }
@@ -665,13 +665,12 @@ main p {
     align-items: center;
     box-sizing: border-box;
     
-    /* pannello x immagini */
-    background-color: #c2b8cf;
-    border-top: 2px solid #1d0243;
-    border-left: 2px solid #1d0243;
+    /* cornicex immagini */
+    background-color: #1d0243;
+    border: 1px solid #00f3ff;
     overflow: hidden;
-    padding: 10px 0px 5px 10px;
-    border-radius: 8px;
+    padding: 12px 0 8px 0;
+    border-radius: 6px;
 }
 
 .film-panel-left img {
@@ -682,7 +681,8 @@ main p {
     object-fit: cover; 
     display: block;
     /* snx, h, blur, poi colore trasparenza */
-    box-shadow: -4px -4px 8px rgba(110, 233, 255, 0.544);
+    box-shadow: 0 0 12px rgba(0, 243, 255, 0.4);
+    border-radius: 4px;
 }
 
 .photo-when {
@@ -740,7 +740,7 @@ main p {
 
     transform: scale(1.2);
 }
-/* cambio colore bottini invertiti (tipo glitch) */
+/* cambio colore bottini invertiti (effetto press)*/
 .frecce_scena button:active {
     border-top: 2px solid #46365d;
     border-left: 2px solid #46365d;
@@ -758,7 +758,7 @@ main p {
 }
 
 
-/* ZONA DESTRA */
+/* ZONA DESTRA testi */
 
 .description-container-right {
     width: 45%;
@@ -773,7 +773,6 @@ main p {
 
     box-sizing: border-box;
 }
-
 
 /* BOTTONI STORY / METADATA / QR */
 
@@ -859,6 +858,12 @@ main p {
 
 }
 
+.story-content h3,
+.metadata-content h3,
+.qr-content h3 {
+
+    color: #ffe600 !important; 
+}
 
 /* DIFFICULTY BUTTONS */
 
@@ -952,7 +957,7 @@ main p {
 }
 
 .tellme-buttons button:hover, .metadata-tasti button:hover {
-    color: #ffe600;
+    color: #00f3ff;
     background-color: #c2b8cf;
     border-top: 2px solid white;
     border-left: 2px solid white;
