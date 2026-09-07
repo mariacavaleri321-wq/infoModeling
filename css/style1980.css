@@ -211,7 +211,6 @@ header {
     opacity: 1;
 
     text-shadow:
-
         0 0 5px #0ff,
         0 0 10px #0ff,
         0 0 20px #0ff,
@@ -268,7 +267,7 @@ main p {
     font-size: 1.3rem;
     line-height: 1.5rem;
 
-    color: #00f3ff;
+    color: #ffffff;
 
     text-align: justify;
 }
@@ -621,12 +620,24 @@ main p {
     border: 2px solid #ffe600;
 
     border-radius: 8px;
-
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-
     overflow: hidden;
-}
 
+    position: relative;
+    
+    background-image: repeating-linear-gradient(
+        0deg,
+        rgba(216, 180, 254, 0.35) 0px,
+        rgba(216, 180, 254, 0.35) 3px,
+        transparent 3px, /* spessore linea */
+        transparent 12px /* Distanza tra le linee */
+        );
+    
+    box-shadow:
+        0 0 5px #0ff,
+        0 0 10px #0ff,
+        0 0 20px #0ff,
+        0 0 40px #0ff;
+}
 
 /* =========================================================
    ZONA SINISTRA - FOTO
@@ -648,6 +659,19 @@ main p {
 
 .film-panel-left>div {
     width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    
+    /* pannello x immagini */
+    background-color: #c2b8cf;
+    border-top: 2px solid #1d0243;
+    border-left: 2px solid #1d0243;
+    overflow: hidden;
+    padding: 10px 0px 5px 10px;
+    border-radius: 8px;
 }
 
 .film-panel-left img {
@@ -655,20 +679,23 @@ main p {
 
     aspect-ratio: 16 / 10;
 
-    object-fit: cover;
+    object-fit: cover; 
     display: block;
+    /* snx, h, blur, poi colore trasparenza */
+    box-shadow: -4px -4px 8px rgba(110, 233, 255, 0.544);
 }
 
 .photo-when {
     width: 100%;
 
     margin-bottom: 5px;
+    margin-left: 30px;
 
     color: white;
 
     font-family: 'VT323', monospace;
     font-size: 1.2rem;
-    letter-spacing: 1.2px;
+    letter-spacing: 1px;
 
     text-align: left;
 }
@@ -784,7 +811,7 @@ main p {
         border-color 0.2s ease,
         background-color 0.2s ease;
 }
-
+/* tasti cambio scena */
 .showview-buttons button:hover {
     color: #00f3ff;
     background-color: #1d0243;
@@ -793,7 +820,7 @@ main p {
     border-right: 2px solid #46365d;
     border-bottom: 2px solid #46365d;
 }
-/* ????? non funz effetto glitch */
+
 .showview-buttons button:active {
     border-top: 2px solid #46365d;
     border-left: 2px solid #46365d;
@@ -803,10 +830,10 @@ main p {
 
 
 /* =========================================================
-   STORY
+   BOX TESTO SCENE
    ========================================================= */
 
-.story-content {
+.story-content, .metadata-content, .qr-content {
     position: relative;
 
     width: 100%;
@@ -824,17 +851,16 @@ main p {
 
     border-top: 3px solid #46365d;
     border-left: 3px solid #46365d;
-     border-right: 3px solid #c2b8cf;
+    border-right: 3px solid #c2b8cf;
     border-bottom: 3px solid #c2b8cf;
     border-radius: 0px;
 
     overflow-y: auto;
+
 }
 
 
-/* =========================================================
-   DIFFICULTY BUTTONS
-   ========================================================= */
+/* DIFFICULTY BUTTONS */
 
 .difficulty-buttons {
     width: 100%;
@@ -906,77 +932,49 @@ main p {
     gap: 8px;
 }
 
-.tellme-buttons button {
+.tellme-buttons button, .metadata-tasti button {
     padding: 6px 12px;
 
-    background-color: #1c1b1b;
-
+    background-color: #c2b8cf;
     color: white;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #46365d;
+    border-bottom: 2px solid #46365d;
+    border-radius: 0px;
 
-    border: 1px solid #1c1b1b;
-    border-radius: 4px;
-
-    font-family: 'Courier New', monospace;
+    font-family: 'VT323', monospace;
     font-size: 1rem;
-    font-weight: bold;
 
     transition:
         background-color 0.2s ease,
         color 0.2s ease;
 }
 
-.tellme-buttons button:hover {
-    background-color: #f4e8c1;
-
-    color: #943b3b;
-
+.tellme-buttons button:hover, .metadata-tasti button:hover {
+    color: #ffe600;
+    background-color: #c2b8cf;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid #46365d;
+    border-bottom: 2px solid #46365d;
     opacity: 1;
 }
 
-
-/* =========================================================
-   METADATA
-   ========================================================= */
-
-.metadata-content {
-    position: relative;
-
-    width: 100%;
-    height: 450px;
-
-    box-sizing: border-box;
-
-    padding: 15px 30px;
-
-    background-color: #f4e8c1;
-    color: #2b2623;
-
-    border: 2px solid white;
-    border-radius: 8px;
-
-    font-family: 'Special Elite', monospace;
-    font-size: 1.1rem;
-
-    overflow-y: auto;
+.tellme-buttons button:active, .metadata-tasti button:active {
+    border-top: 2px solid #46365d;
+    border-left: 2px solid #46365d;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
 }
 
-.metadata-content h3 {
-    font-family: 'Special Elite', monospace;
-    font-size: 1.2rem;
-}
+
+/* metadata*/
 
 .introduzione-meta {
     margin-bottom: 15px;
-
-    font-family: 'Special Elite', monospace;
-    font-size: 1.1rem;
     line-height: 1.6;
 }
-
-
-/* =========================================================
-   BOTTONI METADATA
-   ========================================================= */
 
 .metadata-tasti {
     display: flex;
@@ -989,45 +987,17 @@ main p {
     font-weight: bold;
 }
 
-.metadata-tasti button {
-    width: 250px;
-
-    align-self: center;
-
-    padding: 10px 20px;
-
-    background-color: #1c1b1b;
-    color: white;
-
-    border: 1px solid #1c1b1b;
-    border-radius: 4px;
-
-    font-family: 'Special Elite', monospace;
-    font-size: 1rem;
-    font-weight: bold;
-
-    transition:
-        background-color 0.2s ease,
-        color 0.2s ease;
-}
-
-.metadata-tasti button:hover {
-    background-color: #f4e8c1;
-
-    color: #943b3b;
-}
-
 .metadata-tasti li {
     margin-bottom: 12px;
 }
 
 
 /* =========================================================
-   META PUNTI
+   META PUNTI (????? non ho capito cosa sia)
    ========================================================= */
 
 .meta-punti {
-    color: #943b3b;
+    color: #3b9454;
 
     font-size: 1.2rem;
 
@@ -1037,17 +1007,15 @@ main p {
 }
 
 .meta-punti:hover {
-    color: #6d2121;
+    color: #82af7a;
 
-    border-bottom: 2px solid #6d2121;
+    border-bottom: 2px solid #62216d;
 
     text-decoration: underline;
 }
 
 
-/* =========================================================
-   MODAL
-   ========================================================= */
+/* METADATA finestra informazioni aggiuntive */
 
 .modal-overlay {
     position: fixed;
@@ -1079,11 +1047,11 @@ main p {
 
     padding: 30px;
 
-    background-color: #f4e8c1;
-    color: #2b2623;
+    background-color: #c2b8cf;
+    color: #1d0243;
 
-    border: 3px solid white;
-    border-radius: 8px;
+    border: 2px solid #46365d;
+    border-radius: 0px;
 
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 
@@ -1097,9 +1065,9 @@ main p {
 
     padding-bottom: 8px;
 
-    color: #943b3b;
+    color: #ff007f;
 
-    border-bottom: 1px solid #943b3b;
+    border-bottom: 1px solid #ff007f;
 
     font-size: 1.2rem;
 }
@@ -1126,7 +1094,7 @@ main p {
 .metadata-content li,
 .metadata-content strong,
 .metadata-content p {
-    color: #2b2623;
+    color: #1d0243;
 }
 
 .story-content p,
@@ -1143,38 +1111,20 @@ main p {
 .qr-content {
     width: 100%;
     height: 450px;
-
-    box-sizing: border-box;
-
-    padding: 30px;
-
-    background-color: #f4e8c1;
-
-    border: 2px solid white;
-    border-radius: 8px;
-
     text-align: center;
-
     overflow-y: auto;
 }
 
 .qr-content h3 {
     margin-top: 0;
-
-    color: #2b2623;
-
+    color: #1d0243;
     font-size: 1.17em;
-    font-weight: bold;
-
     text-align: left;
 }
 
 .qr-description {
     margin-bottom: 30px;
-
-    color: #2b2623;
-
-    font-family: 'Special Elite', monospace;
+    color: #1d0243;
     font-size: 0.9rem;
     line-height: 1.4;
 }
@@ -1189,7 +1139,7 @@ main p {
 
     background-color: white;
 
-    border: 1px solid #38312d;
+    border: 1px solid #1d0243;
 }
 
 
