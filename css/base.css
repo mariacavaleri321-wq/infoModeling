@@ -617,6 +617,11 @@ main p {
     box-sizing: border-box;
 
     background-color: #1c1b1b;
+
+    /* linee tratteggiate x rullino */
+    border-top: 14px dashed white;
+    border-bottom: 14px dashed white;
+
     border-radius: 4px;
 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
