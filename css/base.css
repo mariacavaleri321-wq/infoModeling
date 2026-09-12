@@ -903,6 +903,10 @@ main p {
     opacity: 1;
 }
 
+.tellme-buttons button.active {
+    background-color: #943b3b;
+    color: #f4e8c1;
+}
 
 /* =========================================================
    METADATA

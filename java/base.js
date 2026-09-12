@@ -37,6 +37,25 @@
     }
 })();
 
+/* ============================================================
+   BOTTONE RESTA PREMUTO QUANDO IN FUNZIONE
+   ============================================================ */
+document.addEventListener('click', function (e) {
+    const clickedButton = e.target.closest('[onclick]');
+    if (!clickedButton) return;
+
+    const container = clickedButton.parentElement;
+    if (!container) return;
+
+    Array.from(container.children).forEach(function (sibling) {
+        if (sibling.hasAttribute('onclick')) {
+            sibling.classList.remove('active');
+        }
+    });
+
+    clickedButton.classList.add('active');
+});
+
 
 /* ============================================================
    NARRATIVE (attivo solo se nella pagina esiste .story-content o .area-immagini
