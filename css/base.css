@@ -895,7 +895,7 @@ main p {
         color 0.2s ease;
 }
 
-.tellme-buttons button:hover {
+.tellme-buttons button:hover, .tellme-buttons button.active {
     background-color: #f4e8c1;
 
     color: #943b3b;
@@ -903,10 +903,6 @@ main p {
     opacity: 1;
 }
 
-.tellme-buttons button.active {
-    background-color: #943b3b;
-    color: #f4e8c1;
-}
 
 /* =========================================================
    METADATA
