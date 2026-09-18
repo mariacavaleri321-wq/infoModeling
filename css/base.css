@@ -1654,19 +1654,482 @@ footer a:hover {
     }
 }
 
-/*MAPPA*/
-#map {
-    height: 500px;
-    width: 70%;
+ /* =========================================================
+   MAPPA
+   ========================================================= */
+
+.map-page {
+    width: 100%;
 }
 
+
+/* TITOLO MAPPA */
+
+.map-page h1 {
+    width: 100%;
+    max-width: 950px;
+
+    margin: 35px auto 25px auto;
+
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4.5rem;
+    letter-spacing: 4px;
+
+    color: #f4e8c1;
+
+    text-align: center;
+}
+
+
+/* MAPPA LEAFLET */
+
+#map {
+    width: 100%;
+    max-width: 950px;
+    height: 550px;
+
+    margin: 0 auto;
+
+    box-sizing: border-box;
+
+    border: 4px solid white;
+}
 
 .leaflet-popup-content {
-    font-family: inherit;
+    font-family: 'Special Elite', monospace;
 }
 
-.map-legend {
-    padding: 10px;
+
+/* =========================================================
+   FILTRI MAPPA
+   ========================================================= */
+
+#filters {
+    width: 100%;
+    max-width: 950px;
+
+    display: flex;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin: 20px auto 0 auto;
+}
+
+#filters button {
+    padding: 9px 18px;
+
+    background-color: #1c1b1b;
+
+    border: 1px solid white;
+    border-radius: 3px;
+
+    font-family: 'Special Elite', monospace;
+    font-size: 0.85rem;
+
+    color: white;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+#filters button:hover,
+#filters button.active {
+    background-color: #f4e8c1;
+
+    color: #943b3b;
+
+    border-color: #f4e8c1;
+}
+
+
+/* =========================================================
+   EXPLORE THE LOCATIONS
+   ========================================================= */
+
+.locations-section {
+    width: 100%;
+    max-width: 950px;
+
+    margin: 65px auto 20px auto;
+}
+
+.locations-section h2 {
+    margin-bottom: 45px;
+}
+
+
+/* =========================================================
+   CONTENITORE ITINERARIO
+   ========================================================= */
+
+#locations-list {
+    position: relative;
+
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   LINEA VERTICALE PRINCIPALE
+   ========================================================= */
+
+#locations-list::before {
+    content: "";
+
+    position: absolute;
+
+    left: 31px;
+    top: 30px;
+    bottom: 30px;
+
+    width: 2px;
+
+    background-color: rgba(244, 232, 193, 0.65);
+}
+
+
+/* =========================================================
+   SINGOLA TAPPA
+   ========================================================= */
+
+.location-card {
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 30px;
+
+    padding: 25px 0;
+
+    box-sizing: border-box;
+
+    background-color: transparent;
+
+    border: none;
+}
+
+
+/* =========================================================
+   NUMERO TAPPA
+   ========================================================= */
+
+.location-number {
+    position: relative;
+
+    z-index: 2;
+
+    flex: 0 0 64px;
+
+    width: 64px;
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    background-color: #943b3b;
+
+    border: 2px solid #f4e8c1;
+    border-radius: 50%;
+
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.7rem;
+
+    color: #f4e8c1;
+}
+
+
+/* =========================================================
+   INFORMAZIONI PRINCIPALI LOCATION
+   ========================================================= */
+
+.location-info {
+    flex: 1;
+
+    padding-top: 3px;
+}
+
+.location-info h3 {
+    margin: 0 0 5px 0;
+
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+
+    color: white;
+}
+
+
+/* FILM */
+
+.location-info p:first-of-type {
+    width: 100%;
+    max-width: none;
+
+    margin: 0 0 8px 0;
+
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+
+    color: #f4e8c1;
+
+    text-align: left;
+}
+
+
+/* DESCRIZIONE */
+
+.location-info p:nth-of-type(2) {
+    width: 100%;
+    max-width: 700px;
+
+    margin: 0;
+
+    font-size: 0.9rem;
+    line-height: 1.45rem;
+
+    color: white;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   DISCOVER THIS STOP
+   ========================================================= */
+
+.location-info a {
+    display: inline-block;
+
+    margin-top: 12px;
+
+    padding: 6px 11px;
+
+    background-color: #1c1b1b;
+
+    border: 1px solid white;
+    border-radius: 3px;
+
+    font-family: 'Special Elite', monospace;
+    font-size: 0.7rem;
+
+    color: white;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.location-info a:hover {
+    background-color: #f4e8c1;
+
+    color: #943b3b;
+
+    border-color: #f4e8c1;
+
+    opacity: 1;
+}
+
+
+/* =========================================================
+   PIÙ LOCATION NELLA STESSA TAPPA
+   es. Piazza Testaccio + Testaccio Market
+   ========================================================= */
+
+.location-subitem {
+    padding-bottom: 20px;
+
+    margin-bottom: 20px;
+
+    border-bottom:
+        1px dashed rgba(244, 232, 193, 0.4);
+}
+
+.location-subitem:last-child {
+    padding-bottom: 0;
+
+    margin-bottom: 0;
+
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   SPOSTAMENTO TRA DUE TAPPE
+   INFORMAZIONE SECONDARIA
+   ========================================================= */
+
+.route-connection {
+    position: relative;
+
+    width: calc(100% - 95px);
+
+    margin:
+        -8px
+        0
+        -8px
+        95px;
+
+    padding:
+        8px
+        15px
+        8px
+        18px;
+
+    box-sizing: border-box;
+
+    border-left:
+        1px solid rgba(244, 232, 193, 0.45);
+}
+
+
+/* PICCOLO PUNTO SULLA LINEA SECONDARIA */
+
+.route-connection::before {
+    content: "";
+
+    position: absolute;
+
+    left: -4px;
+    top: 12px;
+
+    width: 7px;
+    height: 7px;
+
+    background-color: #f4e8c1;
+
+    border-radius: 50%;
+}
+
+
+/* TRASPORTO + TEMPO */
+
+.route-main-info {
+    margin-bottom: 3px;
+
+    font-family: 'Special Elite', monospace;
+    font-size: 0.68rem;
+    font-weight: normal;
+
+    color: rgba(244, 232, 193, 0.85);
+}
+
+
+/* INDICAZIONI */
+
+.route-directions {
+    width: 100% !important;
+    max-width: 650px !important;
+
+    margin: 0 !important;
+
+    font-family: 'Special Elite', monospace;
+    font-size: 0.66rem !important;
+    line-height: 1.1rem !important;
+
+    color: rgba(255, 255, 255, 0.65) !important;
+
+    text-align: left !important;
+}
+
+
+/* NEXT STOP leggermente più evidente */
+
+.route-directions strong {
+    font-weight: normal;
+
+    color: rgba(244, 232, 193, 0.8);
+}
+
+
+/* =========================================================
+   ALL LOCATIONS
+   ========================================================= */
+
+/*
+   Quando selezioni All Locations non esiste .location-number.
+   Quindi nascondiamo la linea da itinerario.
+*/
+
+#locations-list:not(:has(.location-number))::before {
+    display: none;
+}
+
+
+/* Le card di All Locations diventano più semplici */
+
+.location-card:not(:has(.location-number)) {
+    padding: 22px 0;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.25);
+}
+
+.location-card:not(:has(.location-number)) .location-info {
+    padding-left: 0;
+}
+
+
+/* =========================================================
+   MAPPA RESPONSIVE
+   ========================================================= */
+
+@media screen and (max-width: 800px) {
+
+    .map-page h1 {
+        font-size: 3.2rem;
+    }
+
+    #map {
+        height: 430px;
+    }
+
+    #filters {
+        flex-wrap: wrap;
+    }
+
+    .locations-section {
+        margin-top: 45px;
+    }
+
+    #locations-list::before {
+        left: 24px;
+    }
+
+    .location-card {
+        gap: 18px;
+    }
+
+    .location-number {
+        flex-basis: 50px;
+
+        width: 50px;
+        height: 50px;
+
+        font-size: 1.4rem;
+    }
+
+    .location-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .route-connection {
+        width: calc(100% - 68px);
+
+        margin-left: 68px;
+    }
 }
 
 /* DISCLAIMER*/
