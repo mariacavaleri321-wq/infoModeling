@@ -1078,7 +1078,7 @@ function initMapPage() {
     var historicalLine;
     var womenLine;
 
-    var currentNarrative = 'all';
+    var currentNarrative = 'historical';
 
 
     function updateMap() {
