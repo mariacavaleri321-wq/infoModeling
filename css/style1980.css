@@ -294,30 +294,19 @@ main p {
 
 .title-container {
     position: relative;
-
     width: 100%;
     max-width: 900px;
-
     margin: 0 auto;
     padding: 60px 70px;
-
     box-sizing: border-box;
-
-
-    border-radius: 0px;
-
+    
     background-color: #1d0243;
-    
-        border-radius: 8px;
-        overflow: hidden;
-    
-        position: relative;
-    
-        box-shadow:
-            0 0 5px #0ff,
-            0 0 10px #0ff,
-            0 0 20px #0ff,
-            0 0 40px #0ff;
+    box-shadow:
+        0 0 5px #0ff,
+        0 0 10px #0ff,
+        0 0 20px #0ff,
+        0 0 40px #0ff;
+
 }
 
 
@@ -343,7 +332,10 @@ main p {
     text-shadow: -3px -3px 0px #00ffff;
     -webkit-text-stroke: 2px #ff007f;
 
+    animation: jitter 0.15s infinite;
+
 }
+
 
 .title-container h1::before,
 .title-container h1::after {
@@ -353,11 +345,10 @@ main p {
     left: 0;
     width: 100%;
     height: 100%;
-    /*righe nere da creare nel glitch*/
-    background: #000;
+    background: #1d0243;
 }
 
-/* Primo strato Glitch ( */
+/* Primo strato Glitch */
 .title-container h1::before {
     left: 4px;
     animation: glitch-anim-1 0.2s infinite linear alternate-reverse;
@@ -367,11 +358,6 @@ main p {
 .title-container h1::after {
     left: -4px;
     animation: glitch-anim-2 0.3s infinite linear alternate-reverse;
-}
-
-/* Tremolio e cambio colore e aggiunta strato azurro */
-.title-container h1 {
-    animation: jitter 0.15s infinite;
 }
 
 /* ANIMAZIONI */
