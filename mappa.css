@@ -1,0 +1,119 @@
+#map {
+    height: 500px;
+    width: 70%;
+}
+
+
+.leaflet-popup-content {
+    font-family: inherit;
+}
+
+.map-legend {
+    padding: 10px;
+}
+
+
+
+/* =========================================================
+
+   EXPLORE THE LOCATIONS
+
+   ========================================================= */
+
+.locations-section {
+
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 60px auto;
+
+}
+
+.locations-section h2 {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+}
+
+/* SINGOLA LOCATION */
+
+.location-card {
+
+    display: flex;
+
+    gap: 25px;
+
+    padding: 25px;
+
+    border: 1px solid currentColor;
+
+    box-sizing: border-box;
+
+}
+
+.location-number {
+
+    font-size: 2rem;
+
+    font-weight: bold;
+
+}
+
+.location-info {
+
+    flex: 1;
+
+}
+
+.location-info h3 {
+
+    margin-top: 0;
+
+    margin-bottom: 10px;
+
+}
+
+.location-info p {
+
+    margin: 8px 0;
+
+    line-height: 1.5;
+
+}
+
+/* PERCORSO TRA DUE LOCATION */
+
+.route-connection {
+
+    width: 80%;
+
+    margin: 0 auto;
+
+    padding: 20px 30px;
+
+    box-sizing: border-box;
+
+    border-left: 2px solid currentColor;
+
+}
+
+.route-main-info {
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+
+}
+
+.route-directions {
+
+    margin: 0;
+
+    line-height: 1.5;
+
+    font-size: 0.9rem;
+
+}
