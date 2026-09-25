@@ -74,7 +74,8 @@ header {
     transition: color 0.2s ease;
 }
 
-.link-head > a:hover,
+.link-head > a:hover, 
+.link-head > a.active,
 .dropdown > a:hover {
     color: #f4e8c1;
 
@@ -778,7 +779,7 @@ main p {
         background-color 0.2s ease;
 }
 
-.showview-buttons button:hover {
+.showview-buttons button:hover, .showview-buttons button.active {
     background-color: #f4e8c1;
 
     color: #943b3b;
@@ -854,7 +855,7 @@ main p {
         color 0.2s ease;
 }
 
-.difficulty-buttons button:hover {
+.difficulty-buttons button:hover, .difficulty-buttons button.active {
     background-color: #f4e8c1;
 
     color: #943b3b;
